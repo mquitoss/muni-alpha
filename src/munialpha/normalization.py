@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import math
-from collections.abc import Iterable
+from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
 
 
@@ -70,7 +70,9 @@ def ratio_per_1000(value: float | None, population: float | None) -> float | Non
     return value / population * 1000
 
 
-def piecewise_linear_score(value: float | None, points: list[tuple[float, float]]) -> float | None:
+def piecewise_linear_score(
+    value: float | None, points: Sequence[tuple[float, float]]
+) -> float | None:
     """Interpolate a score between ordered metric/score control points."""
     if value is None or not math.isfinite(value):
         return None

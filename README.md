@@ -4,8 +4,8 @@
 
 El objetivo es construir una base de datos reproducible a nivel municipal utilizando, siempre que sea posible, **datos públicos y fuentes oficiales**.
 
-> Estado actual: **fase de adquisición y normalización de datos**.  
-> El mapa interactivo y el score compuesto global se desarrollarán posteriormente.
+> Estado actual: **Fase 2, modelo exploratorio y mapa estático**.
+> El índice es relativo, configurable y no sustituye una evaluación profesional.
 
 ## Objetivo
 
@@ -596,4 +596,39 @@ obtenida como `partial` y continúa en la siguiente ejecución:
 
 ```bash
 .venv/bin/munialpha --data-dir data
+```
+
+# Mapa estático (Fase 2)
+
+El mapa zero-build combina `municipalities.csv` y los 15 CSV de scores mediante
+`municipality_code`, y une la geometría ICGC por `CODIMUNI`. Los vacíos se
+publican como `null`; no se imputan ni se convierten en cero.
+
+```bash
+python scripts/build_map_data.py
+open index.html
+```
+
+El artefacto generado y versionable es `data/map_bundle.js`. La generación
+simplifica la geometría de `data/raw/icgc_municipal_boundaries.geojson` con
+tolerancia conservadora y serializa JSON compacto para que el mapa pueda abrirse
+directamente mediante `file://`. Leaflet y el mapa base se cargan desde CDN, por
+lo que el fondo cartográfico requiere conexión; los límites y datos municipales
+están embebidos.
+
+Las tesis disponibles son equilibrado, rentabilidad residencial, crecimiento,
+turístico, calidad de vida, deportes de invierno y senderismo. Deportes de
+invierno prioriza el acceso a estaciones de esquí; senderismo utiliza paisaje
+(superficie natural, protegida y pendiente) como proxy principal. HUT se
+presenta como gate regulatorio y el riesgo natural como indicador de revisión:
+ninguno entra en el índice compuesto. La aplicación no constituye asesoramiento
+financiero, legal, fiscal ni urbanístico.
+
+Pruebas y linters:
+
+```bash
+pytest
+ruff check .
+npm test
+npm run lint
 ```

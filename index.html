@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta name="description" content="Mapa exploratorio de indicadores inmobiliarios de los 947 municipios de Cataluña." />
+    <title>MuniAlpha · Mapa municipal</title>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  </head>
+  <body>
+    <aside id="ssm-rail" aria-label="Controles del mapa"></aside>
+    <main id="ssm-map" aria-label="Mapa de municipios"></main>
+    <aside id="ssm-detail" aria-live="polite" aria-hidden="true"></aside>
+    <script src="app.config.js"></script>
+    <script src="data/map_bundle.js"></script>
+    <script src="src/engine/format.js"></script>
+    <script src="src/engine/geo.js"></script>
+    <script src="src/engine/join.js"></script>
+    <script src="src/engine/scoring.js"></script>
+    <script src="src/engine/color.js"></script>
+    <script src="src/engine/bundle.js"></script>
+    <script src="src/adapters/domain.js"></script>
+    <script src="src/app.js"></script>
+  </body>
+</html>
