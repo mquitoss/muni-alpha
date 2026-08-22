@@ -632,3 +632,18 @@ ruff check .
 npm test
 npm run lint
 ```
+
+## Despliegue en Cloudflare
+
+El build web copia exclusivamente los recursos públicos a `dist/`; de este modo
+el despliegue no incluye `node_modules`, el entorno Python ni los ficheros de
+desarrollo:
+
+```bash
+npm run build
+npm run deploy
+```
+
+En Cloudflare Workers Builds debe utilizarse `npm run build` como comando de
+build y `npm run deploy` como comando de despliegue. `wrangler.jsonc` publica
+únicamente `dist/`.

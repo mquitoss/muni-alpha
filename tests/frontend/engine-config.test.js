@@ -1,9 +1,13 @@
 import { describe, expect, it } from "vitest";
+import { execFileSync } from "node:child_process";
+import { existsSync, readFileSync } from "node:fs";
+import { resolve } from "node:path";
 
 const config = require("../../app.config.js");
 const join = require("../../src/engine/join.js");
 const scoring = require("../../src/engine/scoring.js");
 const format = require("../../src/engine/format.js");
+const projectRoot = process.cwd();
 
 describe("motor agnóstico", () => {
   it("une códigos conservando ceros iniciales y null", () => {
@@ -92,5 +96,21 @@ describe("configuración MuniAlpha", () => {
     expect(inputs.some((key) => key.includes("natural_risk"))).toBe(false);
     expect(config.detail.notices.join(" ")).toMatch(/gate regulatorio/);
     expect(config.branding.notice).toMatch(/No constituye asesoramiento/);
+  });
+});
+
+describe("build estático", () => {
+  it("publica solo los recursos necesarios en dist", () => {
+    execFileSync(process.execPath, [resolve(projectRoot, "scripts/build_static_site.js")]);
+
+    expect(existsSync(resolve(projectRoot, "dist/index.html"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/data/map_bundle.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/src/engine/scoring.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/node_modules"))).toBe(false);
+    expect(existsSync(resolve(projectRoot, "dist/.venv"))).toBe(false);
+
+    const wrangler = JSON.parse(readFileSync(resolve(projectRoot, "wrangler.jsonc"), "utf8"));
+    expect(wrangler.build.command).toBe("npm run build");
+    expect(wrangler.assets.directory).toBe("./dist");
   });
 });

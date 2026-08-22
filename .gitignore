@@ -9,3 +9,4 @@ __pycache__/
 data/raw/
 data/intermediate/
 node_modules/
+dist/

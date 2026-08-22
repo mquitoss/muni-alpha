@@ -4,13 +4,17 @@
   "private": true,
   "type": "commonjs",
   "scripts": {
+    "build": "node scripts/build_static_site.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev",
     "test": "vitest run",
-    "lint": "eslint app.config.js src tests/frontend"
+    "lint": "eslint app.config.js scripts/build_static_site.js src tests/frontend"
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "eslint": "^9.34.0",
     "globals": "^16.3.0",
-    "vitest": "^3.2.4"
+    "vitest": "^3.2.4",
+    "wrangler": "^4.25.0"
   }
 }
