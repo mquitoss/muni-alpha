@@ -94,6 +94,20 @@ En v0.1 no sustituir automáticamente valores municipales ausentes por datos de 
 
 # 3. Normalización general
 
+## Contrato de publicación v0.2
+
+Además de las columnas comunes, todos los scores incluyen:
+
+```csv
+score_status,score_min_0_100,score_max_0_100,coverage_weight_pct,rank_stability_0_100,source_tier,method_variant,usable_for_composite
+```
+
+Estados válidos: `complete`, `partial`, `engineering_pending`,
+`methodology_pending` y `external_blocked`. Un score parcial conserva el
+intervalo compatible con los componentes ausentes y no se utiliza en el futuro
+score compuesto salvo regla explícita. La ausencia nunca se representa como
+cero.
+
 Excepto cuando un score tenga una función explícita propia, utilizar normalización robusta.
 
 Para métricas donde un valor alto es mejor:
