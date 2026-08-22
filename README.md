@@ -562,3 +562,38 @@ La pregunta interesante es:
 > **¿Qué municipios presentan una combinación inusualmente buena de precio, demanda, crecimiento, rentabilidad, accesibilidad, turismo y calidad del entorno?**
 
 El objetivo final es encontrar esos **outliers territoriales** que pueden representar oportunidades inmobiliarias antes de que sean evidentes mirando únicamente el precio de mercado.
+
+---
+
+# Pipeline de datos
+
+La primera fase dispone de un pipeline Python reproducible. Descarga snapshots
+de las fuentes oficiales en `data/raw/`, genera una fila para cada uno de los
+947 municipios y registra cobertura, hashes y parámetros de normalización en
+`data/manifest.json`.
+
+```bash
+python -m venv .venv
+.venv/bin/pip install -e '.[dev]'
+.venv/bin/munialpha --data-dir data
+```
+
+Para volver a descargar todos los snapshots:
+
+```bash
+.venv/bin/munialpha --data-dir data --refresh
+```
+
+El contrato v0.2 distingue resultados `complete`, `partial`,
+`engineering_pending`, `methodology_pending` y `external_blocked`. Los
+resultados parciales incluyen intervalo, cobertura de la fórmula y una bandera
+que impide utilizarlos silenciosamente en un futuro score compuesto. No se
+inventan datos ni se convierte una ausencia en cero.
+
+El routing de servicios es reanudable. Si openrouteservice alcanza su cuota
+diaria, la ejecución conserva las matrices ya descargadas, publica la cobertura
+obtenida como `partial` y continúa en la siguiente ejecución:
+
+```bash
+.venv/bin/munialpha --data-dir data
+```
