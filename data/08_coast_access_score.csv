@@ -1,0 +1,948 @@
+municipality_code,municipality_name,comarca_code,comarca_name,reference_period,touches_coast,distance_to_coast_km,score_0_100,confidence_0_100,data_scope,source_id,source_updated_at,retrieved_at,method_version,missing_reason,notes,score_status,score_min_0_100,score_max_0_100,coverage_weight_pct,rank_stability_0_100,source_tier,method_variant,usable_for_composite
+080018,Abrera,11,Baix Llobregat,2026-02,false,27.857199,57.2843,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.2843,57.2843,100,,official,default,true
+080023,Aguilar de Segarra,07,Bages,2026-02,false,57.891419,31.4168,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.4168,31.4168,100,,official,default,true
+080039,Alella,21,Maresme,2026-02,false,2.221787,95.6537,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,95.6537,95.6537,100,,official,default,true
+080044,Alpens,43,Lluçanès,2026-02,false,70.576776,24.3769,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.3769,24.3769,100,,official,default,true
+080057,l'Ametlla del Vallès,41,Vallès Oriental,2026-02,false,21.875102,64.5647,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.5647,64.5647,100,,official,default,true
+080060,Arenys de Mar,21,Maresme,2026-02,true,0.19174,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080076,Arenys de Munt,21,Maresme,2026-02,false,3.520707,93.2008,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,93.2008,93.2008,100,,official,default,true
+080082,Argençola,06,Anoia,2026-02,false,46.807068,39.2138,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.2138,39.2138,100,,official,default,true
+080095,Argentona,21,Maresme,2026-02,false,4.307634,91.7454,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,91.7454,91.7454,100,,official,default,true
+080109,Artés,07,Bages,2026-02,false,45.782778,40.0254,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.0254,40.0254,100,,official,default,true
+080116,Avià,14,Berguedà,2026-02,false,77.725495,21.1293,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.1293,21.1293,100,,official,default,true
+080121,Avinyó,07,Bages,2026-02,false,51.1001,35.9874,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.9874,35.9874,100,,official,default,true
+080137,Avinyonet del Penedès,03,Alt Penedès,2026-02,false,14.209804,75.2619,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.2619,75.2619,100,,official,default,true
+080142,Aiguafreda,24,Osona,2026-02,false,30.548206,54.2827,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.2827,54.2827,100,,official,default,true
+080155,Badalona,13,Barcelonès,2026-02,true,0.721623,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080168,Bagà,14,Berguedà,2026-02,false,93.212376,15.5013,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,15.5013,15.5013,100,,official,default,true
+080174,Balenyà,24,Osona,2026-02,false,35.458933,49.2048,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.2048,49.2048,100,,official,default,true
+080180,Balsareny,07,Bages,2026-02,false,55.351548,33.0539,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.0539,33.0539,100,,official,default,true
+080193,Barcelona,13,Barcelonès,2026-02,true,0.564076,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080207,Begues,11,Baix Llobregat,2026-02,false,7.856446,85.4594,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.4594,85.4594,100,,official,default,true
+080214,Bellprat,06,Anoia,2026-02,false,38.197021,46.5827,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.5827,46.5827,100,,official,default,true
+080229,Berga,14,Berguedà,2026-02,false,79.511823,20.3877,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.3877,20.3877,100,,official,default,true
+080235,Bigues i Riells del Fai,41,Vallès Oriental,2026-02,false,23.477845,62.5279,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.5279,62.5279,100,,official,default,true
+080240,Borredà,14,Berguedà,2026-02,false,76.391266,21.7007,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.7007,21.7007,100,,official,default,true
+080253,el Bruc,06,Anoia,2026-02,false,37.135063,47.5827,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,47.5827,47.5827,100,,official,default,true
+080266,el Brull,24,Osona,2026-02,false,32.992998,51.6924,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.6924,51.6924,100,,official,default,true
+080272,les Cabanyes,03,Alt Penedès,2026-02,false,17.5792,70.3573,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.3573,70.3573,100,,official,default,true
+080288,Cabrera d'Anoia,06,Anoia,2026-02,false,28.374791,56.6943,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.6943,56.6943,100,,official,default,true
+080291,Cabrera de Mar,21,Maresme,2026-02,true,2.163118,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080305,Cabrils,21,Maresme,2026-02,false,3.324964,93.5664,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,93.5664,93.5664,100,,official,default,true
+080312,Calaf,06,Anoia,2026-02,false,60.421769,29.8664,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.8664,29.8664,100,,official,default,true
+080327,Caldes d'Estrac,21,Maresme,2026-02,true,0.411457,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080333,Caldes de Montbui,41,Vallès Oriental,2026-02,false,21.114246,65.5547,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.5547,65.5547,100,,official,default,true
+080348,Calders,42,Moianès,2026-02,false,43.173392,42.1697,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.1697,42.1697,100,,official,default,true
+080351,Calella,21,Maresme,2026-02,true,0.244128,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080364,Calonge de Segarra,06,Anoia,2026-02,false,64.312373,27.6306,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.6306,27.6306,100,,official,default,true
+080370,Calldetenes,24,Osona,2026-02,false,44.38187,41.1627,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.1627,41.1627,100,,official,default,true
+080386,Callús,07,Bages,2026-02,false,53.72431,34.1473,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.1473,34.1473,100,,official,default,true
+080399,Campins,41,Vallès Oriental,2026-02,false,17.85655,69.9681,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.9681,69.9681,100,,official,default,true
+080403,Canet de Mar,21,Maresme,2026-02,true,0.290227,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080410,Canovelles,41,Vallès Oriental,2026-02,false,16.21507,72.3032,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.3032,72.3032,100,,official,default,true
+080425,Cànoves i Samalús,41,Vallès Oriental,2026-02,false,18.935314,68.4747,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.4747,68.4747,100,,official,default,true
+080431,Canyelles,17,Garraf,2026-02,false,7.718729,85.6951,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.6951,85.6951,100,,official,default,true
+080446,Capellades,06,Anoia,2026-02,false,34.46612,50.1916,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.1916,50.1916,100,,official,default,true
+080459,Capolat,14,Berguedà,2026-02,false,80.830753,19.857,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.857,19.857,100,,official,default,true
+080462,Cardedeu,41,Vallès Oriental,2026-02,false,13.778579,75.9138,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.9138,75.9138,100,,official,default,true
+080478,Cardona,07,Bages,2026-02,false,70.098804,24.611,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.611,24.611,100,,official,default,true
+080484,Carme,06,Anoia,2026-02,false,36.317081,48.3675,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.3675,48.3675,100,,official,default,true
+080497,Casserres,14,Berguedà,2026-02,false,70.89987,24.2199,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.2199,24.2199,100,,official,default,true
+080500,Castellar del Riu,14,Berguedà,2026-02,false,87.782203,17.2796,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.2796,17.2796,100,,official,default,true
+080517,Castellar del Vallès,40,Vallès Occidental,2026-02,false,23.050865,63.0642,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.0642,63.0642,100,,official,default,true
+080522,Castellar de n'Hug,14,Berguedà,2026-02,false,89.881513,16.5691,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.5691,16.5691,100,,official,default,true
+080538,Castellbell i el Vilar,07,Bages,2026-02,false,38.111197,46.6628,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.6628,46.6628,100,,official,default,true
+080543,Castellbisbal,40,Vallès Occidental,2026-02,false,19.90705,67.1567,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.1567,67.1567,100,,official,default,true
+080556,Castellcir,42,Moianès,2026-02,false,34.209549,50.4498,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.4498,50.4498,100,,official,default,true
+080569,Castelldefels,11,Baix Llobregat,2026-02,true,1.809879,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080575,Castell de l'Areny,14,Berguedà,2026-02,false,82.059465,19.3749,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.3749,19.3749,100,,official,default,true
+080581,Castellet i la Gornal,03,Alt Penedès,2026-02,false,7.274389,86.46,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.46,86.46,100,,official,default,true
+080594,Castellfollit del Boix,07,Bages,2026-02,false,49.044179,37.498,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.498,37.498,100,,official,default,true
+080608,Castellfollit de Riubregós,06,Anoia,2026-02,false,66.372069,26.5155,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.5155,26.5155,100,,official,default,true
+080615,Castellgalí,07,Bages,2026-02,false,42.747584,42.5304,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.5304,42.5304,100,,official,default,true
+080620,Castellnou de Bages,07,Bages,2026-02,false,54.871189,33.373,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.373,33.373,100,,official,default,true
+080636,Castellolí,06,Anoia,2026-02,false,41.325249,43.7576,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.7576,43.7576,100,,official,default,true
+080641,Castellterçol,42,Moianès,2026-02,false,34.271807,50.387,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.387,50.387,100,,official,default,true
+080654,Castellví de la Marca,03,Alt Penedès,2026-02,false,14.695931,74.5337,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.5337,74.5337,100,,official,default,true
+080667,Castellví de Rosanes,11,Baix Llobregat,2026-02,false,20.866223,65.8807,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.8807,65.8807,100,,official,default,true
+080673,Centelles,24,Osona,2026-02,false,34.734135,49.9233,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.9233,49.9233,100,,official,default,true
+080689,Cervelló,11,Baix Llobregat,2026-02,false,14.641526,74.6149,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.6149,74.6149,100,,official,default,true
+080692,Collbató,11,Baix Llobregat,2026-02,false,35.32102,49.3407,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.3407,49.3407,100,,official,default,true
+080706,Collsuspina,42,Moianès,2026-02,false,39.403973,45.4717,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.4717,45.4717,100,,official,default,true
+080713,Copons,06,Anoia,2026-02,false,49.931148,36.8386,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.8386,36.8386,100,,official,default,true
+080728,Corbera de Llobregat,11,Baix Llobregat,2026-02,false,17.210866,70.8775,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.8775,70.8775,100,,official,default,true
+080734,Cornellà de Llobregat,11,Baix Llobregat,2026-02,false,6.595658,87.6417,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.6417,87.6417,100,,official,default,true
+080749,Cubelles,17,Garraf,2026-02,true,1.037286,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080752,Dosrius,21,Maresme,2026-02,false,7.304905,86.4073,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.4073,86.4073,100,,official,default,true
+080765,Esparreguera,11,Baix Llobregat,2026-02,false,31.164222,53.618,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,53.618,53.618,100,,official,default,true
+080771,Esplugues de Llobregat,11,Baix Llobregat,2026-02,false,6.290615,88.178,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,88.178,88.178,100,,official,default,true
+080787,l'Espunyola,14,Berguedà,2026-02,false,77.758453,21.1154,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.1154,21.1154,100,,official,default,true
+080790,l'Estany,42,Moianès,2026-02,false,46.41243,39.5245,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.5245,39.5245,100,,official,default,true
+080804,Fígols,14,Berguedà,2026-02,false,87.458569,17.3918,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.3918,17.3918,100,,official,default,true
+080811,Fogars de Montclús,41,Vallès Oriental,2026-02,false,18.93088,68.4807,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.4807,68.4807,100,,official,default,true
+080826,Fogars de la Selva,34,Selva,2026-02,false,11.963521,78.7202,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.7202,78.7202,100,,official,default,true
+080832,Folgueroles,24,Osona,2026-02,false,44.474457,41.0866,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.0866,41.0866,100,,official,default,true
+080847,Fonollosa,07,Bages,2026-02,false,59.786649,30.2482,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.2482,30.2482,100,,official,default,true
+080850,Font-rubí,03,Alt Penedès,2026-02,false,23.025497,63.0962,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.0962,63.0962,100,,official,default,true
+080863,les Franqueses del Vallès,41,Vallès Oriental,2026-02,false,16.676932,71.6384,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.6384,71.6384,100,,official,default,true
+080879,Gallifa,40,Vallès Occidental,2026-02,false,28.731092,56.2918,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.2918,56.2918,100,,official,default,true
+080885,la Garriga,41,Vallès Oriental,2026-02,false,21.522414,65.0218,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.0218,65.0218,100,,official,default,true
+080898,Gavà,11,Baix Llobregat,2026-02,true,4.247178,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+080902,Gaià,07,Bages,2026-02,false,58.06725,31.3065,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.3065,31.3065,100,,official,default,true
+080919,Gelida,03,Alt Penedès,2026-02,false,20.673264,66.1354,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,66.1354,66.1354,100,,official,default,true
+080924,Gironella,14,Berguedà,2026-02,false,71.149684,24.0991,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.0991,24.0991,100,,official,default,true
+080930,Gisclareny,14,Berguedà,2026-02,false,96.137855,14.6203,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,14.6203,14.6203,100,,official,default,true
+080945,la Granada,03,Alt Penedès,2026-02,false,17.617004,70.3041,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.3041,70.3041,100,,official,default,true
+080958,Granera,42,Moianès,2026-02,false,34.285881,50.3729,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.3729,50.3729,100,,official,default,true
+080961,Granollers,41,Vallès Oriental,2026-02,false,14.488187,74.844,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.844,74.844,100,,official,default,true
+080977,Gualba,41,Vallès Oriental,2026-02,false,17.448191,70.5419,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.5419,70.5419,100,,official,default,true
+080983,Sant Salvador de Guardiola,07,Bages,2026-02,false,47.873947,38.3859,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,38.3859,38.3859,100,,official,default,true
+080996,Guardiola de Berguedà,14,Berguedà,2026-02,false,90.636303,16.3209,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.3209,16.3209,100,,official,default,true
+081000,Gurb,24,Osona,2026-02,false,49.428258,37.211,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.211,37.211,100,,official,default,true
+081017,l'Hospitalet de Llobregat,13,Barcelonès,2026-02,false,4.527244,91.3433,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,91.3433,91.3433,100,,official,default,true
+081022,Igualada,06,Anoia,2026-02,false,41.356611,43.7302,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.7302,43.7302,100,,official,default,true
+081038,Jorba,06,Anoia,2026-02,false,45.497617,40.2543,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.2543,40.2543,100,,official,default,true
+081043,la Llacuna,06,Anoia,2026-02,false,31.857073,52.8802,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.8802,52.8802,100,,official,default,true
+081056,la Llagosta,41,Vallès Oriental,2026-02,false,8.539488,84.2999,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.2999,84.2999,100,,official,default,true
+081069,Llinars del Vallès,41,Vallès Oriental,2026-02,false,11.618664,79.265,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.265,79.265,100,,official,default,true
+081075,Lliçà d'Amunt,41,Vallès Oriental,2026-02,false,16.087223,72.4883,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.4883,72.4883,100,,official,default,true
+081081,Lliçà de Vall,41,Vallès Oriental,2026-02,false,13.454052,76.4081,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.4081,76.4081,100,,official,default,true
+081094,Lluçà,43,Lluçanès,2026-02,false,66.667919,26.3591,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.3591,26.3591,100,,official,default,true
+081108,Malgrat de Mar,21,Maresme,2026-02,true,0.51585,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081115,Malla,24,Osona,2026-02,false,42.568937,42.6826,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.6826,42.6826,100,,official,default,true
+081120,Manlleu,24,Osona,2026-02,false,51.968207,35.368,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.368,35.368,100,,official,default,true
+081136,Manresa,07,Bages,2026-02,false,46.791651,39.2259,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.2259,39.2259,100,,official,default,true
+081141,Martorell,11,Baix Llobregat,2026-02,false,23.255462,62.8066,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.8066,62.8066,100,,official,default,true
+081154,Martorelles,41,Vallès Oriental,2026-02,false,7.290713,86.4318,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.4318,86.4318,100,,official,default,true
+081167,les Masies de Roda,24,Osona,2026-02,false,49.672637,37.0296,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.0296,37.0296,100,,official,default,true
+081173,les Masies de Voltregà,24,Osona,2026-02,false,56.007925,32.6228,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,32.6228,32.6228,100,,official,default,true
+081189,el Masnou,21,Maresme,2026-02,true,0.16433,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081192,Masquefa,06,Anoia,2026-02,false,28.478161,56.5772,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.5772,56.5772,100,,official,default,true
+081206,Matadepera,40,Vallès Occidental,2026-02,false,25.048053,60.5948,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.5948,60.5948,100,,official,default,true
+081213,Mataró,21,Maresme,2026-02,true,0.695828,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081228,Mediona,03,Alt Penedès,2026-02,false,30.748376,54.0658,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.0658,54.0658,100,,official,default,true
+081234,Molins de Rei,11,Baix Llobregat,2026-02,false,13.547124,76.266,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.266,76.266,100,,official,default,true
+081249,Mollet del Vallès,41,Vallès Oriental,2026-02,false,9.67435,82.4081,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.4081,82.4081,100,,official,default,true
+081252,Montcada i Reixac,40,Vallès Occidental,2026-02,false,6.872423,87.1579,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.1579,87.1579,100,,official,default,true
+081265,Montgat,21,Maresme,2026-02,true,0.144466,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081271,Monistrol de Montserrat,07,Bages,2026-02,false,38.17275,46.6053,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.6053,46.6053,100,,official,default,true
+081287,Monistrol de Calders,42,Moianès,2026-02,false,39.430609,45.4475,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.4475,45.4475,100,,official,default,true
+081290,Muntanyola,24,Osona,2026-02,false,44.094706,41.3998,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.3998,41.3998,100,,official,default,true
+081304,Montclar,14,Berguedà,2026-02,false,74.744292,22.4274,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.4274,22.4274,100,,official,default,true
+081311,Montesquiu,24,Osona,2026-02,false,65.533652,26.9639,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.9639,26.9639,100,,official,default,true
+081326,Montmajor,14,Berguedà,2026-02,false,76.137065,21.8113,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.8113,21.8113,100,,official,default,true
+081332,Montmaneu,06,Anoia,2026-02,false,50.306717,36.563,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.563,36.563,100,,official,default,true
+081347,Figaró-Montmany,41,Vallès Oriental,2026-02,false,25.306236,60.2827,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.2827,60.2827,100,,official,default,true
+081350,Montmeló,41,Vallès Oriental,2026-02,false,9.666832,82.4204,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.4204,82.4204,100,,official,default,true
+081363,Montornès del Vallès,41,Vallès Oriental,2026-02,false,8.388322,84.5551,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.5551,84.5551,100,,official,default,true
+081379,Montseny,41,Vallès Oriental,2026-02,false,23.856529,62.0561,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.0561,62.0561,100,,official,default,true
+081385,Moià,42,Moianès,2026-02,false,41.292401,43.7864,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.7864,43.7864,100,,official,default,true
+081398,Mura,07,Bages,2026-02,false,36.018445,48.6573,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.6573,48.6573,100,,official,default,true
+081402,Navarcles,07,Bages,2026-02,false,44.351016,41.1881,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.1881,41.1881,100,,official,default,true
+081419,Navàs,07,Bages,2026-02,false,58.596274,30.977,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.977,30.977,100,,official,default,true
+081424,la Nou de Berguedà,14,Berguedà,2026-02,false,84.109927,18.5965,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.5965,18.5965,100,,official,default,true
+081430,Òdena,06,Anoia,2026-02,false,43.541507,41.8604,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.8604,41.8604,100,,official,default,true
+081445,Olvan,14,Berguedà,2026-02,false,72.614427,23.4034,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,23.4034,23.4034,100,,official,default,true
+081458,Olèrdola,03,Alt Penedès,2026-02,false,11.422079,79.5773,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.5773,79.5773,100,,official,default,true
+081461,Olesa de Bonesvalls,03,Alt Penedès,2026-02,false,11.708865,79.1222,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.1222,79.1222,100,,official,default,true
+081477,Olesa de Montserrat,11,Baix Llobregat,2026-02,false,30.385355,54.4598,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.4598,54.4598,100,,official,default,true
+081483,Olivella,17,Garraf,2026-02,false,8.247814,84.7931,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.7931,84.7931,100,,official,default,true
+081496,Olost,43,Lluçanès,2026-02,false,57.835594,31.4519,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.4519,31.4519,100,,official,default,true
+081509,Orís,24,Osona,2026-02,false,59.284124,30.5538,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.5538,30.5538,100,,official,default,true
+081516,Oristà,43,Lluçanès,2026-02,false,54.579919,33.568,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.568,33.568,100,,official,default,true
+081521,Orpí,06,Anoia,2026-02,false,36.273199,48.41,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.41,48.41,100,,official,default,true
+081537,Òrrius,21,Maresme,2026-02,false,6.686749,87.4822,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.4822,87.4822,100,,official,default,true
+081542,Pacs del Penedès,03,Alt Penedès,2026-02,false,17.048415,71.1081,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.1081,71.1081,100,,official,default,true
+081555,Palafolls,21,Maresme,2026-02,false,2.449763,95.2186,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,95.2186,95.2186,100,,official,default,true
+081568,Palau-solità i Plegamans,40,Vallès Occidental,2026-02,false,15.908387,72.7481,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.7481,72.7481,100,,official,default,true
+081574,Pallejà,11,Baix Llobregat,2026-02,false,15.353287,73.5602,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.5602,73.5602,100,,official,default,true
+081580,el Papiol,11,Baix Llobregat,2026-02,false,15.591775,73.2102,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.2102,73.2102,100,,official,default,true
+081593,Parets del Vallès,41,Vallès Oriental,2026-02,false,12.311012,78.175,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.175,78.175,100,,official,default,true
+081607,Perafita,43,Lluçanès,2026-02,false,62.759122,28.5024,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.5024,28.5024,100,,official,default,true
+081614,Piera,06,Anoia,2026-02,false,31.830123,52.9087,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.9087,52.9087,100,,official,default,true
+081629,els Hostalets de Pierola,06,Anoia,2026-02,false,33.093836,51.5882,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.5882,51.5882,100,,official,default,true
+081635,Pineda de Mar,21,Maresme,2026-02,true,0.70084,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081640,el Pla del Penedès,03,Alt Penedès,2026-02,false,21.814474,64.6431,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.6431,64.6431,100,,official,default,true
+081653,la Pobla de Claramunt,06,Anoia,2026-02,false,37.190389,47.5301,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,47.5301,47.5301,100,,official,default,true
+081666,la Pobla de Lillet,14,Berguedà,2026-02,false,87.692825,17.3105,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.3105,17.3105,100,,official,default,true
+081672,Polinyà,40,Vallès Occidental,2026-02,false,14.263789,75.1807,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.1807,75.1807,100,,official,default,true
+081688,Pontons,03,Alt Penedès,2026-02,false,25.805583,59.6837,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.6837,59.6837,100,,official,default,true
+081691,el Prat de Llobregat,11,Baix Llobregat,2026-02,true,4.308085,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081705,els Prats de Rei,06,Anoia,2026-02,false,56.622932,32.224,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,32.224,32.224,100,,official,default,true
+081712,Prats de Lluçanès,43,Lluçanès,2026-02,false,62.984197,28.3744,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.3744,28.3744,100,,official,default,true
+081727,Premià de Mar,21,Maresme,2026-02,true,0.441747,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081748,Puigdàlber,03,Alt Penedès,2026-02,false,20.862015,65.8863,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.8863,65.8863,100,,official,default,true
+081751,Puig-reig,14,Berguedà,2026-02,false,65.609152,26.9232,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.9232,26.9232,100,,official,default,true
+081764,Pujalt,06,Anoia,2026-02,false,60.173863,30.0149,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.0149,30.0149,100,,official,default,true
+081770,la Quar,14,Berguedà,2026-02,false,72.760611,23.3351,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,23.3351,23.3351,100,,official,default,true
+081786,Rajadell,07,Bages,2026-02,false,55.037609,33.2621,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.2621,33.2621,100,,official,default,true
+081799,Rellinars,40,Vallès Occidental,2026-02,false,35.408525,49.2544,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.2544,49.2544,100,,official,default,true
+081803,Ripollet,40,Vallès Occidental,2026-02,false,9.781174,82.2322,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.2322,82.2322,100,,official,default,true
+081810,la Roca del Vallès,41,Vallès Oriental,2026-02,false,11.005437,80.2432,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.2432,80.2432,100,,official,default,true
+081825,el Pont de Vilomara i Rocafort,07,Bages,2026-02,false,42.348367,42.8713,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.8713,42.8713,100,,official,default,true
+081831,Roda de Ter,24,Osona,2026-02,false,49.057434,37.488,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.488,37.488,100,,official,default,true
+081846,Rubí,40,Vallès Occidental,2026-02,false,17.782217,70.0722,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.0722,70.0722,100,,official,default,true
+081859,Rubió,06,Anoia,2026-02,false,49.459798,37.1876,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.1876,37.1876,100,,official,default,true
+081878,Sabadell,40,Vallès Occidental,2026-02,false,16.207945,72.3135,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.3135,72.3135,100,,official,default,true
+081884,Sagàs,14,Berguedà,2026-02,false,70.04832,24.6359,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.6359,24.6359,100,,official,default,true
+081897,Sant Pere Sallavinera,06,Anoia,2026-02,false,59.042976,30.7015,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.7015,30.7015,100,,official,default,true
+081901,Saldes,14,Berguedà,2026-02,false,96.005774,14.659,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,14.659,14.659,100,,official,default,true
+081918,Sallent,07,Bages,2026-02,false,50.920235,36.1171,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.1171,36.1171,100,,official,default,true
+081923,Santpedor,07,Bages,2026-02,false,50.580968,36.363,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.363,36.363,100,,official,default,true
+081939,Sant Iscle de Vallalta,21,Maresme,2026-02,false,4.32024,91.7223,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,91.7223,91.7223,100,,official,default,true
+081944,Sant Adrià de Besòs,13,Barcelonès,2026-02,true,1.578195,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081957,Sant Agustí de Lluçanès,24,Osona,2026-02,false,66.215643,26.5986,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.5986,26.5986,100,,official,default,true
+081960,Sant Andreu de la Barca,11,Baix Llobregat,2026-02,false,18.412765,69.1941,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.1941,69.1941,100,,official,default,true
+081976,Sant Andreu de Llavaneres,21,Maresme,2026-02,true,2.471981,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+081982,Sant Antoni de Vilamajor,41,Vallès Oriental,2026-02,false,15.213211,73.7666,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.7666,73.7666,100,,official,default,true
+081995,Sant Bartomeu del Grau,24,Osona,2026-02,false,54.115854,33.881,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.881,33.881,100,,official,default,true
+082009,Sant Boi de Llobregat,11,Baix Llobregat,2026-02,false,8.078576,85.0806,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.0806,85.0806,100,,official,default,true
+082016,Sant Boi de Lluçanès,24,Osona,2026-02,false,62.542823,28.626,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.626,28.626,100,,official,default,true
+082021,Sant Celoni,41,Vallès Oriental,2026-02,false,13.368538,76.5389,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.5389,76.5389,100,,official,default,true
+082037,Sant Cebrià de Vallalta,21,Maresme,2026-02,false,2.753614,94.6417,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,94.6417,94.6417,100,,official,default,true
+082042,Sant Climent de Llobregat,11,Baix Llobregat,2026-02,false,8.122604,85.0057,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.0057,85.0057,100,,official,default,true
+082055,Sant Cugat del Vallès,40,Vallès Occidental,2026-02,false,12.986095,77.1266,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.1266,77.1266,100,,official,default,true
+082068,Sant Cugat Sesgarrigues,03,Alt Penedès,2026-02,false,15.136489,73.8799,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.8799,73.8799,100,,official,default,true
+082074,Sant Esteve de Palautordera,41,Vallès Oriental,2026-02,false,16.669777,71.6487,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.6487,71.6487,100,,official,default,true
+082080,Sant Esteve Sesrovires,11,Baix Llobregat,2026-02,false,26.142627,59.2827,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.2827,59.2827,100,,official,default,true
+082093,Sant Fost de Campsentelles,41,Vallès Oriental,2026-02,false,7.061157,86.8296,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.8296,86.8296,100,,official,default,true
+082107,Sant Feliu de Codines,41,Vallès Oriental,2026-02,false,26.435357,58.9366,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.9366,58.9366,100,,official,default,true
+082114,Sant Feliu de Llobregat,11,Baix Llobregat,2026-02,false,9.60616,82.5205,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.5205,82.5205,100,,official,default,true
+082129,Sant Feliu Sasserra,07,Bages,2026-02,false,57.1352,31.8955,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.8955,31.8955,100,,official,default,true
+082135,Sant Fruitós de Bages,07,Bages,2026-02,false,46.016715,39.8386,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.8386,39.8386,100,,official,default,true
+082140,Vilassar de Dalt,21,Maresme,2026-02,false,2.972464,94.2283,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,94.2283,94.2283,100,,official,default,true
+082153,Sant Hipòlit de Voltregà,24,Osona,2026-02,false,55.151471,33.1864,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.1864,33.1864,100,,official,default,true
+082166,Sant Jaume de Frontanyà,14,Berguedà,2026-02,false,80.196941,20.1103,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.1103,20.1103,100,,official,default,true
+082172,Sant Joan Despí,11,Baix Llobregat,2026-02,false,8.204865,84.8659,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.8659,84.8659,100,,official,default,true
+082188,Sant Joan de Vilatorrada,07,Bages,2026-02,false,49.792797,36.9407,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.9407,36.9407,100,,official,default,true
+082191,Vilassar de Mar,21,Maresme,2026-02,true,0.060108,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+082205,Sant Julià de Vilatorta,24,Osona,2026-02,false,42.577675,42.6751,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.6751,42.6751,100,,official,default,true
+082212,Sant Just Desvern,11,Baix Llobregat,2026-02,false,7.664829,85.7875,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.7875,85.7875,100,,official,default,true
+082227,Sant Llorenç d'Hortons,03,Alt Penedès,2026-02,false,24.429254,61.3494,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.3494,61.3494,100,,official,default,true
+082233,Sant Llorenç Savall,40,Vallès Occidental,2026-02,false,29.919034,54.9701,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.9701,54.9701,100,,official,default,true
+082248,Sant Martí de Centelles,24,Osona,2026-02,false,32.684631,52.0122,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.0122,52.0122,100,,official,default,true
+082251,Sant Martí d'Albars,43,Lluçanès,2026-02,false,62.783928,28.4882,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.4882,28.4882,100,,official,default,true
+082264,Sant Martí de Tous,06,Anoia,2026-02,false,41.572479,43.5418,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.5418,43.5418,100,,official,default,true
+082270,Sant Martí Sarroca,03,Alt Penedès,2026-02,false,20.899615,65.8367,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.8367,65.8367,100,,official,default,true
+082286,Sant Martí Sesgueioles,06,Anoia,2026-02,false,57.597138,31.6022,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.6022,31.6022,100,,official,default,true
+082299,Sant Mateu de Bages,07,Bages,2026-02,false,58.044877,31.3205,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.3205,31.3205,100,,official,default,true
+082303,Premià de Dalt,21,Maresme,2026-02,false,2.439591,95.2379,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,95.2379,95.2379,100,,official,default,true
+082310,Sant Pere de Ribes,17,Garraf,2026-02,true,4.077857,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+082325,Sant Pere de Riudebitlles,03,Alt Penedès,2026-02,false,25.904509,59.5657,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.5657,59.5657,100,,official,default,true
+082331,Sant Pere de Torelló,24,Osona,2026-02,false,59.074412,30.6822,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.6822,30.6822,100,,official,default,true
+082346,Sant Pere de Vilamajor,41,Vallès Oriental,2026-02,false,16.717584,71.5802,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.5802,71.5802,100,,official,default,true
+082359,Sant Pol de Mar,21,Maresme,2026-02,true,0.040943,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+082362,Sant Quintí de Mediona,03,Alt Penedès,2026-02,false,27.878599,57.2598,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.2598,57.2598,100,,official,default,true
+082378,Sant Quirze de Besora,24,Osona,2026-02,false,64.079306,27.7597,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.7597,27.7597,100,,official,default,true
+082384,Sant Quirze del Vallès,40,Vallès Occidental,2026-02,false,17.149096,70.9651,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.9651,70.9651,100,,official,default,true
+082397,Sant Quirze Safaja,42,Moianès,2026-02,false,30.712218,54.105,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.105,54.105,100,,official,default,true
+082401,Sant Sadurní d'Anoia,03,Alt Penedès,2026-02,false,20.999819,65.7049,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.7049,65.7049,100,,official,default,true
+082418,Sant Sadurní d'Osormort,24,Osona,2026-02,false,38.622935,46.1876,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.1876,46.1876,100,,official,default,true
+082423,Marganell,07,Bages,2026-02,false,43.749352,41.6867,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.6867,41.6867,100,,official,default,true
+082439,Santa Cecília de Voltregà,24,Osona,2026-02,false,53.523293,34.2849,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.2849,34.2849,100,,official,default,true
+082444,Santa Coloma de Cervelló,11,Baix Llobregat,2026-02,false,10.989591,80.2686,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.2686,80.2686,100,,official,default,true
+082457,Santa Coloma de Gramenet,13,Barcelonès,2026-02,false,3.245108,93.7159,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,93.7159,93.7159,100,,official,default,true
+082460,Santa Eugènia de Berga,24,Osona,2026-02,false,42.054454,43.1241,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.1241,43.1241,100,,official,default,true
+082476,Santa Eulàlia de Riuprimer,24,Osona,2026-02,false,46.752766,39.2564,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.2564,39.2564,100,,official,default,true
+082482,Santa Eulàlia de Ronçana,41,Vallès Oriental,2026-02,false,20.66119,66.1514,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,66.1514,66.1514,100,,official,default,true
+082495,Santa Fe del Penedès,03,Alt Penedès,2026-02,false,18.171362,69.5289,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.5289,69.5289,100,,official,default,true
+082508,Santa Margarida de Montbui,06,Anoia,2026-02,false,41.187783,43.8781,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.8781,43.8781,100,,official,default,true
+082515,Santa Margarida i els Monjos,03,Alt Penedès,2026-02,false,13.016089,77.0804,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.0804,77.0804,100,,official,default,true
+082520,Barberà del Vallès,40,Vallès Occidental,2026-02,false,13.07711,76.9863,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.9863,76.9863,100,,official,default,true
+082536,Santa Maria de Besora,24,Osona,2026-02,false,65.608686,26.9234,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.9234,26.9234,100,,official,default,true
+082541,l'Esquirol,24,Osona,2026-02,false,52.539914,34.9659,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.9659,34.9659,100,,official,default,true
+082554,Santa Maria de Merlès,14,Berguedà,2026-02,false,64.379315,27.5936,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.5936,27.5936,100,,official,default,true
+082567,Santa Maria de Martorelles,41,Vallès Oriental,2026-02,false,6.310513,88.1429,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,88.1429,88.1429,100,,official,default,true
+082573,Santa Maria de Miralles,06,Anoia,2026-02,false,36.962807,47.7469,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,47.7469,47.7469,100,,official,default,true
+082589,Santa Maria d'Oló,42,Moianès,2026-02,false,49.573181,37.1033,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.1033,37.1033,100,,official,default,true
+082592,Santa Maria de Palautordera,41,Vallès Oriental,2026-02,false,15.400277,73.4911,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.4911,73.4911,100,,official,default,true
+082606,Santa Perpètua de Mogoda,40,Vallès Occidental,2026-02,false,10.905882,80.4031,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.4031,80.4031,100,,official,default,true
+082613,Santa Susanna,21,Maresme,2026-02,true,0.82904,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+082628,Sant Vicenç de Castellet,07,Bages,2026-02,false,40.409361,44.5665,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.5665,44.5665,100,,official,default,true
+082634,Sant Vicenç dels Horts,11,Baix Llobregat,2026-02,false,12.886782,77.2799,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.2799,77.2799,100,,official,default,true
+082649,Sant Vicenç de Montalt,21,Maresme,2026-02,true,1.738952,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+082652,Sant Vicenç de Torelló,24,Osona,2026-02,false,58.412295,31.0912,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.0912,31.0912,100,,official,default,true
+082665,Cerdanyola del Vallès,40,Vallès Occidental,2026-02,false,10.374631,81.2619,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.2619,81.2619,100,,official,default,true
+082671,Sentmenat,40,Vallès Occidental,2026-02,false,19.86967,67.207,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.207,67.207,100,,official,default,true
+082687,Cercs,14,Berguedà,2026-02,false,83.08262,18.9825,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.9825,18.9825,100,,official,default,true
+082690,Seva,24,Osona,2026-02,false,36.101468,48.5765,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.5765,48.5765,100,,official,default,true
+082704,Sitges,17,Garraf,2026-02,true,0.044607,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+082711,Sobremunt,43,Lluçanès,2026-02,false,59.892993,30.184,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.184,30.184,100,,official,default,true
+082726,Sora,24,Osona,2026-02,false,67.619562,25.8621,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.8621,25.8621,100,,official,default,true
+082732,Subirats,03,Alt Penedès,2026-02,false,16.433552,71.988,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.988,71.988,100,,official,default,true
+082747,Súria,07,Bages,2026-02,false,59.343739,30.5174,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.5174,30.5174,100,,official,default,true
+082750,Tavèrnoles,24,Osona,2026-02,false,45.546861,40.2147,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.2147,40.2147,100,,official,default,true
+082763,Tagamanent,41,Vallès Oriental,2026-02,false,27.007168,58.2665,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.2665,58.2665,100,,official,default,true
+082779,Talamanca,07,Bages,2026-02,false,39.243284,45.6181,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.6181,45.6181,100,,official,default,true
+082785,Taradell,24,Osona,2026-02,false,39.378944,45.4945,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.4945,45.4945,100,,official,default,true
+082798,Terrassa,40,Vallès Occidental,2026-02,false,23.871019,62.0382,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.0382,62.0382,100,,official,default,true
+082802,Tavertet,24,Osona,2026-02,false,46.940089,39.1096,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.1096,39.1096,100,,official,default,true
+082819,Teià,21,Maresme,2026-02,false,2.210104,95.6761,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,95.6761,95.6761,100,,official,default,true
+082824,Tiana,21,Maresme,2026-02,false,2.02953,96.0222,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,96.0222,96.0222,100,,official,default,true
+082830,Tona,24,Osona,2026-02,false,39.240862,45.6203,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.6203,45.6203,100,,official,default,true
+082845,Tordera,21,Maresme,2026-02,false,6.8279,87.2356,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.2356,87.2356,100,,official,default,true
+082858,Torelló,24,Osona,2026-02,false,57.301132,31.7899,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.7899,31.7899,100,,official,default,true
+082861,la Torre de Claramunt,06,Anoia,2026-02,false,35.475713,49.1883,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.1883,49.1883,100,,official,default,true
+082877,Torrelavit,03,Alt Penedès,2026-02,false,24.398499,61.3871,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.3871,61.3871,100,,official,default,true
+082883,Torrelles de Foix,03,Alt Penedès,2026-02,false,22.247844,64.0852,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.0852,64.0852,100,,official,default,true
+082896,Torrelles de Llobregat,11,Baix Llobregat,2026-02,false,10.527208,81.0143,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.0143,81.0143,100,,official,default,true
+082900,Ullastrell,40,Vallès Occidental,2026-02,false,24.888436,60.7886,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.7886,60.7886,100,,official,default,true
+082917,Vacarisses,40,Vallès Occidental,2026-02,false,32.969452,51.7167,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.7167,51.7167,100,,official,default,true
+082922,Vallbona d'Anoia,06,Anoia,2026-02,false,32.618643,52.0809,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.0809,52.0809,100,,official,default,true
+082938,Vallcebre,14,Berguedà,2026-02,false,90.408233,16.3955,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.3955,16.3955,100,,official,default,true
+082943,Vallgorguina,41,Vallès Oriental,2026-02,false,8.429916,84.4848,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.4848,84.4848,100,,official,default,true
+082956,Vallirana,11,Baix Llobregat,2026-02,false,13.847781,75.8088,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.8088,75.8088,100,,official,default,true
+082969,Vallromanes,41,Vallès Oriental,2026-02,false,6.162557,88.4042,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,88.4042,88.4042,100,,official,default,true
+082975,Veciana,06,Anoia,2026-02,false,52.568766,34.9457,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.9457,34.9457,100,,official,default,true
+082981,Vic,24,Osona,2026-02,false,46.163794,39.7216,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.7216,39.7216,100,,official,default,true
+082994,Vilada,14,Berguedà,2026-02,false,79.309352,20.4705,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.4705,20.4705,100,,official,default,true
+083008,Viladecavalls,40,Vallès Occidental,2026-02,false,27.258689,57.9741,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.9741,57.9741,100,,official,default,true
+083015,Viladecans,11,Baix Llobregat,2026-02,true,5.381692,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+083020,Vilanova del Camí,06,Anoia,2026-02,false,40.144693,44.8031,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.8031,44.8031,100,,official,default,true
+083036,Vilanova de Sau,24,Osona,2026-02,false,43.282185,42.0781,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.0781,42.0781,100,,official,default,true
+083041,Vilobí del Penedès,03,Alt Penedès,2026-02,false,20.127785,66.8609,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,66.8609,66.8609,100,,official,default,true
+083054,Vilafranca del Penedès,03,Alt Penedès,2026-02,false,14.694531,74.5358,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.5358,74.5358,100,,official,default,true
+083067,Vilalba Sasserra,41,Vallès Oriental,2026-02,false,11.713075,79.1155,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.1155,79.1155,100,,official,default,true
+083073,Vilanova i la Geltrú,17,Garraf,2026-02,true,1.042752,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+083089,Viver i Serrateix,14,Berguedà,2026-02,false,67.71535,25.8126,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.8126,25.8126,100,,official,default,true
+089019,Rupit i Pruit,24,Osona,2026-02,false,47.379876,38.7671,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,38.7671,38.7671,100,,official,default,true
+089024,Vilanova del Vallès,41,Vallès Oriental,2026-02,false,8.767458,83.9164,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,83.9164,83.9164,100,,official,default,true
+089030,Sant Julià de Cerdanyola,14,Berguedà,2026-02,false,89.11237,16.826,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.826,16.826,100,,official,default,true
+089045,Badia del Vallès,40,Vallès Occidental,2026-02,false,13.372973,76.5321,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.5321,76.5321,100,,official,default,true
+089058,la Palma de Cervelló,11,Baix Llobregat,2026-02,false,16.398666,72.0382,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.0382,72.0382,100,,official,default,true
+170010,Agullana,02,Alt Empordà,2026-02,false,25.176858,60.4389,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.4389,60.4389,100,,official,default,true
+170025,Aiguaviva,20,Gironès,2026-02,false,26.851786,58.4478,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.4478,58.4478,100,,official,default,true
+170031,Albanyà,02,Alt Empordà,2026-02,false,33.989317,50.6725,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.6725,50.6725,100,,official,default,true
+170046,Albons,10,Baix Empordà,2026-02,false,4.134241,92.0641,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,92.0641,92.0641,100,,official,default,true
+170059,el Far d'Empordà,02,Alt Empordà,2026-02,false,10.48025,81.0904,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.0904,81.0904,100,,official,default,true
+170062,Alp,15,Cerdanya,2026-02,false,102.744938,12.8106,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.8106,12.8106,100,,official,default,true
+170078,Amer,34,Selva,2026-02,false,39.823769,45.0915,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.0915,45.0915,100,,official,default,true
+170084,Anglès,34,Selva,2026-02,false,33.307,51.3688,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.3688,51.3688,100,,official,default,true
+170097,Arbúcies,34,Selva,2026-02,false,25.498904,60.0509,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.0509,60.0509,100,,official,default,true
+170101,Argelaguer,19,Garrotxa,2026-02,false,38.703702,46.1131,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.1131,46.1131,100,,official,default,true
+170118,l'Armentera,02,Alt Empordà,2026-02,false,3.07698,94.0316,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,94.0316,94.0316,100,,official,default,true
+170123,Avinyonet de Puigventós,02,Alt Empordà,2026-02,false,16.905173,71.3122,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.3122,71.3122,100,,official,default,true
+170139,Begur,10,Baix Empordà,2026-02,true,1.582521,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170144,la Vajol,02,Alt Empordà,2026-02,false,29.023067,55.964,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,55.964,55.964,100,,official,default,true
+170157,Banyoles,28,Pla de l'Estany,2026-02,false,29.104843,55.8726,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,55.8726,55.8726,100,,official,default,true
+170160,Bàscara,02,Alt Empordà,2026-02,false,16.691525,71.6175,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.6175,71.6175,100,,official,default,true
+170182,Bellcaire d'Empordà,10,Baix Empordà,2026-02,false,5.291784,89.9572,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,89.9572,89.9572,100,,official,default,true
+170195,Besalú,19,Garrotxa,2026-02,false,33.906011,50.757,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.757,50.757,100,,official,default,true
+170209,Bescanó,20,Gironès,2026-02,false,30.205716,54.6558,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.6558,54.6558,100,,official,default,true
+170216,Beuda,19,Garrotxa,2026-02,false,33.30009,51.3759,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.3759,51.3759,100,,official,default,true
+170221,la Bisbal d'Empordà,10,Baix Empordà,2026-02,false,13.729849,75.9878,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.9878,75.9878,100,,official,default,true
+170237,Blanes,34,Selva,2026-02,true,0.231735,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170242,Bolvir,15,Cerdanya,2026-02,false,104.181162,12.4478,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.4478,12.4478,100,,official,default,true
+170255,Bordils,20,Gironès,2026-02,false,19.926933,67.13,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.13,67.13,100,,official,default,true
+170268,Borrassà,02,Alt Empordà,2026-02,false,15.356246,73.5559,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.5559,73.5559,100,,official,default,true
+170274,Breda,34,Selva,2026-02,false,17.214593,70.8722,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.8722,70.8722,100,,official,default,true
+170280,Brunyola i Sant Martí Sapresa,34,Selva,2026-02,false,26.407806,58.9691,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.9691,58.9691,100,,official,default,true
+170293,Boadella i les Escaules,02,Alt Empordà,2026-02,false,24.453272,61.3199,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.3199,61.3199,100,,official,default,true
+170307,Cabanes,02,Alt Empordà,2026-02,false,14.401513,74.9739,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.9739,74.9739,100,,official,default,true
+170314,Cabanelles,02,Alt Empordà,2026-02,false,24.192679,61.6403,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.6403,61.6403,100,,official,default,true
+170329,Cadaqués,02,Alt Empordà,2026-02,true,0.080213,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170335,Caldes de Malavella,34,Selva,2026-02,false,15.858848,72.8202,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.8202,72.8202,100,,official,default,true
+170340,Calonge i Sant Antoni,10,Baix Empordà,2026-02,true,3.046748,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170353,Camós,28,Pla de l'Estany,2026-02,false,29.424783,55.5162,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,55.5162,55.5162,100,,official,default,true
+170366,Campdevànol,31,Ripollès,2026-02,false,77.876084,21.0658,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.0658,21.0658,100,,official,default,true
+170372,Campelles,31,Ripollès,2026-02,false,80.68244,19.916,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.916,19.916,100,,official,default,true
+170388,Campllong,20,Gironès,2026-02,false,19.156291,68.1727,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.1727,68.1727,100,,official,default,true
+170391,Camprodon,31,Ripollès,2026-02,false,62.660838,28.5585,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.5585,28.5585,100,,official,default,true
+170405,Canet d'Adri,20,Gironès,2026-02,false,33.66268,51.0046,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.0046,51.0046,100,,official,default,true
+170412,Cantallops,02,Alt Empordà,2026-02,false,18.968171,68.4297,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.4297,68.4297,100,,official,default,true
+170427,Capmany,02,Alt Empordà,2026-02,false,19.197945,68.1159,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.1159,68.1159,100,,official,default,true
+170433,Queralbs,31,Ripollès,2026-02,false,79.808936,20.2669,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.2669,20.2669,100,,official,default,true
+170448,Cassà de la Selva,20,Gironès,2026-02,false,16.720015,71.5767,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.5767,71.5767,100,,official,default,true
+170464,Castellfollit de la Roca,19,Garrotxa,2026-02,false,46.275524,39.6329,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.6329,39.6329,100,,official,default,true
+170470,Castelló d'Empúries,02,Alt Empordà,2026-02,true,4.815606,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170486,"Castell d'Aro, Platja d'Aro i s'Agaró",10,Baix Empordà,2026-02,true,0.125293,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170499,Celrà,20,Gironès,2026-02,false,23.280081,62.7757,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.7757,62.7757,100,,official,default,true
+170502,Cervià de Ter,20,Gironès,2026-02,false,18.92646,68.4868,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.4868,68.4868,100,,official,default,true
+170519,Cistella,02,Alt Empordà,2026-02,false,22.819564,63.3566,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.3566,63.3566,100,,official,default,true
+170524,Siurana,02,Alt Empordà,2026-02,false,9.620974,82.4961,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.4961,82.4961,100,,official,default,true
+170545,Colera,02,Alt Empordà,2026-02,true,0.441909,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170558,Colomers,10,Baix Empordà,2026-02,false,12.266126,78.2452,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.2452,78.2452,100,,official,default,true
+170561,Cornellà del Terri,28,Pla de l'Estany,2026-02,false,25.585855,59.9465,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.9465,59.9465,100,,official,default,true
+170577,Corçà,10,Baix Empordà,2026-02,false,14.915044,74.2078,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.2078,74.2078,100,,official,default,true
+170583,Crespià,28,Pla de l'Estany,2026-02,false,25.787067,59.7058,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.7058,59.7058,100,,official,default,true
+170600,Darnius,02,Alt Empordà,2026-02,false,26.534176,58.8203,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.8203,58.8203,100,,official,default,true
+170617,Das,15,Cerdanya,2026-02,false,103.197138,12.6952,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.6952,12.6952,100,,official,default,true
+170622,l'Escala,02,Alt Empordà,2026-02,true,0.195248,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170638,Espinelves,24,Osona,2026-02,false,34.14699,50.513,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.513,50.513,100,,official,default,true
+170643,Espolla,02,Alt Empordà,2026-02,false,12.488411,77.8981,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.8981,77.8981,100,,official,default,true
+170656,Esponellà,28,Pla de l'Estany,2026-02,false,26.09939,59.334,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.334,59.334,100,,official,default,true
+170669,Figueres,02,Alt Empordà,2026-02,false,13.800858,75.88,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.88,75.88,100,,official,default,true
+170675,Flaçà,20,Gironès,2026-02,false,16.418992,72.0089,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.0089,72.0089,100,,official,default,true
+170681,Foixà,10,Baix Empordà,2026-02,false,14.398692,74.9781,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.9781,74.9781,100,,official,default,true
+170694,Fontanals de Cerdanya,15,Cerdanya,2026-02,false,101.867363,13.0374,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,13.0374,13.0374,100,,official,default,true
+170708,Fontanilles,10,Baix Empordà,2026-02,false,7.24199,86.5161,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.5161,86.5161,100,,official,default,true
+170715,Fontcoberta,28,Pla de l'Estany,2026-02,false,26.836432,58.4658,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.4658,58.4658,100,,official,default,true
+170736,Fornells de la Selva,20,Gironès,2026-02,false,23.600141,62.3752,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.3752,62.3752,100,,official,default,true
+170741,Fortià,02,Alt Empordà,2026-02,false,6.657908,87.5327,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.5327,87.5327,100,,official,default,true
+170754,Garrigàs,02,Alt Empordà,2026-02,false,12.921236,77.2267,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.2267,77.2267,100,,official,default,true
+170767,Garrigoles,10,Baix Empordà,2026-02,false,7.999945,85.2145,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.2145,85.2145,100,,official,default,true
+170773,Garriguella,02,Alt Empordà,2026-02,false,8.361479,84.6005,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.6005,84.6005,100,,official,default,true
+170789,Ger,15,Cerdanya,2026-02,false,106.889909,11.7914,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,11.7914,11.7914,100,,official,default,true
+170792,Girona,20,Gironès,2026-02,false,27.348687,57.8698,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.8698,57.8698,100,,official,default,true
+170806,Gombrèn,31,Ripollès,2026-02,false,83.657133,18.7656,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.7656,18.7656,100,,official,default,true
+170813,Gualta,10,Baix Empordà,2026-02,false,7.432998,86.1862,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.1862,86.1862,100,,official,default,true
+170828,Guils de Cerdanya,15,Cerdanya,2026-02,false,104.92385,12.2643,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.2643,12.2643,100,,official,default,true
+170834,Hostalric,34,Selva,2026-02,false,14.43117,74.9294,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.9294,74.9294,100,,official,default,true
+170849,Isòvol,15,Cerdanya,2026-02,false,107.147896,11.7307,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,11.7307,11.7307,100,,official,default,true
+170852,Jafre,10,Baix Empordà,2026-02,false,11.244581,79.8603,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.8603,79.8603,100,,official,default,true
+170865,la Jonquera,02,Alt Empordà,2026-02,false,23.057842,63.0554,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.0554,63.0554,100,,official,default,true
+170871,Juià,20,Gironès,2026-02,false,21.774831,64.6943,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.6943,64.6943,100,,official,default,true
+170887,Lladó,02,Alt Empordà,2026-02,false,24.982836,60.6739,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.6739,60.6739,100,,official,default,true
+170890,Llagostera,20,Gironès,2026-02,false,10.593167,80.9075,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.9075,80.9075,100,,official,default,true
+170904,Llambilles,20,Gironès,2026-02,false,20.564397,66.2796,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,66.2796,66.2796,100,,official,default,true
+170911,Llanars,31,Ripollès,2026-02,false,64.553836,27.4975,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.4975,27.4975,100,,official,default,true
+170926,Llançà,02,Alt Empordà,2026-02,true,0.901534,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170932,Llers,02,Alt Empordà,2026-02,false,18.673157,68.8346,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.8346,68.8346,100,,official,default,true
+170947,Llívia,15,Cerdanya,2026-02,false,96.708852,14.4543,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,14.4543,14.4543,100,,official,default,true
+170950,Lloret de Mar,34,Selva,2026-02,true,0.14001,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+170963,les Llosses,31,Ripollès,2026-02,false,73.044044,23.2032,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,23.2032,23.2032,100,,official,default,true
+170979,Madremanya,20,Gironès,2026-02,false,19.846723,67.2378,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.2378,67.2378,100,,official,default,true
+170985,Maià de Montcal,19,Garrotxa,2026-02,false,30.466614,54.3714,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.3714,54.3714,100,,official,default,true
+170998,Meranges,15,Cerdanya,2026-02,false,112.334272,10.5749,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.5749,10.5749,100,,official,default,true
+171002,Masarac i Vilarnadal,02,Alt Empordà,2026-02,false,15.316474,73.6144,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.6144,73.6144,100,,official,default,true
+171019,Massanes,34,Selva,2026-02,false,15.5672,73.2462,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.2462,73.2462,100,,official,default,true
+171024,Maçanet de Cabrenys,02,Alt Empordà,2026-02,false,33.304484,51.3713,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.3713,51.3713,100,,official,default,true
+171030,Maçanet de la Selva,34,Selva,2026-02,false,12.262223,78.2513,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.2513,78.2513,100,,official,default,true
+171058,Mieres,19,Garrotxa,2026-02,false,39.471191,45.4106,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.4106,45.4106,100,,official,default,true
+171061,Mollet de Peralada,02,Alt Empordà,2026-02,false,12.946357,77.1879,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.1879,77.1879,100,,official,default,true
+171077,Molló,31,Ripollès,2026-02,false,60.314676,29.9305,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.9305,29.9305,100,,official,default,true
+171096,Montagut i Oix,19,Garrotxa,2026-02,false,42.540277,42.7071,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.7071,42.7071,100,,official,default,true
+171100,Mont-ras,10,Baix Empordà,2026-02,true,4.058769,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171117,Navata,02,Alt Empordà,2026-02,false,20.739171,66.0483,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,66.0483,66.0483,100,,official,default,true
+171122,Ogassa,31,Ripollès,2026-02,false,69.130915,25.0921,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.0921,25.0921,100,,official,default,true
+171143,Olot,19,Garrotxa,2026-02,false,51.27336,35.8629,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.8629,35.8629,100,,official,default,true
+171156,Ordis,02,Alt Empordà,2026-02,false,16.897772,71.3227,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.3227,71.3227,100,,official,default,true
+171169,Osor,34,Selva,2026-02,false,35.819901,48.8509,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.8509,48.8509,100,,official,default,true
+171175,Palafrugell,10,Baix Empordà,2026-02,true,3.378278,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171181,Palamós,10,Baix Empordà,2026-02,true,0.186649,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171194,Palau de Santa Eulàlia,02,Alt Empordà,2026-02,false,12.130588,78.4576,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.4576,78.4576,100,,official,default,true
+171208,Palau-saverdera,02,Alt Empordà,2026-02,false,4.781339,90.8803,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,90.8803,90.8803,100,,official,default,true
+171215,Palau-sator,10,Baix Empordà,2026-02,false,7.349379,86.3305,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.3305,86.3305,100,,official,default,true
+171236,Palol de Revardit,28,Pla de l'Estany,2026-02,false,27.76899,57.3854,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.3854,57.3854,100,,official,default,true
+171241,Pals,10,Baix Empordà,2026-02,true,5.202525,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171254,Pardines,31,Ripollès,2026-02,false,74.970504,22.3262,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.3262,22.3262,100,,official,default,true
+171267,Parlavà,10,Baix Empordà,2026-02,false,13.497385,76.3419,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.3419,76.3419,100,,official,default,true
+171289,Pau,02,Alt Empordà,2026-02,false,6.262399,88.2278,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,88.2278,88.2278,100,,official,default,true
+171292,Pedret i Marzà,02,Alt Empordà,2026-02,false,8.816472,83.8342,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,83.8342,83.8342,100,,official,default,true
+171306,la Pera,10,Baix Empordà,2026-02,false,17.232397,70.847,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.847,70.847,100,,official,default,true
+171328,Peralada,02,Alt Empordà,2026-02,false,12.345748,78.1207,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.1207,78.1207,100,,official,default,true
+171334,les Planes d'Hostoles,19,Garrotxa,2026-02,false,46.942168,39.108,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.108,39.108,100,,official,default,true
+171349,Planoles,31,Ripollès,2026-02,false,83.979664,18.645,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.645,18.645,100,,official,default,true
+171352,Pont de Molins,02,Alt Empordà,2026-02,false,18.572533,68.9733,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.9733,68.9733,100,,official,default,true
+171365,Pontós,02,Alt Empordà,2026-02,false,16.050969,72.5409,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.5409,72.5409,100,,official,default,true
+171371,Porqueres,28,Pla de l'Estany,2026-02,false,27.828546,57.3171,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.3171,57.3171,100,,official,default,true
+171387,Portbou,02,Alt Empordà,2026-02,true,0.22524,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171390,les Preses,19,Garrotxa,2026-02,false,53.859282,34.0553,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.0553,34.0553,100,,official,default,true
+171404,el Port de la Selva,02,Alt Empordà,2026-02,true,0.085447,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171411,Puigcerdà,15,Cerdanya,2026-02,false,100.719304,13.3402,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,13.3402,13.3402,100,,official,default,true
+171426,Quart,20,Gironès,2026-02,false,23.174724,62.9081,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.9081,62.9081,100,,official,default,true
+171432,Rabós,02,Alt Empordà,2026-02,false,10.328967,81.3362,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.3362,81.3362,100,,official,default,true
+171447,Regencós,10,Baix Empordà,2026-02,false,4.076797,92.17,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,92.17,92.17,100,,official,default,true
+171450,Ribes de Freser,31,Ripollès,2026-02,false,78.608913,20.7592,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.7592,20.7592,100,,official,default,true
+171463,Riells i Viabrea,34,Selva,2026-02,false,14.78641,74.399,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.399,74.399,100,,official,default,true
+171479,Ripoll,31,Ripollès,2026-02,false,75.352297,22.1564,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.1564,22.1564,100,,official,default,true
+171485,Riudarenes,34,Selva,2026-02,false,17.087995,71.0519,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.0519,71.0519,100,,official,default,true
+171498,Riudaura,19,Garrotxa,2026-02,false,58.093097,31.2903,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.2903,31.2903,100,,official,default,true
+171501,Riudellots de la Selva,34,Selva,2026-02,false,20.801016,65.9667,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.9667,65.9667,100,,official,default,true
+171518,Riumors,02,Alt Empordà,2026-02,false,6.10667,88.503,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,88.503,88.503,100,,official,default,true
+171523,Roses,02,Alt Empordà,2026-02,true,0.190409,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171539,Rupià,10,Baix Empordà,2026-02,false,14.905566,74.2219,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.2219,74.2219,100,,official,default,true
+171544,Sales de Llierca,19,Garrotxa,2026-02,false,38.181817,46.5969,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.5969,46.5969,100,,official,default,true
+171557,Salt,20,Gironès,2026-02,false,28.492881,56.5606,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.5606,56.5606,100,,official,default,true
+171576,Sant Andreu Salou,20,Gironès,2026-02,false,17.986571,69.7864,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.7864,69.7864,100,,official,default,true
+171582,Sant Climent Sescebes,02,Alt Empordà,2026-02,false,14.405528,74.9679,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.9679,74.9679,100,,official,default,true
+171595,Sant Feliu de Buixalleu,34,Selva,2026-02,false,20.747388,66.0375,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,66.0375,66.0375,100,,official,default,true
+171609,Sant Feliu de Guíxols,10,Baix Empordà,2026-02,true,0.126642,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171616,Sant Feliu de Pallerols,19,Garrotxa,2026-02,false,50.128489,36.6935,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.6935,36.6935,100,,official,default,true
+171621,Sant Ferriol,19,Garrotxa,2026-02,false,36.465857,48.2238,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.2238,48.2238,100,,official,default,true
+171637,Sant Gregori,20,Gironès,2026-02,false,31.511465,53.247,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,53.247,53.247,100,,official,default,true
+171642,Sant Hilari Sacalm,34,Selva,2026-02,false,32.189521,52.5298,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.5298,52.5298,100,,official,default,true
+171655,Sant Jaume de Llierca,19,Garrotxa,2026-02,false,41.42541,43.67,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.67,43.67,100,,official,default,true
+171668,Sant Jordi Desvalls,20,Gironès,2026-02,false,15.364013,73.5444,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.5444,73.5444,100,,official,default,true
+171674,Sant Joan de les Abadesses,31,Ripollès,2026-02,false,68.21007,25.5585,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.5585,25.5585,100,,official,default,true
+171680,Sant Joan de Mollet,20,Gironès,2026-02,false,17.550917,70.3971,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.3971,70.3971,100,,official,default,true
+171693,Sant Julià de Ramis,20,Gironès,2026-02,false,25.694961,59.8159,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.8159,59.8159,100,,official,default,true
+171707,Vallfogona de Ripollès,31,Ripollès,2026-02,false,66.593382,26.3984,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.3984,26.3984,100,,official,default,true
+171714,Sant Llorenç de la Muga,02,Alt Empordà,2026-02,false,29.076396,55.9044,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,55.9044,55.9044,100,,official,default,true
+171729,Sant Martí de Llémena,20,Gironès,2026-02,false,40.620643,44.3786,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.3786,44.3786,100,,official,default,true
+171735,Sant Martí Vell,20,Gironès,2026-02,false,19.972234,67.0692,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.0692,67.0692,100,,official,default,true
+171740,Sant Miquel de Campmajor,28,Pla de l'Estany,2026-02,false,35.949686,48.7242,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.7242,48.7242,100,,official,default,true
+171753,Sant Miquel de Fluvià,02,Alt Empordà,2026-02,false,9.90116,82.0351,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.0351,82.0351,100,,official,default,true
+171766,Sant Mori,02,Alt Empordà,2026-02,false,10.131495,81.658,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.658,81.658,100,,official,default,true
+171772,Sant Pau de Segúries,31,Ripollès,2026-02,false,61.846904,29.0272,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.0272,29.0272,100,,official,default,true
+171788,Sant Pere Pescador,02,Alt Empordà,2026-02,true,2.392733,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171805,Santa Coloma de Farners,34,Selva,2026-02,false,23.388889,62.6393,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.6393,62.6393,100,,official,default,true
+171812,Santa Cristina d'Aro,10,Baix Empordà,2026-02,true,4.601013,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+171827,Santa Llogaia d'Àlguema,02,Alt Empordà,2026-02,false,13.50669,76.3277,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.3277,76.3277,100,,official,default,true
+171833,Sant Aniol de Finestres,19,Garrotxa,2026-02,false,42.463873,42.7724,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.7724,42.7724,100,,official,default,true
+171848,Santa Pau,19,Garrotxa,2026-02,false,44.754774,40.8569,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.8569,40.8569,100,,official,default,true
+171851,Sant Joan les Fonts,19,Garrotxa,2026-02,false,49.413054,37.2223,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.2223,37.2223,100,,official,default,true
+171864,Sarrià de Ter,20,Gironès,2026-02,false,27.515428,57.6772,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.6772,57.6772,100,,official,default,true
+171870,"Saus, Camallera i Llampaies",02,Alt Empordà,2026-02,false,12.858869,77.3231,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.3231,77.3231,100,,official,default,true
+171886,la Selva de Mar,02,Alt Empordà,2026-02,false,1.417036,97.2057,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,97.2057,97.2057,100,,official,default,true
+171899,la Cellera de Ter,34,Selva,2026-02,false,35.113726,49.5457,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.5457,49.5457,100,,official,default,true
+171903,Serinyà,28,Pla de l'Estany,2026-02,false,30.323305,54.5274,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,54.5274,54.5274,100,,official,default,true
+171910,Serra de Daró,10,Baix Empordà,2026-02,false,10.030099,81.8238,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.8238,81.8238,100,,official,default,true
+171925,Setcases,31,Ripollès,2026-02,false,69.349591,24.9826,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.9826,24.9826,100,,official,default,true
+171931,Sils,34,Selva,2026-02,false,14.933739,74.1801,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.1801,74.1801,100,,official,default,true
+171946,Susqueda,34,Selva,2026-02,false,42.624896,42.6349,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.6349,42.6349,100,,official,default,true
+171959,la Tallada d'Empordà,10,Baix Empordà,2026-02,false,7.747057,85.6466,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.6466,85.6466,100,,official,default,true
+171962,Terrades,02,Alt Empordà,2026-02,false,24.834702,60.8539,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.8539,60.8539,100,,official,default,true
+171978,Torrent,10,Baix Empordà,2026-02,false,7.270467,86.4668,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.4668,86.4668,100,,official,default,true
+171984,Torroella de Fluvià,02,Alt Empordà,2026-02,false,5.822737,89.007,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,89.007,89.007,100,,official,default,true
+171997,Torroella de Montgrí,10,Baix Empordà,2026-02,true,5.743503,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+172001,Tortellà,19,Garrotxa,2026-02,false,39.783276,45.1281,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.1281,45.1281,100,,official,default,true
+172018,Toses,31,Ripollès,2026-02,false,91.143192,16.1562,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.1562,16.1562,100,,official,default,true
+172023,Tossa de Mar,34,Selva,2026-02,true,0.187803,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+172039,Ultramort,10,Baix Empordà,2026-02,false,12.247604,78.2742,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.2742,78.2742,100,,official,default,true
+172044,Ullà,10,Baix Empordà,2026-02,false,7.405704,86.2333,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.2333,86.2333,100,,official,default,true
+172057,Ullastret,10,Baix Empordà,2026-02,false,10.585993,80.9191,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.9191,80.9191,100,,official,default,true
+172060,Urús,15,Cerdanya,2026-02,false,102.782289,12.801,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.801,12.801,100,,official,default,true
+172076,la Vall d'en Bas,19,Garrotxa,2026-02,false,54.248362,33.7913,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.7913,33.7913,100,,official,default,true
+172082,la Vall de Bianya,19,Garrotxa,2026-02,false,54.21014,33.8171,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.8171,33.8171,100,,official,default,true
+172095,Vall-llobrega,10,Baix Empordà,2026-02,false,2.759302,94.6309,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,94.6309,94.6309,100,,official,default,true
+172109,Ventalló,02,Alt Empordà,2026-02,false,7.231721,86.5339,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.5339,86.5339,100,,official,default,true
+172116,Verges,10,Baix Empordà,2026-02,false,9.723395,82.3273,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.3273,82.3273,100,,official,default,true
+172121,Vidrà,24,Osona,2026-02,false,63.462463,28.1043,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.1043,28.1043,100,,official,default,true
+172137,Vidreres,34,Selva,2026-02,false,11.416165,79.5867,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.5867,79.5867,100,,official,default,true
+172142,Vilabertran,02,Alt Empordà,2026-02,false,12.883191,77.2855,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.2855,77.2855,100,,official,default,true
+172155,Vilablareix,20,Gironès,2026-02,false,27.85156,57.2907,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.2907,57.2907,100,,official,default,true
+172168,Viladasens,20,Gironès,2026-02,false,16.335677,72.129,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.129,72.129,100,,official,default,true
+172174,Viladamat,02,Alt Empordà,2026-02,false,3.681493,92.9016,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,92.9016,92.9016,100,,official,default,true
+172180,Vilademuls,28,Pla de l'Estany,2026-02,false,18.772636,68.6978,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.6978,68.6978,100,,official,default,true
+172207,Viladrau,24,Osona,2026-02,false,32.799594,51.8927,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.8927,51.8927,100,,official,default,true
+172214,Vilafant,02,Alt Empordà,2026-02,false,15.005353,74.0739,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.0739,74.0739,100,,official,default,true
+172229,Vilaür,02,Alt Empordà,2026-02,false,13.192116,76.8095,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.8095,76.8095,100,,official,default,true
+172235,Vilajuïga,02,Alt Empordà,2026-02,false,6.934863,87.0492,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.0492,87.0492,100,,official,default,true
+172240,Vilallonga de Ter,31,Ripollès,2026-02,false,67.365659,25.9938,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.9938,25.9938,100,,official,default,true
+172253,Vilamacolum,02,Alt Empordà,2026-02,false,4.445946,91.492,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,91.492,91.492,100,,official,default,true
+172266,Vilamalla,02,Alt Empordà,2026-02,false,11.667349,79.1879,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.1879,79.1879,100,,official,default,true
+172272,Vilamaniscle,02,Alt Empordà,2026-02,false,7.188784,86.6082,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.6082,86.6082,100,,official,default,true
+172288,Vilanant,02,Alt Empordà,2026-02,false,19.123287,68.2177,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.2177,68.2177,100,,official,default,true
+172305,Vila-sacra,02,Alt Empordà,2026-02,false,9.362802,82.9231,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.9231,82.9231,100,,official,default,true
+172327,Vilopriu,10,Baix Empordà,2026-02,false,11.178011,79.9667,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.9667,79.9667,100,,official,default,true
+172333,Vilobí d'Onyar,34,Selva,2026-02,false,22.836307,63.3354,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.3354,63.3354,100,,official,default,true
+172348,Biure,02,Alt Empordà,2026-02,false,21.884289,64.5529,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.5529,64.5529,100,,official,default,true
+179011,"Cruïlles, Monells i Sant Sadurní de l'Heura",10,Baix Empordà,2026-02,false,15.440734,73.4317,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.4317,73.4317,100,,official,default,true
+179026,Forallac,10,Baix Empordà,2026-02,false,12.685851,77.5911,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.5911,77.5911,100,,official,default,true
+179032,Sant Julià del Llor i Bonmatí,34,Selva,2026-02,false,33.713549,50.9528,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.9528,50.9528,100,,official,default,true
+250019,Abella de la Conca,25,Pallars Jussà,2026-02,false,114.707599,10.0847,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.0847,10.0847,100,,official,default,true
+250024,Àger,23,Noguera,2026-02,false,106.344723,11.9207,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,11.9207,11.9207,100,,official,default,true
+250030,Agramunt,38,Urgell,2026-02,false,75.080566,22.2771,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.2771,22.2771,100,,official,default,true
+250045,els Alamús,33,Segrià,2026-02,false,66.555611,26.4183,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.4183,26.4183,100,,official,default,true
+250058,Alàs i Cerc,04,Alt Urgell,2026-02,false,117.303659,9.5744,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.5744,9.5744,100,,official,default,true
+250061,l'Albagés,18,Garrigues,2026-02,false,49.851275,36.8975,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.8975,36.8975,100,,official,default,true
+250077,Albatàrrec,33,Segrià,2026-02,false,67.224376,26.0673,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.0673,26.0673,100,,official,default,true
+250083,Albesa,23,Noguera,2026-02,false,82.981148,19.0211,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.0211,19.0211,100,,official,default,true
+250096,l'Albi,18,Garrigues,2026-02,false,40.983739,44.0575,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.0575,44.0575,100,,official,default,true
+250100,Alcanó,33,Segrià,2026-02,false,57.895974,31.4139,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.4139,31.4139,100,,official,default,true
+250117,Alcarràs,33,Segrià,2026-02,false,69.691115,24.8125,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.8125,24.8125,100,,official,default,true
+250122,Alcoletge,33,Segrià,2026-02,false,71.27018,24.0411,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.0411,24.0411,100,,official,default,true
+250138,Alfarràs,33,Segrià,2026-02,false,93.961665,15.2707,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,15.2707,15.2707,100,,official,default,true
+250143,Alfés,33,Segrià,2026-02,false,61.550683,29.1996,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.1996,29.1996,100,,official,default,true
+250156,Algerri,23,Noguera,2026-02,false,90.315445,16.4259,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.4259,16.4259,100,,official,default,true
+250169,Alguaire,33,Segrià,2026-02,false,84.193278,18.5655,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.5655,18.5655,100,,official,default,true
+250175,Alins,26,Pallars Sobirà,2026-02,false,144.245914,5.5859,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.5859,5.5859,100,,official,default,true
+250194,Almacelles,33,Segrià,2026-02,false,89.442138,16.7153,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.7153,16.7153,100,,official,default,true
+250208,Almatret,33,Segrià,2026-02,false,54.131038,33.8707,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.8707,33.8707,100,,official,default,true
+250215,Almenar,33,Segrià,2026-02,false,90.884737,16.24,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.24,16.24,100,,official,default,true
+250220,Alòs de Balaguer,23,Noguera,2026-02,false,91.541553,16.028,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.028,16.028,100,,official,default,true
+250236,Alpicat,33,Segrià,2026-02,false,78.313781,20.8821,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.8821,20.8821,100,,official,default,true
+250241,Alt Àneu,26,Pallars Sobirà,2026-02,false,161.728744,3.9377,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,3.9377,3.9377,100,,official,default,true
+250254,Naut Aran,39,Val d'Aran,2026-02,false,177.214687,2.8889,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.8889,2.8889,100,,official,default,true
+250273,Anglesola,38,Urgell,2026-02,false,61.693211,29.1165,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.1165,29.1165,100,,official,default,true
+250292,Arbeca,18,Garrigues,2026-02,false,54.091984,33.8971,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.8971,33.8971,100,,official,default,true
+250306,el Pont de Bar,04,Alt Urgell,2026-02,false,115.161335,9.9936,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.9936,9.9936,100,,official,default,true
+250313,Arres,39,Val d'Aran,2026-02,false,187.138231,2.3689,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.3689,2.3689,100,,official,default,true
+250328,Arsèguel,04,Alt Urgell,2026-02,false,113.95361,10.2379,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.2379,10.2379,100,,official,default,true
+250334,Artesa de Lleida,33,Segrià,2026-02,false,61.4014,29.287,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.287,29.287,100,,official,default,true
+250349,Artesa de Segre,23,Noguera,2026-02,false,87.833943,17.2617,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.2617,17.2617,100,,official,default,true
+250352,la Sentiu de Sió,23,Noguera,2026-02,false,82.736652,19.1143,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.1143,19.1143,100,,official,default,true
+250365,Aspa,33,Segrià,2026-02,false,56.951736,32.0128,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,32.0128,32.0128,100,,official,default,true
+250371,les Avellanes i Santa Linya,23,Noguera,2026-02,false,96.727813,14.4488,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,14.4488,14.4488,100,,official,default,true
+250387,Aitona,33,Segrià,2026-02,false,66.961758,26.2046,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.2046,26.2046,100,,official,default,true
+250390,Baix Pallars,26,Pallars Sobirà,2026-02,false,132.581814,7.0536,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,7.0536,7.0536,100,,official,default,true
+250404,Balaguer,23,Noguera,2026-02,false,83.163065,18.952,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.952,18.952,100,,official,default,true
+250411,Barbens,27,Pla d'Urgell,2026-02,false,65.517858,26.9724,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.9724,26.9724,100,,official,default,true
+250426,la Baronia de Rialb,23,Noguera,2026-02,false,87.861082,17.2524,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.2524,17.2524,100,,official,default,true
+250432,la Vall de Boí,05,Alta Ribagorça,2026-02,false,158.45962,4.2038,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.2038,4.2038,100,,official,default,true
+250447,Bassella,04,Alt Urgell,2026-02,false,93.692255,15.3532,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,15.3532,15.3532,100,,official,default,true
+250450,Bausen,39,Val d'Aran,2026-02,false,195.444289,2.0063,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.0063,2.0063,100,,official,default,true
+250463,Belianes,38,Urgell,2026-02,false,53.413021,34.3606,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.3606,34.3606,100,,official,default,true
+250479,Bellcaire d'Urgell,23,Noguera,2026-02,false,77.202375,21.3515,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.3515,21.3515,100,,official,default,true
+250485,Bell-lloc d'Urgell,27,Pla d'Urgell,2026-02,false,66.77582,26.3022,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.3022,26.3022,100,,official,default,true
+250498,Bellmunt d'Urgell,23,Noguera,2026-02,false,77.38126,21.2753,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.2753,21.2753,100,,official,default,true
+250501,Bellpuig,38,Urgell,2026-02,false,60.275555,29.9539,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.9539,29.9539,100,,official,default,true
+250518,Bellver de Cerdanya,15,Cerdanya,2026-02,false,108.129775,11.5026,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,11.5026,11.5026,100,,official,default,true
+250523,Bellvís,27,Pla d'Urgell,2026-02,false,70.258555,24.5325,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.5325,24.5325,100,,official,default,true
+250539,Benavent de Segrià,33,Segrià,2026-02,false,78.334914,20.8733,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.8733,20.8733,100,,official,default,true
+250557,Biosca,35,Solsonès,2026-02,false,74.801947,22.4016,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.4016,22.4016,100,,official,default,true
+250560,Bovera,18,Garrigues,2026-02,false,43.037498,42.2845,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.2845,42.2845,100,,official,default,true
+250576,Es Bòrdes,39,Val d'Aran,2026-02,false,185.159178,2.4645,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.4645,2.4645,100,,official,default,true
+250582,les Borges Blanques,18,Garrigues,2026-02,false,53.032804,34.6229,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.6229,34.6229,100,,official,default,true
+250595,Bossòst,39,Val d'Aran,2026-02,false,190.847095,2.1995,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.1995,2.1995,100,,official,default,true
+250609,Cabanabona,23,Noguera,2026-02,false,78.811884,20.6752,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.6752,20.6752,100,,official,default,true
+250616,Cabó,04,Alt Urgell,2026-02,false,119.806673,9.1069,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.1069,9.1069,100,,official,default,true
+250621,Camarasa,23,Noguera,2026-02,false,90.079021,16.5038,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.5038,16.5038,100,,official,default,true
+250637,Canejan,39,Val d'Aran,2026-02,false,195.195263,2.0163,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.0163,2.0163,100,,official,default,true
+250642,Castellar de la Ribera,35,Solsonès,2026-02,false,93.365357,15.4539,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,15.4539,15.4539,100,,official,default,true
+250674,Castelldans,18,Garrigues,2026-02,false,53.714376,34.1541,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.1541,34.1541,100,,official,default,true
+250680,Castellnou de Seana,27,Pla d'Urgell,2026-02,false,63.772634,27.9305,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.9305,27.9305,100,,official,default,true
+250693,Castelló de Farfanya,23,Noguera,2026-02,false,88.225491,17.1271,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.1271,17.1271,100,,official,default,true
+250707,Castellserà,38,Urgell,2026-02,false,73.494236,22.9952,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.9952,22.9952,100,,official,default,true
+250714,Cava,04,Alt Urgell,2026-02,false,111.515114,10.7496,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.7496,10.7496,100,,official,default,true
+250729,Cervera,32,Segarra,2026-02,false,57.796792,31.4763,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.4763,31.4763,100,,official,default,true
+250735,Cervià de les Garrigues,18,Garrigues,2026-02,false,43.154942,42.1853,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.1853,42.1853,100,,official,default,true
+250740,Ciutadilla,38,Urgell,2026-02,false,49.968827,36.8109,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.8109,36.8109,100,,official,default,true
+250753,Clariana de Cardener,35,Solsonès,2026-02,false,74.985088,22.3197,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.3197,22.3197,100,,official,default,true
+250766,el Cogul,18,Garrigues,2026-02,false,53.477207,34.3165,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.3165,34.3165,100,,official,default,true
+250772,Coll de Nargó,04,Alt Urgell,2026-02,false,111.717347,10.7062,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.7062,10.7062,100,,official,default,true
+250788,Corbins,33,Segrià,2026-02,false,75.711257,21.9979,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.9979,21.9979,100,,official,default,true
+250791,Cubells,23,Noguera,2026-02,false,85.218447,18.1887,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.1887,18.1887,100,,official,default,true
+250812,l'Espluga Calba,18,Garrigues,2026-02,false,46.913371,39.1305,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.1305,39.1305,100,,official,default,true
+250827,Espot,26,Pallars Sobirà,2026-02,false,157.73595,4.265,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.265,4.265,100,,official,default,true
+250851,Estaràs,32,Segarra,2026-02,false,58.116247,31.2758,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.2758,31.2758,100,,official,default,true
+250864,Esterri d'Àneu,26,Pallars Sobirà,2026-02,false,160.723236,4.0177,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.0177,4.0177,100,,official,default,true
+250870,Esterri de Cardós,26,Pallars Sobirà,2026-02,false,150.844722,4.8953,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.8953,4.8953,100,,official,default,true
+250886,Estamariu,04,Alt Urgell,2026-02,false,118.690632,9.3125,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.3125,9.3125,100,,official,default,true
+250899,Farrera,26,Pallars Sobirà,2026-02,false,142.193209,5.82,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.82,5.82,100,,official,default,true
+250925,la Floresta,18,Garrigues,2026-02,false,50.771773,36.2245,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.2245,36.2245,100,,official,default,true
+250931,Fondarella,27,Pla d'Urgell,2026-02,false,65.067079,27.2166,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.2166,27.2166,100,,official,default,true
+250946,Foradada,23,Noguera,2026-02,false,86.521087,17.721,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.721,17.721,100,,official,default,true
+250962,la Fuliola,38,Urgell,2026-02,false,69.05575,25.1298,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.1298,25.1298,100,,official,default,true
+250978,Fulleda,18,Garrigues,2026-02,false,43.02831,42.2923,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,42.2923,42.2923,100,,official,default,true
+250984,Gavet de la Conca,25,Pallars Jussà,2026-02,false,114.949284,10.0361,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.0361,10.0361,100,,official,default,true
+250997,Golmés,27,Pla d'Urgell,2026-02,false,63.290748,28.2009,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.2009,28.2009,100,,official,default,true
+251001,Gósol,14,Berguedà,2026-02,false,99.87717,13.5668,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,13.5668,13.5668,100,,official,default,true
+251018,la Granadella,18,Garrigues,2026-02,false,44.14144,41.3611,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.3611,41.3611,100,,official,default,true
+251023,la Granja d'Escarp,33,Segrià,2026-02,false,67.236564,26.061,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.061,26.061,100,,official,default,true
+251039,Granyanella,32,Segarra,2026-02,false,58.954374,30.7559,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.7559,30.7559,100,,official,default,true
+251044,Granyena de Segarra,32,Segarra,2026-02,false,54.011924,33.9515,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.9515,33.9515,100,,official,default,true
+251057,Granyena de les Garrigues,18,Garrigues,2026-02,false,51.908722,35.4101,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.4101,35.4101,100,,official,default,true
+251095,Guimerà,38,Urgell,2026-02,false,49.358907,37.2627,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.2627,37.2627,100,,official,default,true
+251109,Guissona,32,Segarra,2026-02,false,70.002499,24.6585,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.6585,24.6585,100,,official,default,true
+251116,Guixers,35,Solsonès,2026-02,false,89.839867,16.5829,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.5829,16.5829,100,,official,default,true
+251121,Ivars de Noguera,23,Noguera,2026-02,false,95.516573,14.8031,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,14.8031,14.8031,100,,official,default,true
+251137,Ivars d'Urgell,27,Pla d'Urgell,2026-02,false,66.925824,26.2234,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.2234,26.2234,100,,official,default,true
+251142,Ivorra,32,Segarra,2026-02,false,66.552227,26.4201,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.4201,26.4201,100,,official,default,true
+251155,Isona i Conca Dellà,25,Pallars Jussà,2026-02,false,111.312589,10.7932,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.7932,10.7932,100,,official,default,true
+251180,Juncosa,18,Garrigues,2026-02,false,40.77113,44.2452,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.2452,44.2452,100,,official,default,true
+251193,Juneda,18,Garrigues,2026-02,false,57.110896,31.911,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.911,31.911,100,,official,default,true
+251207,Lleida,33,Segrià,2026-02,false,70.500423,24.4141,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.4141,24.4141,100,,official,default,true
+251214,Les,39,Val d'Aran,2026-02,false,193.033401,2.1054,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.1054,2.1054,100,,official,default,true
+251229,Linyola,27,Pla d'Urgell,2026-02,false,72.204796,23.5959,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,23.5959,23.5959,100,,official,default,true
+251235,Lladorre,26,Pallars Sobirà,2026-02,false,154.022912,4.5938,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.5938,4.5938,100,,official,default,true
+251240,Lladurs,35,Solsonès,2026-02,false,90.543342,16.3512,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.3512,16.3512,100,,official,default,true
+251253,Llardecans,33,Segrià,2026-02,false,51.916078,35.4048,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.4048,35.4048,100,,official,default,true
+251266,Llavorsí,26,Pallars Sobirà,2026-02,false,144.537802,5.5534,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.5534,5.5534,100,,official,default,true
+251272,Lles de Cerdanya,15,Cerdanya,2026-02,false,113.738943,10.282,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.282,10.282,100,,official,default,true
+251288,Llimiana,25,Pallars Jussà,2026-02,false,109.897325,11.1031,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,11.1031,11.1031,100,,official,default,true
+251291,Llobera,35,Solsonès,2026-02,false,84.323187,18.5173,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.5173,18.5173,100,,official,default,true
+251305,Maldà,38,Urgell,2026-02,false,51.675451,35.5756,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.5756,35.5756,100,,official,default,true
+251312,Massalcoreig,33,Segrià,2026-02,false,69.851671,24.733,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.733,24.733,100,,official,default,true
+251327,Massoteres,32,Segarra,2026-02,false,70.855991,24.2411,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.2411,24.2411,100,,official,default,true
+251333,Maials,33,Segrià,2026-02,false,53.830155,34.0751,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.0751,34.0751,100,,official,default,true
+251348,Menàrguens,23,Noguera,2026-02,false,78.241587,20.9123,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.9123,20.9123,100,,official,default,true
+251351,Miralcamp,27,Pla d'Urgell,2026-02,false,61.803111,29.0526,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.0526,29.0526,100,,official,default,true
+251364,la Molsosa,35,Solsonès,2026-02,false,65.037543,27.2327,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.2327,27.2327,100,,official,default,true
+251370,Mollerussa,27,Pla d'Urgell,2026-02,false,64.196145,27.6949,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.6949,27.6949,100,,official,default,true
+251386,Montgai,23,Noguera,2026-02,false,79.759183,20.2871,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.2871,20.2871,100,,official,default,true
+251399,Montellà i Martinet,15,Cerdanya,2026-02,false,110.45234,10.9805,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.9805,10.9805,100,,official,default,true
+251403,Montferrer i Castellbò,04,Alt Urgell,2026-02,false,120.153559,9.044,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.044,9.044,100,,official,default,true
+251410,Montoliu de Segarra,32,Segarra,2026-02,false,49.866129,36.8866,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.8866,36.8866,100,,official,default,true
+251425,Montoliu de Lleida,33,Segrià,2026-02,false,66.636604,26.3756,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.3756,26.3756,100,,official,default,true
+251431,Montornès de Segarra,32,Segarra,2026-02,false,52.172041,35.2241,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.2241,35.2241,100,,official,default,true
+251459,Nalec,38,Urgell,2026-02,false,50.393359,36.4997,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.4997,36.4997,100,,official,default,true
+251462,Navès,35,Solsonès,2026-02,false,78.724589,20.7113,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.7113,20.7113,100,,official,default,true
+251484,Odèn,35,Solsonès,2026-02,false,104.575418,12.3501,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.3501,12.3501,100,,official,default,true
+251497,Oliana,04,Alt Urgell,2026-02,false,99.759346,13.5988,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,13.5988,13.5988,100,,official,default,true
+251500,Oliola,23,Noguera,2026-02,false,82.472711,19.2155,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.2155,19.2155,100,,official,default,true
+251517,Olius,35,Solsonès,2026-02,false,82.509667,19.2013,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.2013,19.2013,100,,official,default,true
+251522,les Oluges,32,Segarra,2026-02,false,59.917263,30.1693,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.1693,30.1693,100,,official,default,true
+251538,els Omellons,18,Garrigues,2026-02,false,49.128481,37.4348,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.4348,37.4348,100,,official,default,true
+251543,els Omells de na Gaia,38,Urgell,2026-02,false,45.311975,40.4041,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.4041,40.4041,100,,official,default,true
+251556,Organyà,04,Alt Urgell,2026-02,false,114.170059,10.1937,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.1937,10.1937,100,,official,default,true
+251569,Os de Balaguer,23,Noguera,2026-02,false,93.84484,15.3064,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,15.3064,15.3064,100,,official,default,true
+251575,Ossó de Sió,38,Urgell,2026-02,false,70.232432,24.5453,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.5453,24.5453,100,,official,default,true
+251581,el Palau d'Anglesola,27,Pla d'Urgell,2026-02,false,66.808713,26.2849,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.2849,26.2849,100,,official,default,true
+251615,Conca de Dalt,25,Pallars Jussà,2026-02,false,126.674361,7.9382,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,7.9382,7.9382,100,,official,default,true
+251636,la Coma i la Pedra,35,Solsonès,2026-02,false,97.439684,14.2446,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,14.2446,14.2446,100,,official,default,true
+251641,Penelles,23,Noguera,2026-02,false,75.241639,22.2054,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.2054,22.2054,100,,official,default,true
+251654,Peramola,04,Alt Urgell,2026-02,false,99.735374,13.6053,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,13.6053,13.6053,100,,official,default,true
+251667,Pinell de Solsonès,35,Solsonès,2026-02,false,85.628483,18.0402,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.0402,18.0402,100,,official,default,true
+251673,Pinós,35,Solsonès,2026-02,false,70.633172,24.3494,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.3494,24.3494,100,,official,default,true
+251689,el Poal,27,Pla d'Urgell,2026-02,false,70.106656,24.6072,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.6072,24.6072,100,,official,default,true
+251692,la Pobla de Cérvoles,18,Garrigues,2026-02,false,35.568911,49.0967,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.0967,49.0967,100,,official,default,true
+251706,Bellaguarda,18,Garrigues,2026-02,false,39.089801,45.7583,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.7583,45.7583,100,,official,default,true
+251713,la Pobla de Segur,25,Pallars Jussà,2026-02,false,127.278414,7.8428,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,7.8428,7.8428,100,,official,default,true
+251728,Ponts,23,Noguera,2026-02,false,86.35343,17.7805,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.7805,17.7805,100,,official,default,true
+251734,el Pont de Suert,05,Alta Ribagorça,2026-02,false,149.515355,5.0272,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.0272,5.0272,100,,official,default,true
+251749,la Portella,33,Segrià,2026-02,false,82.521388,19.1968,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.1968,19.1968,100,,official,default,true
+251752,Prats i Sansor,15,Cerdanya,2026-02,false,104.920754,12.2651,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.2651,12.2651,100,,official,default,true
+251765,Preixana,38,Urgell,2026-02,false,57.562647,31.624,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.624,31.624,100,,official,default,true
+251771,Preixens,23,Noguera,2026-02,false,76.81449,21.5178,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.5178,21.5178,100,,official,default,true
+251790,Prullans,15,Cerdanya,2026-02,false,110.56801,10.9552,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.9552,10.9552,100,,official,default,true
+251804,Puiggròs,18,Garrigues,2026-02,false,55.67736,32.8392,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,32.8392,32.8392,100,,official,default,true
+251811,Puigverd d'Agramunt,38,Urgell,2026-02,false,73.585472,22.9533,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.9533,22.9533,100,,official,default,true
+251826,Puigverd de Lleida,33,Segrià,2026-02,false,59.44475,30.4558,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.4558,30.4558,100,,official,default,true
+251832,Rialp,26,Pallars Sobirà,2026-02,false,144.084245,5.604,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.604,5.604,100,,official,default,true
+251850,Ribera d'Urgellet,04,Alt Urgell,2026-02,false,119.761991,9.1151,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.1151,9.1151,100,,official,default,true
+251863,Riner,35,Solsonès,2026-02,false,79.090681,20.5602,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.5602,20.5602,100,,official,default,true
+251898,Rosselló,33,Segrià,2026-02,false,79.500457,20.3924,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.3924,20.3924,100,,official,default,true
+251902,Salàs de Pallars,25,Pallars Jussà,2026-02,false,124.286601,8.3265,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,8.3265,8.3265,100,,official,default,true
+251919,Sanaüja,32,Segarra,2026-02,false,79.373366,20.4443,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.4443,20.4443,100,,official,default,true
+251924,Sant Guim de Freixenet,32,Segarra,2026-02,false,53.50302,34.2988,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,34.2988,34.2988,100,,official,default,true
+251930,Sant Llorenç de Morunys,35,Solsonès,2026-02,false,93.83764,15.3086,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,15.3086,15.3086,100,,official,default,true
+251945,Sant Ramon,32,Segarra,2026-02,false,62.074332,28.8954,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.8954,28.8954,100,,official,default,true
+251961,Sant Esteve de la Sarga,25,Pallars Jussà,2026-02,false,114.674013,10.0915,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.0915,10.0915,100,,official,default,true
+251977,Sant Guim de la Plana,32,Segarra,2026-02,false,66.865708,26.255,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.255,26.255,100,,official,default,true
+252000,Sarroca de Lleida,33,Segrià,2026-02,false,58.443139,31.072,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,31.072,31.072,100,,official,default,true
+252017,Sarroca de Bellera,25,Pallars Jussà,2026-02,false,141.127107,5.9455,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.9455,5.9455,100,,official,default,true
+252022,Senterada,25,Pallars Jussà,2026-02,false,136.009355,6.5862,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,6.5862,6.5862,100,,official,default,true
+252038,la Seu d'Urgell,04,Alt Urgell,2026-02,false,120.050503,9.0626,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.0626,9.0626,100,,official,default,true
+252043,Seròs,33,Segrià,2026-02,false,67.181905,26.0895,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.0895,26.0895,100,,official,default,true
+252056,Sidamon,27,Pla d'Urgell,2026-02,false,65.383928,27.0447,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.0447,27.0447,100,,official,default,true
+252069,el Soleràs,18,Garrigues,2026-02,false,48.596345,37.8353,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,37.8353,37.8353,100,,official,default,true
+252075,Solsona,35,Solsonès,2026-02,false,86.010672,17.9028,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,17.9028,17.9028,100,,official,default,true
+252081,Soriguera,26,Pallars Sobirà,2026-02,false,136.613665,6.5071,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,6.5071,6.5071,100,,official,default,true
+252094,Sort,26,Pallars Sobirà,2026-02,false,140.616412,6.0065,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,6.0065,6.0065,100,,official,default,true
+252108,Soses,33,Segrià,2026-02,false,68.818145,25.2495,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.2495,25.2495,100,,official,default,true
+252115,Sudanell,33,Segrià,2026-02,false,67.281482,26.0376,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.0376,26.0376,100,,official,default,true
+252120,Sunyer,33,Segrià,2026-02,false,62.903814,28.42,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,28.42,28.42,100,,official,default,true
+252154,Talarn,25,Pallars Jussà,2026-02,false,122.048826,8.7076,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,8.7076,8.7076,100,,official,default,true
+252167,Talavera,32,Segarra,2026-02,false,47.208337,38.9004,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,38.9004,38.9004,100,,official,default,true
+252173,Tàrrega,38,Urgell,2026-02,false,59.08328,30.6767,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.6767,30.6767,100,,official,default,true
+252189,Tarrés,18,Garrigues,2026-02,false,39.042641,45.8015,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.8015,45.8015,100,,official,default,true
+252192,Tarroja de Segarra,32,Segarra,2026-02,false,64.526809,27.5123,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,27.5123,27.5123,100,,official,default,true
+252206,Térmens,23,Noguera,2026-02,false,76.509739,21.6493,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.6493,21.6493,100,,official,default,true
+252213,Tírvia,26,Pallars Sobirà,2026-02,false,144.692265,5.5363,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.5363,5.5363,100,,official,default,true
+252228,Tiurana,23,Noguera,2026-02,false,91.181028,16.144,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,16.144,16.144,100,,official,default,true
+252234,Torà,35,Solsonès,2026-02,false,70.883053,24.228,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.228,24.228,100,,official,default,true
+252249,els Torms,18,Garrigues,2026-02,false,45.167166,40.5213,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.5213,40.5213,100,,official,default,true
+252252,Tornabous,38,Urgell,2026-02,false,66.934829,26.2187,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.2187,26.2187,100,,official,default,true
+252265,Torrebesses,33,Segrià,2026-02,false,53.961304,33.9858,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.9858,33.9858,100,,official,default,true
+252271,la Torre de Cabdella,25,Pallars Jussà,2026-02,false,145.023947,5.4997,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,5.4997,5.4997,100,,official,default,true
+252287,Torrefarrera,33,Segrià,2026-02,false,77.078254,21.4046,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.4046,21.4046,100,,official,default,true
+252304,Torregrossa,27,Pla d'Urgell,2026-02,false,60.264795,29.9603,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.9603,29.9603,100,,official,default,true
+252311,Torrelameu,23,Noguera,2026-02,false,76.862744,21.497,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.497,21.497,100,,official,default,true
+252326,Torres de Segre,33,Segrià,2026-02,false,67.705769,25.8176,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,25.8176,25.8176,100,,official,default,true
+252332,Torre-serona,33,Segrià,2026-02,false,76.090481,21.8316,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,21.8316,21.8316,100,,official,default,true
+252347,Tremp,25,Pallars Jussà,2026-02,false,120.22812,9.0305,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.0305,9.0305,100,,official,default,true
+252385,Vallbona de les Monges,38,Urgell,2026-02,false,47.453318,38.7102,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,38.7102,38.7102,100,,official,default,true
+252398,les Valls de Valira,04,Alt Urgell,2026-02,false,122.218264,8.6781,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,8.6781,8.6781,100,,official,default,true
+252402,Vallfogona de Balaguer,23,Noguera,2026-02,false,78.979252,20.6061,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,20.6061,20.6061,100,,official,default,true
+252424,Verdú,38,Urgell,2026-02,false,55.089598,33.2275,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,33.2275,33.2275,100,,official,default,true
+252430,Vielha e Mijaran,39,Val d'Aran,2026-02,false,179.401408,2.7653,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.7653,2.7653,100,,official,default,true
+252445,Vilagrassa,38,Urgell,2026-02,false,60.017975,30.1086,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,30.1086,30.1086,100,,official,default,true
+252458,Vilaller,05,Alta Ribagorça,2026-02,false,157.430355,4.2912,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.2912,4.2912,100,,official,default,true
+252477,Vilamòs,39,Val d'Aran,2026-02,false,186.00597,2.4231,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,2.4231,2.4231,100,,official,default,true
+252483,Vilanova de Bellpuig,27,Pla d'Urgell,2026-02,false,60.57572,29.7746,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,29.7746,29.7746,100,,official,default,true
+252496,Vilanova de l'Aguda,23,Noguera,2026-02,false,84.371674,18.4994,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.4994,18.4994,100,,official,default,true
+252509,Vilanova de Meià,23,Noguera,2026-02,false,99.020244,13.8013,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,13.8013,13.8013,100,,official,default,true
+252516,Vilanova de Segrià,33,Segrià,2026-02,false,80.523959,19.9792,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,19.9792,19.9792,100,,official,default,true
+252521,Vila-sana,27,Pla d'Urgell,2026-02,false,66.607299,26.391,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.391,26.391,100,,official,default,true
+252537,el Vilosell,18,Garrigues,2026-02,false,36.581933,48.112,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.112,48.112,100,,official,default,true
+252542,Vilanova de la Barca,33,Segrià,2026-02,false,74.630306,22.4786,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,22.4786,22.4786,100,,official,default,true
+252555,Vinaixa,18,Garrigues,2026-02,false,40.972398,44.0675,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.0675,44.0675,100,,official,default,true
+259010,Vall de Cardós,26,Pallars Sobirà,2026-02,false,149.918479,4.9868,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.9868,4.9868,100,,official,default,true
+259025,Sant Martí de Riucorb,38,Urgell,2026-02,false,52.030549,35.3239,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.3239,35.3239,100,,official,default,true
+259031,la Guingueta d'Àneu,26,Pallars Sobirà,2026-02,false,157.280801,4.304,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,4.304,4.304,100,,official,default,true
+259046,Castell de Mur,25,Pallars Jussà,2026-02,false,112.663835,10.5054,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.5054,10.5054,100,,official,default,true
+259059,Ribera d'Ondara,32,Segarra,2026-02,false,51.763491,35.5131,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,35.5131,35.5131,100,,official,default,true
+259062,les Valls d'Aguilar,04,Alt Urgell,2026-02,false,120.351607,9.0082,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,9.0082,9.0082,100,,official,default,true
+259078,Torrefeta i Florejacs,32,Segarra,2026-02,false,67.033846,26.1668,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,26.1668,26.1668,100,,official,default,true
+259084,Fígols i Alinyà,04,Alt Urgell,2026-02,false,112.881126,10.4599,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,10.4599,10.4599,100,,official,default,true
+259097,la Vansa i Fórnols,04,Alt Urgell,2026-02,false,107.944955,11.5452,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,11.5452,11.5452,100,,official,default,true
+259101,Josa i Tuixén,04,Alt Urgell,2026-02,false,103.552399,12.6054,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.6054,12.6054,100,,official,default,true
+259118,els Plans de Sió,32,Segarra,2026-02,false,69.898867,24.7096,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,24.7096,24.7096,100,,official,default,true
+259123,Gimenells i el Pla de la Font,33,Segrià,2026-02,false,84.307845,18.523,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,18.523,18.523,100,,official,default,true
+259139,Riu de Cerdanya,15,Cerdanya,2026-02,false,103.490286,12.621,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,12.621,12.621,100,,official,default,true
+430017,Aiguamúrcia,01,Alt Camp,2026-02,false,21.813797,64.6439,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.6439,64.6439,100,,official,default,true
+430022,Albinyana,12,Baix Penedès,2026-02,false,7.870352,85.4356,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.4356,85.4356,100,,official,default,true
+430038,l'Albiol,08,Baix Camp,2026-02,false,19.713295,67.4175,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.4175,67.4175,100,,official,default,true
+430043,Alcanar,22,Montsià,2026-02,true,3.351651,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430056,Alcover,01,Alt Camp,2026-02,false,17.959474,69.8242,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.8242,69.8242,100,,official,default,true
+430069,Aldover,09,Baix Ebre,2026-02,false,18.786761,68.6784,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.6784,68.6784,100,,official,default,true
+430075,l'Aleixar,08,Baix Camp,2026-02,false,15.187709,73.8042,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.8042,73.8042,100,,official,default,true
+430081,Alfara de Carles,09,Baix Ebre,2026-02,false,26.393215,58.9863,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.9863,58.9863,100,,official,default,true
+430094,Alforja,08,Baix Camp,2026-02,false,17.413249,70.5912,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.5912,70.5912,100,,official,default,true
+430108,Alió,01,Alt Camp,2026-02,false,18.32888,69.3102,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.3102,69.3102,100,,official,default,true
+430115,Almoster,08,Baix Camp,2026-02,false,13.561287,76.2444,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.2444,76.2444,100,,official,default,true
+430120,Altafulla,36,Tarragonès,2026-02,true,0.994495,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430136,l'Ametlla de Mar,09,Baix Ebre,2026-02,true,0.127241,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430141,Amposta,22,Montsià,2026-02,true,10.208334,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430154,Arbolí,08,Baix Camp,2026-02,false,21.535368,65.0049,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.0049,65.0049,100,,official,default,true
+430167,l'Arboç,12,Baix Penedès,2026-02,false,8.594086,84.2079,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.2079,84.2079,100,,official,default,true
+430173,l'Argentera,08,Baix Camp,2026-02,false,12.539689,77.8183,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.8183,77.8183,100,,official,default,true
+430189,Arnes,37,Terra Alta,2026-02,false,38.840088,45.9874,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.9874,45.9874,100,,official,default,true
+430192,Ascó,30,Ribera d'Ebre,2026-02,false,35.869586,48.8024,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.8024,48.8024,100,,official,default,true
+430206,Banyeres del Penedès,12,Baix Penedès,2026-02,false,10.124324,81.6698,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.6698,81.6698,100,,official,default,true
+430213,Barberà de la Conca,16,Conca de Barberà,2026-02,false,31.950471,52.7815,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.7815,52.7815,100,,official,default,true
+430228,Batea,37,Terra Alta,2026-02,false,45.785651,40.0231,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.0231,40.0231,100,,official,default,true
+430234,Bellmunt del Priorat,29,Priorat,2026-02,false,22.6138,63.6179,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.6179,63.6179,100,,official,default,true
+430249,Bellvei,12,Baix Penedès,2026-02,false,5.936676,88.8044,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,88.8044,88.8044,100,,official,default,true
+430252,Benifallet,09,Baix Ebre,2026-02,false,24.131877,61.7153,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.7153,61.7153,100,,official,default,true
+430265,Benissanet,30,Ribera d'Ebre,2026-02,false,22.683777,63.5289,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.5289,63.5289,100,,official,default,true
+430271,la Bisbal de Montsant,29,Priorat,2026-02,false,34.539361,50.1181,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.1181,50.1181,100,,official,default,true
+430287,la Bisbal del Penedès,12,Baix Penedès,2026-02,false,11.634786,79.2395,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.2395,79.2395,100,,official,default,true
+430290,Blancafort,16,Conca de Barberà,2026-02,false,36.338424,48.3469,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.3469,48.3469,100,,official,default,true
+430304,Bonastre,12,Baix Penedès,2026-02,false,6.472756,87.8574,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,87.8574,87.8574,100,,official,default,true
+430311,les Borges del Camp,08,Baix Camp,2026-02,false,12.277898,78.2268,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.2268,78.2268,100,,official,default,true
+430326,Bot,37,Terra Alta,2026-02,false,34.848173,49.8095,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.8095,49.8095,100,,official,default,true
+430332,Botarell,08,Baix Camp,2026-02,false,9.428283,82.8146,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.8146,82.8146,100,,official,default,true
+430347,Bràfim,01,Alt Camp,2026-02,false,15.04584,74.0139,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,74.0139,74.0139,100,,official,default,true
+430350,Cabacés,29,Priorat,2026-02,false,31.201653,53.5779,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,53.5779,53.5779,100,,official,default,true
+430363,Cabra del Camp,01,Alt Camp,2026-02,false,29.64416,55.2731,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,55.2731,55.2731,100,,official,default,true
+430379,Calafell,12,Baix Penedès,2026-02,true,1.620652,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430385,Cambrils,08,Baix Camp,2026-02,true,1.129697,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430398,Capafonts,08,Baix Camp,2026-02,false,25.662595,59.8546,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.8546,59.8546,100,,official,default,true
+430402,Capçanes,29,Priorat,2026-02,false,16.80627,71.4533,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.4533,71.4533,100,,official,default,true
+430419,Caseres,37,Terra Alta,2026-02,false,45.832345,39.9858,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.9858,39.9858,100,,official,default,true
+430424,Castellvell del Camp,08,Baix Camp,2026-02,false,12.035996,78.6062,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.6062,78.6062,100,,official,default,true
+430430,el Catllar,36,Tarragonès,2026-02,false,5.104769,90.2943,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,90.2943,90.2943,100,,official,default,true
+430445,la Sénia,22,Montsià,2026-02,false,22.388301,63.9054,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.9054,63.9054,100,,official,default,true
+430458,Colldejou,08,Baix Camp,2026-02,false,10.336741,81.3235,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.3235,81.3235,100,,official,default,true
+430461,Conesa,16,Conca de Barberà,2026-02,false,41.799208,43.3448,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.3448,43.3448,100,,official,default,true
+430477,Constantí,36,Tarragonès,2026-02,false,5.320115,89.9063,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,89.9063,89.9063,100,,official,default,true
+430483,Corbera d'Ebre,37,Terra Alta,2026-02,false,34.535535,50.122,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.122,50.122,100,,official,default,true
+430496,Cornudella de Montsant,29,Priorat,2026-02,false,25.406547,60.1619,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.1619,60.1619,100,,official,default,true
+430509,Creixell,36,Tarragonès,2026-02,true,1.21271,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430516,Cunit,12,Baix Penedès,2026-02,true,0.580253,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430521,Xerta,09,Baix Ebre,2026-02,false,20.903039,65.8322,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,65.8322,65.8322,100,,official,default,true
+430537,Duesaigües,08,Baix Camp,2026-02,false,12.566929,77.7759,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.7759,77.7759,100,,official,default,true
+430542,l'Espluga de Francolí,16,Conca de Barberà,2026-02,false,33.727722,50.9383,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.9383,50.9383,100,,official,default,true
+430555,Falset,29,Priorat,2026-02,false,17.948869,69.839,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.839,69.839,100,,official,default,true
+430568,la Fatarella,37,Terra Alta,2026-02,false,40.506582,44.48,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.48,44.48,100,,official,default,true
+430574,la Febró,08,Baix Camp,2026-02,false,24.006139,61.8707,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.8707,61.8707,100,,official,default,true
+430580,la Figuera,29,Priorat,2026-02,false,28.722103,56.3019,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.3019,56.3019,100,,official,default,true
+430593,Figuerola del Camp,01,Alt Camp,2026-02,false,27.123568,58.131,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.131,58.131,100,,official,default,true
+430607,Flix,30,Ribera d'Ebre,2026-02,false,40.851011,44.1746,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.1746,44.1746,100,,official,default,true
+430614,Forès,16,Conca de Barberà,2026-02,false,40.96241,44.0763,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.0763,44.0763,100,,official,default,true
+430629,Freginals,22,Montsià,2026-02,false,8.729821,83.9796,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,83.9796,83.9796,100,,official,default,true
+430635,la Galera,22,Montsià,2026-02,false,13.122449,76.9166,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.9166,76.9166,100,,official,default,true
+430640,Gandesa,37,Terra Alta,2026-02,false,34.876721,49.7811,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.7811,49.7811,100,,official,default,true
+430653,Garcia,30,Ribera d'Ebre,2026-02,false,27.537607,57.6516,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.6516,57.6516,100,,official,default,true
+430666,els Garidells,01,Alt Camp,2026-02,false,9.789651,82.2182,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.2182,82.2182,100,,official,default,true
+430672,Ginestar,30,Ribera d'Ebre,2026-02,false,21.824167,64.6305,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.6305,64.6305,100,,official,default,true
+430688,Godall,22,Montsià,2026-02,false,10.807364,80.5617,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.5617,80.5617,100,,official,default,true
+430691,Gratallops,29,Priorat,2026-02,false,24.294963,61.5144,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.5144,61.5144,100,,official,default,true
+430705,els Guiamets,29,Priorat,2026-02,false,18.688508,68.8135,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,68.8135,68.8135,100,,official,default,true
+430712,Horta de Sant Joan,37,Terra Alta,2026-02,false,36.269842,48.4132,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.4132,48.4132,100,,official,default,true
+430727,el Lloar,29,Priorat,2026-02,false,25.173189,60.4433,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.4433,60.4433,100,,official,default,true
+430733,Llorac,16,Conca de Barberà,2026-02,false,45.353408,40.3706,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.3706,40.3706,100,,official,default,true
+430748,Llorenç del Penedès,12,Baix Penedès,2026-02,false,10.788297,80.5924,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.5924,80.5924,100,,official,default,true
+430751,Margalef,29,Priorat,2026-02,false,33.348756,51.3259,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.3259,51.3259,100,,official,default,true
+430764,Marçà,29,Priorat,2026-02,false,17.606039,70.3195,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,70.3195,70.3195,100,,official,default,true
+430770,Mas de Barberans,22,Montsià,2026-02,false,22.700651,63.5074,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.5074,63.5074,100,,official,default,true
+430786,Masdenverge,22,Montsià,2026-02,false,11.98819,78.6814,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.6814,78.6814,100,,official,default,true
+430799,Masllorenç,12,Baix Penedès,2026-02,false,12.260314,78.2543,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,78.2543,78.2543,100,,official,default,true
+430803,la Masó,01,Alt Camp,2026-02,false,13.406804,76.4804,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.4804,76.4804,100,,official,default,true
+430810,Maspujols,08,Baix Camp,2026-02,false,13.00098,77.1036,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.1036,77.1036,100,,official,default,true
+430825,el Masroig,29,Priorat,2026-02,false,21.837057,64.6139,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.6139,64.6139,100,,official,default,true
+430831,el Milà,01,Alt Camp,2026-02,false,15.312733,73.6199,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.6199,73.6199,100,,official,default,true
+430846,Miravet,30,Ribera d'Ebre,2026-02,false,24.042674,61.8255,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.8255,61.8255,100,,official,default,true
+430859,el Molar,29,Priorat,2026-02,false,26.429896,58.9431,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.9431,58.9431,100,,official,default,true
+430862,Montblanc,16,Conca de Barberà,2026-02,false,29.880768,55.0122,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,55.0122,55.0122,100,,official,default,true
+430884,Montbrió del Camp,08,Baix Camp,2026-02,false,7.348726,86.3316,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,86.3316,86.3316,100,,official,default,true
+430897,Montferri,01,Alt Camp,2026-02,false,13.74957,75.9579,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.9579,75.9579,100,,official,default,true
+430901,el Montmell,12,Baix Penedès,2026-02,false,16.036045,72.5626,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.5626,72.5626,100,,official,default,true
+430918,Mont-ral,01,Alt Camp,2026-02,false,22.675095,63.5399,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,63.5399,63.5399,100,,official,default,true
+430923,Mont-roig del Camp,08,Baix Camp,2026-02,true,5.788215,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+430939,Móra d'Ebre,30,Ribera d'Ebre,2026-02,false,24.628972,61.1048,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.1048,61.1048,100,,official,default,true
+430944,Móra la Nova,30,Ribera d'Ebre,2026-02,false,24.579369,61.1655,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.1655,61.1655,100,,official,default,true
+430957,el Morell,36,Tarragonès,2026-02,false,9.53871,82.6319,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.6319,82.6319,100,,official,default,true
+430960,la Morera de Montsant,29,Priorat,2026-02,false,27.690677,57.4754,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.4754,57.4754,100,,official,default,true
+430976,la Nou de Gaià,36,Tarragonès,2026-02,false,5.447507,89.6775,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,89.6775,89.6775,100,,official,default,true
+430982,Nulles,01,Alt Camp,2026-02,false,13.362014,76.5489,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.5489,76.5489,100,,official,default,true
+430995,la Palma d'Ebre,30,Ribera d'Ebre,2026-02,false,37.886619,46.8728,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.8728,46.8728,100,,official,default,true
+431009,els Pallaresos,36,Tarragonès,2026-02,false,5.757486,89.1233,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,89.1233,89.1233,100,,official,default,true
+431016,Passanant i Belltall,16,Conca de Barberà,2026-02,false,45.618226,40.1574,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,40.1574,40.1574,100,,official,default,true
+431021,Paüls,09,Baix Ebre,2026-02,false,28.41143,56.6528,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.6528,56.6528,100,,official,default,true
+431037,Perafort,36,Tarragonès,2026-02,false,7.843413,85.4817,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.4817,85.4817,100,,official,default,true
+431042,el Perelló,09,Baix Ebre,2026-02,true,4.655,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431055,les Piles de Gaià,16,Conca de Barberà,2026-02,false,38.876959,45.9535,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,45.9535,45.9535,100,,official,default,true
+431068,el Pinell de Brai,37,Terra Alta,2026-02,false,27.451251,57.7513,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.7513,57.7513,100,,official,default,true
+431074,Pira,16,Conca de Barberà,2026-02,false,33.845388,50.8186,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,50.8186,50.8186,100,,official,default,true
+431080,el Pla de Santa Maria,01,Alt Camp,2026-02,false,26.278175,59.1222,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.1222,59.1222,100,,official,default,true
+431093,la Pobla de Mafumet,36,Tarragonès,2026-02,false,9.0224,83.4896,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,83.4896,83.4896,100,,official,default,true
+431107,la Pobla de Massaluca,37,Terra Alta,2026-02,false,49.892993,36.8668,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,36.8668,36.8668,100,,official,default,true
+431114,la Pobla de Montornès,36,Tarragonès,2026-02,false,3.124966,93.9414,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,93.9414,93.9414,100,,official,default,true
+431129,Poboleda,29,Priorat,2026-02,false,24.467109,61.303,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.303,61.303,100,,official,default,true
+431135,el Pont d'Armentera,01,Alt Camp,2026-02,false,25.674754,59.84,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,59.84,59.84,100,,official,default,true
+431140,Porrera,29,Priorat,2026-02,false,19.759345,67.3554,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.3554,67.3554,100,,official,default,true
+431153,Pradell de la Teixeta,29,Priorat,2026-02,false,15.8885,72.777,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,72.777,72.777,100,,official,default,true
+431166,Prades,08,Baix Camp,2026-02,false,27.779163,57.3738,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.3738,57.3738,100,,official,default,true
+431172,Prat de Comte,37,Terra Alta,2026-02,false,31.736596,53.0078,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,53.0078,53.0078,100,,official,default,true
+431188,Pratdip,08,Baix Camp,2026-02,false,7.670416,85.7779,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.7779,85.7779,100,,official,default,true
+431191,Puigpelat,01,Alt Camp,2026-02,false,16.733778,71.557,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.557,71.557,100,,official,default,true
+431205,Querol,01,Alt Camp,2026-02,false,28.894882,56.1077,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,56.1077,56.1077,100,,official,default,true
+431212,Rasquera,30,Ribera d'Ebre,2026-02,false,21.572693,64.9564,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,64.9564,64.9564,100,,official,default,true
+431227,Renau,36,Tarragonès,2026-02,false,10.55852,80.9636,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,80.9636,80.9636,100,,official,default,true
+431233,Reus,08,Baix Camp,2026-02,false,9.012225,83.5066,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,83.5066,83.5066,100,,official,default,true
+431248,la Riba,01,Alt Camp,2026-02,false,23.379928,62.6505,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,62.6505,62.6505,100,,official,default,true
+431251,Riba-roja d'Ebre,30,Ribera d'Ebre,2026-02,false,46.116932,39.7588,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,39.7588,39.7588,100,,official,default,true
+431264,la Riera de Gaià,36,Tarragonès,2026-02,false,3.662915,92.9361,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,92.9361,92.9361,100,,official,default,true
+431270,Riudecanyes,08,Baix Camp,2026-02,false,9.928984,81.9894,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,81.9894,81.9894,100,,official,default,true
+431286,Riudecols,08,Baix Camp,2026-02,false,13.119658,76.9209,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.9209,76.9209,100,,official,default,true
+431299,Riudoms,08,Baix Camp,2026-02,false,8.21394,84.8505,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.8505,84.8505,100,,official,default,true
+431303,Rocafort de Queralt,16,Conca de Barberà,2026-02,false,37.938278,46.8244,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.8244,46.8244,100,,official,default,true
+431310,Roda de Berà,36,Tarragonès,2026-02,true,2.426141,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431325,Rodonyà,01,Alt Camp,2026-02,false,13.832633,75.8318,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.8318,75.8318,100,,official,default,true
+431331,Roquetes,09,Baix Ebre,2026-02,false,16.730923,71.5611,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,71.5611,71.5611,100,,official,default,true
+431346,el Rourell,01,Alt Camp,2026-02,false,12.518881,77.8507,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.8507,77.8507,100,,official,default,true
+431359,Salomó,36,Tarragonès,2026-02,false,9.875065,82.0779,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,82.0779,82.0779,100,,official,default,true
+431362,la Ràpita,22,Montsià,2026-02,true,0.351267,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431378,Sant Jaume dels Domenys,12,Baix Penedès,2026-02,false,12.509141,77.8658,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.8658,77.8658,100,,official,default,true
+431384,Santa Bàrbara,22,Montsià,2026-02,false,13.778838,75.9134,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.9134,75.9134,100,,official,default,true
+431397,Santa Coloma de Queralt,16,Conca de Barberà,2026-02,false,40.835864,44.188,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,44.188,44.188,100,,official,default,true
+431401,Santa Oliva,12,Baix Penedès,2026-02,false,7.542006,85.9985,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.9985,85.9985,100,,official,default,true
+431418,Pontils,16,Conca de Barberà,2026-02,false,34.864567,49.7932,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.7932,49.7932,100,,official,default,true
+431423,Sarral,16,Conca de Barberà,2026-02,false,35.357953,49.3043,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.3043,49.3043,100,,official,default,true
+431439,Savallà del Comtat,16,Conca de Barberà,2026-02,false,44.151364,41.3529,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,41.3529,41.3529,100,,official,default,true
+431444,la Secuita,36,Tarragonès,2026-02,false,8.648405,84.1164,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.1164,84.1164,100,,official,default,true
+431457,la Selva del Camp,08,Baix Camp,2026-02,false,14.108158,75.4151,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,75.4151,75.4151,100,,official,default,true
+431460,Senan,16,Conca de Barberà,2026-02,false,41.817129,43.3292,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.3292,43.3292,100,,official,default,true
+431476,Solivella,16,Conca de Barberà,2026-02,false,37.810357,46.9444,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,46.9444,46.9444,100,,official,default,true
+431482,Tarragona,36,Tarragonès,2026-02,true,0.483783,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431495,Tivenys,09,Baix Ebre,2026-02,false,19.42148,67.8121,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,67.8121,67.8121,100,,official,default,true
+431508,Tivissa,30,Ribera d'Ebre,2026-02,false,15.303962,73.6328,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.6328,73.6328,100,,official,default,true
+431515,la Torre de Fontaubella,29,Priorat,2026-02,false,13.711038,76.0164,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.0164,76.0164,100,,official,default,true
+431520,la Torre de l'Espanyol,30,Ribera d'Ebre,2026-02,false,33.26149,51.4155,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,51.4155,51.4155,100,,official,default,true
+431536,Torredembarra,36,Tarragonès,2026-02,true,1.072614,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431541,Torroja del Priorat,29,Priorat,2026-02,false,24.182115,61.6534,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,61.6534,61.6534,100,,official,default,true
+431554,Tortosa,09,Baix Ebre,2026-02,false,15.142505,73.871,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,73.871,73.871,100,,official,default,true
+431567,Ulldecona,22,Montsià,2026-02,false,8.28946,84.7225,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.7225,84.7225,100,,official,default,true
+431573,Ulldemolins,29,Priorat,2026-02,false,32.159845,52.5609,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.5609,52.5609,100,,official,default,true
+431589,Vallclara,16,Conca de Barberà,2026-02,false,35.268061,49.393,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.393,49.393,100,,official,default,true
+431592,Vallfogona de Riucorb,16,Conca de Barberà,2026-02,false,48.096234,38.2157,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,38.2157,38.2157,100,,official,default,true
+431606,Vallmoll,01,Alt Camp,2026-02,false,13.376631,76.5265,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,76.5265,76.5265,100,,official,default,true
+431613,Valls,01,Alt Camp,2026-02,false,17.857987,69.9661,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.9661,69.9661,100,,official,default,true
+431628,Vandellòs i l'Hospitalet de l'Infant,08,Baix Camp,2026-02,true,7.517855,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431634,el Vendrell,12,Baix Penedès,2026-02,true,4.18735,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431649,Vespella de Gaià,36,Tarragonès,2026-02,false,7.931344,85.3315,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,85.3315,85.3315,100,,official,default,true
+431652,Vilabella,01,Alt Camp,2026-02,false,13.042192,77.0401,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,77.0401,77.0401,100,,official,default,true
+431665,Vilallonga del Camp,36,Tarragonès,2026-02,false,11.686477,79.1576,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,79.1576,79.1576,100,,official,default,true
+431671,Vilanova d'Escornalbou,08,Baix Camp,2026-02,false,9.028572,83.4793,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,83.4793,83.4793,100,,official,default,true
+431687,Vilanova de Prades,16,Conca de Barberà,2026-02,false,32.534052,52.169,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,52.169,52.169,100,,official,default,true
+431690,Vilaplana,08,Baix Camp,2026-02,false,18.288509,69.3662,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.3662,69.3662,100,,official,default,true
+431704,Vila-rodona,01,Alt Camp,2026-02,false,18.437059,69.1604,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,69.1604,69.1604,100,,official,default,true
+431711,Vila-seca,36,Tarragonès,2026-02,true,4.21836,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+431726,Vilaverd,16,Conca de Barberà,2026-02,false,25.030023,60.6167,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,60.6167,60.6167,100,,official,default,true
+431732,la Vilella Alta,29,Priorat,2026-02,false,26.792363,58.5173,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,58.5173,58.5173,100,,official,default,true
+431747,la Vilella Baixa,29,Priorat,2026-02,false,27.411992,57.7966,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,57.7966,57.7966,100,,official,default,true
+431750,Vilalba dels Arcs,37,Terra Alta,2026-02,false,41.936695,43.2257,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,43.2257,43.2257,100,,official,default,true
+431763,Vimbodí i Poblet,16,Conca de Barberà,2026-02,false,35.6764,48.9913,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,48.9913,48.9913,100,,official,default,true
+431779,Vinebre,30,Ribera d'Ebre,2026-02,false,34.731641,49.9258,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,49.9258,49.9258,100,,official,default,true
+431785,Vinyols i els Arcs,08,Baix Camp,2026-02,false,5.606087,89.3935,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,89.3935,89.3935,100,,official,default,true
+439018,Deltebre,09,Baix Ebre,2026-02,true,5.198386,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+439023,Sant Jaume d'Enveja,22,Montsià,2026-02,true,6.790225,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+439039,Camarles,09,Baix Ebre,2026-02,false,3.635325,92.9874,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,92.9874,92.9874,100,,official,default,true
+439044,l'Aldea,09,Baix Ebre,2026-02,false,8.490653,84.3823,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,84.3823,84.3823,100,,official,default,true
+439057,Salou,36,Tarragonès,2026-02,true,0.818923,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+439060,l'Ampolla,09,Baix Ebre,2026-02,true,0.078855,100,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,100,100,100,,official,default,true
+439076,la Canonja,36,Tarragonès,2026-02,false,3.662533,92.9368,100,municipality,icgc_coast_v1r0_202602,,2026-08-21T18:23:41Z,0.2.0,,,complete,92.9368,92.9368,100,,official,default,true
