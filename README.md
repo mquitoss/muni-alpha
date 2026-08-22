@@ -600,6 +600,10 @@ obtenida como `partial` y continúa en la siguiente ejecución:
 
 # Mapa estático (Fase 2)
 
+La versión visible del mapa sigue versionado semántico y actualmente es
+`0.3.0`. El número se declara en `package.json` y se valida contra la
+configuración mostrada en la interfaz.
+
 El mapa zero-build combina `municipalities.csv` y los 15 CSV de scores mediante
 `municipality_code`, y une la geometría ICGC por `CODIMUNI`. Los vacíos se
 publican como `null`; no se imputan ni se convierten en cero.

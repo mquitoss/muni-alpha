@@ -5,7 +5,11 @@
   const L = window.L;
   const config = window.SSM_CONFIG || {};
   const engine = (window.SSM && window.SSM.engine) || {};
-  const state = { zones: [], scores: new Map(), weights: {}, preset: null, map: null, layer: null, layers: new Map(), query: "", selected: null };
+  const state = {
+    zones: [], scores: new Map(), weights: {}, preset: null, map: null, layer: null,
+    layers: new Map(), query: "", selected: null, selectedOutline: null,
+    referenceLayer: null, municipalityLabelLayer: null,
+  };
   const $ = (selector) => document.querySelector(selector);
 
   function element(tag, attrs = {}, children = []) {
@@ -44,7 +48,7 @@
     const score = scoreFor(zone);
     const fillColor = engine.colorForValue(score && score.scoreN, { min: 0, max: 1 }, config.color.ramp);
     if (!fillColor) return { ...config.color.noData, weight: 1, fillOpacity: 0.55 };
-    return { color: "#f3efe5", weight: 0.7, fillColor, fillOpacity: 0.82 };
+    return { color: "#f3efe5", weight: 0.7, fillColor, fillOpacity: 0.7 };
   }
 
   function renderMap() {
@@ -76,10 +80,84 @@
     }
   }
 
+  function highlightZone(zone) {
+    if (state.selectedOutline) state.selectedOutline.remove();
+    state.selectedOutline = L.geoJSON(zone.feature, {
+      interactive: false,
+      style: {
+        color: config.branding.accent,
+        weight: 4,
+        opacity: 1,
+        fill: false,
+        lineCap: "round",
+        lineJoin: "round",
+      },
+    }).addTo(state.map);
+    state.selectedOutline.bringToFront();
+  }
+
+  function labelIcon(label, kind) {
+    const text = document.createElement("span");
+    text.className = `ssm-map-label ssm-map-label-${kind}`;
+    text.textContent = label;
+    return L.divIcon({
+      className: "ssm-map-label-icon",
+      html: text.outerHTML,
+      iconSize: [0, 0],
+      iconAnchor: [0, 0],
+    });
+  }
+
+  function zoneCoordinates(zone) {
+    const lat = Number(zone.ind?.capital_lat);
+    const lon = Number(zone.ind?.capital_lon);
+    return Number.isFinite(lat) && Number.isFinite(lon) ? [lat, lon] : null;
+  }
+
+  function refreshMunicipalityLabels() {
+    const layer = state.municipalityLabelLayer;
+    if (!layer || !state.map.hasLayer(layer)) return;
+    layer.clearLayers();
+    if (state.map.getZoom() < config.map.municipalityLabels.minZoom) return;
+    const bounds = state.map.getBounds().pad(0.15);
+    for (const zone of state.zones) {
+      const coordinates = zoneCoordinates(zone);
+      if (coordinates && bounds.contains(coordinates)) {
+        L.marker(coordinates, { icon: labelIcon(zone.name, "municipality"), interactive: false }).addTo(layer);
+      }
+    }
+  }
+
+  function addOrientationLayers() {
+    const capitalNames = new Set((config.map.comarcaCapitals || []).map(engine.normalizeName));
+    const capitalMarkers = state.zones
+      .filter((zone) => capitalNames.has(engine.normalizeName(zone.name)))
+      .map((zone) => {
+        const coordinates = zoneCoordinates(zone);
+        return coordinates
+          ? L.marker(coordinates, { icon: labelIcon(zone.name, "capital"), interactive: false })
+          : null;
+      })
+      .filter(Boolean);
+    const referenceTiles = L.tileLayer(config.map.referenceTiles.url, {
+      attribution: config.map.referenceTiles.attribution,
+      pane: "overlayPane",
+    });
+    state.referenceLayer = L.layerGroup([referenceTiles, ...capitalMarkers]).addTo(state.map);
+    state.municipalityLabelLayer = L.layerGroup().addTo(state.map);
+    L.control.layers(null, {
+      "Capitales comarcales y vías": state.referenceLayer,
+      "Nombres de municipios (zoom 11+)": state.municipalityLabelLayer,
+    }, { position: "topright" }).addTo(state.map);
+    state.map.on("zoomend moveend overlayadd", refreshMunicipalityLabels);
+    refreshMunicipalityLabels();
+  }
+
   function showDetail(zone) {
     const panel = $("#ssm-detail");
     const score = scoreFor(zone);
     state.selected = zone;
+    highlightZone(zone);
     panel.replaceChildren();
     panel.append(element("div", { class: "ssm-detail-head" }, [
       element("div", {}, [
@@ -109,6 +187,8 @@
     panel.classList.remove("open");
     panel.setAttribute("aria-hidden", "true");
     state.selected = null;
+    if (state.selectedOutline) state.selectedOutline.remove();
+    state.selectedOutline = null;
   }
 
   function focusZone(zone) {
@@ -117,12 +197,13 @@
     showDetail(zone);
   }
 
-  function resultList() {
-    const query = engine.normalizeName(state.query.trim());
-    const ranked = state.zones
-      .filter((zone) => !query || engine.normalizeName(zone.name).includes(query))
-      .sort((left, right) => (scoreFor(right)?.score ?? -1) - (scoreFor(left)?.score ?? -1))
-      .slice(0, query ? 12 : 8);
+  function matchingZones() {
+    return engine.searchZones(state.zones, state.query, scoreFor);
+  }
+
+  function resultList(limit = 8) {
+    const ranked = matchingZones().slice(0, limit);
+    if (!ranked.length) return element("p", { class: "ssm-no-results" }, ["No se ha encontrado ningún municipio."]);
     return element("div", { class: "ssm-results" }, ranked.map((zone) => {
       const badges = [];
       if ((zone.ind?.hut_feasibility_score_0_100 ?? 100) < 100) badges.push("HUT restringido");
@@ -145,13 +226,41 @@
   function buildConsole() {
     const rail = $("#ssm-rail");
     rail.replaceChildren();
-    rail.append(element("header", { class: "ssm-brand" }, [element("h1", {}, [config.branding.title]), element("p", {}, [config.branding.subtitle])]));
+    rail.append(element("header", { class: "ssm-brand" }, [
+      element("h1", {}, [
+        element("span", { class: "ssm-brand-name" }, [config.branding.title]),
+        element("span", { class: "ssm-version" }, [`v${config.branding.version}`]),
+      ]),
+      element("p", {}, [config.branding.subtitle]),
+    ]));
     rail.append(element("p", { class: "ssm-status" }, [coverageStatus()]));
     rail.append(element("p", { class: "ssm-notice" }, [config.branding.notice]));
-    rail.append(element("input", { class: "ssm-search", type: "search", value: state.query, placeholder: "Buscar municipio…", "aria-label": "Buscar municipio", oninput: (event) => {
-      state.query = event.target.value;
-      rail.querySelector(".ssm-results")?.replaceWith(resultList());
-    } }));
+    const searchFeedback = element("div", { class: "ssm-search-feedback", "aria-live": "polite" });
+    const renderSearchFeedback = () => {
+      searchFeedback.replaceChildren();
+      if (!state.query.trim()) return;
+      searchFeedback.append(
+        element("h2", { class: "ssm-section-title" }, ["Coincidencias"]),
+        resultList(12),
+      );
+    };
+    const searchInput = element("input", {
+      class: "ssm-search", type: "search", value: state.query, placeholder: "Buscar municipio…",
+      "aria-label": "Buscar municipio", autocomplete: "off",
+      oninput: (event) => {
+        state.query = event.target.value;
+        renderSearchFeedback();
+      },
+    });
+    rail.append(element("form", {
+      class: "ssm-search-form",
+      onsubmit: (event) => {
+        event.preventDefault();
+        const match = matchingZones()[0];
+        if (match && state.query.trim()) focusZone(match);
+      },
+    }, [searchInput]), searchFeedback);
+    renderSearchFeedback();
 
     const presets = element("div", { class: "ssm-presets" }, (config.scoring.presets || []).map((preset) => element("button", {
       class: `ssm-preset${state.preset === preset.id ? " active" : ""}`,
@@ -183,14 +292,16 @@
           rescore();
           refreshMapStyles();
           rail.querySelector(".ssm-status").textContent = coverageStatus();
-          rail.querySelector(".ssm-results")?.replaceWith(resultList());
+          renderSearchFeedback();
           if (state.selected) showDetail(state.selected);
         } });
         sliders.append(element("label", { class: "ssm-slider" }, [element("span", {}, [factor.label]), output, input]));
       }
       rail.append(element("section", { class: "ssm-section" }, [element("h2", { class: "ssm-section-title" }, [group]), sliders]));
     }
-    rail.append(element("section", { class: "ssm-section" }, [element("h2", { class: "ssm-section-title" }, [state.query ? "Coincidencias" : "Mejor índice actual"]), resultList()]));
+    if (!state.query.trim()) {
+      rail.append(element("section", { class: "ssm-section" }, [element("h2", { class: "ssm-section-title" }, ["Mejor índice actual"]), resultList()]));
+    }
     const gradient = config.color.ramp.map((color) => `rgb(${color.join(",")})`).join(",");
     rail.append(element("div", { class: "ssm-section" }, [element("div", { class: "ssm-legend-bar", style: `background:linear-gradient(90deg,${gradient})` }), element("div", { class: "ssm-legend-ends" }, ["índice bajo", "índice alto"])]));
   }
@@ -209,6 +320,7 @@
     state.map = L.map("ssm-map", { zoomControl: true }).setView(config.map.center, config.map.zoom);
     L.tileLayer(config.map.tiles.url, { attribution: config.map.tiles.attribution }).addTo(state.map);
     renderMap();
+    addOrientationLayers();
     buildConsole();
     state.map.fitBounds(state.layer.getBounds(), { padding: [12, 12] });
   }

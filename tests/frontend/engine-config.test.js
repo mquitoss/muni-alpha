@@ -4,7 +4,9 @@ import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const config = require("../../app.config.js");
+const packageConfig = require("../../package.json");
 const join = require("../../src/engine/join.js");
+const search = require("../../src/engine/search.js");
 const scoring = require("../../src/engine/scoring.js");
 const format = require("../../src/engine/format.js");
 const projectRoot = process.cwd();
@@ -62,9 +64,37 @@ describe("motor agnóstico", () => {
     expect(format.formatValue(60, { format: "duration" })).toBe("1 h");
     expect(format.formatValue(95, { format: "duration" })).toBe("1 h 35 min");
   });
+
+  it("busca sin acentos ni artículos y prioriza coincidencias iniciales", () => {
+    const zones = [
+      { name: "Móra d'Ebre" },
+      { name: "Sant Mori" },
+      { name: "Móra la Nova" },
+    ];
+    expect(search.searchZones(zones, "mora").map((zone) => zone.name)).toEqual([
+      "Móra d'Ebre", "Móra la Nova",
+    ]);
+    expect(search.searchZones([{ name: "l'Hospitalet de Llobregat" }], "hospitalet")).toHaveLength(1);
+  });
 });
 
 describe("configuración MuniAlpha", () => {
+  it("mantiene una única versión semántica visible", () => {
+    expect(config.branding.version).toBe(packageConfig.version);
+    expect(config.branding.version).toMatch(/^\d+\.\d+\.\d+$/);
+  });
+
+  it("configura referencias y etiquetas municipales por nivel de zoom", () => {
+    expect(config.map.referenceTiles.url).toContain("only_labels");
+    expect(config.map.municipalityLabels.minZoom).toBeGreaterThan(config.map.zoom);
+    expect(config.map.comarcaCapitals).toHaveLength(44);
+  });
+
+  it("normaliza artículos y acentos para buscar municipios", () => {
+    expect(join.normalizeName("l'Hospitalet de Llobregat")).toBe("hospitalet de llobregat");
+    expect(join.normalizeName("Móra d'Ebre")).toBe("mora d'ebre");
+  });
+
   it("declara las siete tesis solicitadas", () => {
     expect(config.scoring.presets.map((preset) => preset.id)).toEqual([
       "equilibrado", "residencial", "crecimiento", "turistico", "calidad", "invierno", "senderismo",

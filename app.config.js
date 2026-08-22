@@ -29,6 +29,7 @@
   const config = {
     branding: {
       title: "MuniAlpha",
+      version: "0.3.0",
       subtitle: "Explorador municipal de inversión inmobiliaria · Cataluña",
       accent: "#e3b341",
       dataNamespace: "MUNIALPHA_DATA",
@@ -43,6 +44,21 @@
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a> · Geometría ICGC',
       },
+      referenceTiles: {
+        url: "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
+        attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+      },
+      municipalityLabels: { minZoom: 11 },
+      comarcaCapitals: [
+        "Valls", "Figueres", "Vilafranca del Penedès", "la Seu d'Urgell", "el Pont de Suert",
+        "Igualada", "Manresa", "Reus", "Tortosa", "la Bisbal d'Empordà",
+        "Sant Feliu de Llobregat", "el Vendrell", "Barcelona", "Berga", "Puigcerdà",
+        "Montblanc", "Vilanova i la Geltrú", "les Borges Blanques", "Olot", "Girona",
+        "Prats de Lluçanès", "Mataró", "Moià", "Amposta", "Balaguer", "Vic", "Tremp",
+        "Sort", "Mollerussa", "Banyoles", "Falset", "Móra d'Ebre", "Ripoll", "Cervera",
+        "Lleida", "Santa Coloma de Farners", "Solsona", "Tarragona", "Gandesa", "Tàrrega",
+        "Vielha e Mijaran", "Sabadell", "Terrassa", "Granollers",
+      ],
     },
     join: {
       property: "CODIMUNI",
