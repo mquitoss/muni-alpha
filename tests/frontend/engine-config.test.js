@@ -7,6 +7,7 @@ const config = require("../../app.config.js");
 const packageConfig = require("../../package.json");
 const join = require("../../src/engine/join.js");
 const search = require("../../src/engine/search.js");
+const media = require("../../src/engine/media.js");
 const scoring = require("../../src/engine/scoring.js");
 const format = require("../../src/engine/format.js");
 const projectRoot = process.cwd();
@@ -90,6 +91,13 @@ describe("configuración MuniAlpha", () => {
     expect(config.map.comarcaCapitals).toHaveLength(44);
   });
 
+  it("documenta todos los campos y el proceso de datos", () => {
+    expect(config.detail.fields.every((field) => field.help?.length > 20)).toBe(true);
+    expect(config.detail.glossaryIntro).toMatch(/0 a 100/);
+    expect(config.methodology.sources.length).toBeGreaterThanOrEqual(4);
+    expect(config.methodology.steps).toHaveLength(6);
+  });
+
   it("normaliza artículos y acentos para buscar municipios", () => {
     expect(join.normalizeName("l'Hospitalet de Llobregat")).toBe("hospitalet de llobregat");
     expect(join.normalizeName("Móra d'Ebre")).toBe("mora d'ebre");
@@ -129,6 +137,47 @@ describe("configuración MuniAlpha", () => {
   });
 });
 
+describe("fotografías de Wikimedia Commons", () => {
+  it("construye una búsqueda geográfica alrededor del municipio", () => {
+    const url = new URL(media.buildCommonsUrl({ name: "Vic", lat: 41.93, lon: 2.25, searchLimit: 12 }));
+    expect(url.hostname).toBe("commons.wikimedia.org");
+    expect(url.searchParams.get("generator")).toBe("geosearch");
+    expect(url.searchParams.get("ggscoord")).toBe("41.93|2.25");
+    expect(url.searchParams.get("ggslimit")).toBe("12");
+  });
+
+  it("selecciona fotografías y descarta mapas o formatos no fotográficos", () => {
+    const image = (title, mime) => ({
+      title,
+      imageinfo: [{
+        mime,
+        thumburl: `https://upload.wikimedia.org/${encodeURIComponent(title)}.jpg`,
+        descriptionurl: "https://commons.wikimedia.org/wiki/File:Town.jpg",
+        extmetadata: {
+          Artist: { value: "<b>Autora &amp; Co.</b>" },
+          LicenseShortName: { value: "CC BY-SA 4.0" },
+          LicenseUrl: { value: "https://creativecommons.org/licenses/by-sa/4.0/" },
+        },
+      }],
+    });
+    const payload = { query: { pages: {
+      1: image("File:Plaça major.jpg", "image/jpeg"),
+      2: image("File:Map of town.jpg", "image/jpeg"),
+      3: image("File:Escut.svg", "image/svg+xml"),
+      4: image("File:Entorn natural.webp", "image/webp"),
+      5: image("File:001 Plaça major.jpg", "image/jpeg"),
+    } } };
+
+    const selected = media.selectCommonsImages(payload, 3);
+    expect(selected.map((photo) => photo.title)).toEqual(["Plaça major", "Entorn natural"]);
+    expect(selected[0].author).toBe("Autora & Co.");
+    expect(selected[0].license).toBe("CC BY-SA 4.0");
+    expect(media.titleSignature("001 Plaça major (Vic).jpg")).toBe("placa major");
+    expect(media.safeExternalUrl("javascript:alert(1)")).toBeNull();
+    expect(media.safeExternalUrl("//creativecommons.org/licenses/by/4.0/")).toMatch(/^https:/);
+  });
+});
+
 describe("build estático", () => {
   it("publica solo los recursos necesarios en dist", () => {
     execFileSync(process.execPath, [resolve(projectRoot, "scripts/build_static_site.js")]);
@@ -136,6 +185,7 @@ describe("build estático", () => {
     expect(existsSync(resolve(projectRoot, "dist/index.html"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/data/map_bundle.js"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/src/engine/scoring.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/src/engine/media.js"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/node_modules"))).toBe(false);
     expect(existsSync(resolve(projectRoot, "dist/.venv"))).toBe(false);
 

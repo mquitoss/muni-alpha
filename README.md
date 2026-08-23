@@ -601,7 +601,7 @@ obtenida como `partial` y continúa en la siguiente ejecución:
 # Mapa estático (Fase 2)
 
 La versión visible del mapa sigue versionado semántico y actualmente es
-`0.3.0`. El número se declara en `package.json` y se valida contra la
+`0.4.0`. El número se declara en `package.json` y se valida contra la
 configuración mostrada en la interfaz.
 
 El mapa zero-build combina `municipalities.csv` y los 15 CSV de scores mediante
@@ -627,6 +627,16 @@ invierno prioriza el acceso a estaciones de esquí; senderismo utiliza paisaje
 presenta como gate regulatorio y el riesgo natural como indicador de revisión:
 ninguno entra en el índice compuesto. La aplicación no constituye asesoramiento
 financiero, legal, fiscal ni urbanístico.
+
+La ficha municipal incluye un glosario de indicadores y hasta tres fotografías
+geolocalizadas cercanas procedentes de Wikimedia Commons. Las imágenes se
+solicitan al abrir la ficha, conservan enlace a autor y licencia y pueden mostrar
+el entorno próximo en lugar del núcleo exacto. Si Commons no está disponible,
+la ficha mantiene todos los indicadores y muestra un fallback informativo.
+
+La barra lateral resume las fuentes y las fases del pipeline: snapshots
+trazables, validación por código IDESCAT, normalización, conservación de `null`
+y cálculo dinámico con cobertura mínima.
 
 Pruebas y linters:
 

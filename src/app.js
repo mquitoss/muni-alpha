@@ -8,7 +8,8 @@
   const state = {
     zones: [], scores: new Map(), weights: {}, preset: null, map: null, layer: null,
     layers: new Map(), query: "", selected: null, selectedOutline: null,
-    referenceLayer: null, municipalityLabelLayer: null,
+    referenceLayer: null, municipalityLabelLayer: null, photoCache: new Map(), photoRequest: 0,
+    glossaryTrigger: null,
   };
   const $ = (selector) => document.querySelector(selector);
 
@@ -153,9 +154,101 @@
     refreshMunicipalityLabels();
   }
 
+  function closeGlossary(restoreFocus = true) {
+    const panel = $("#ssm-glossary");
+    panel.classList.remove("open");
+    panel.setAttribute("aria-hidden", "true");
+    if (state.glossaryTrigger?.isConnected) state.glossaryTrigger.setAttribute("aria-expanded", "false");
+    if (restoreFocus && state.glossaryTrigger?.isConnected) state.glossaryTrigger.focus();
+    state.glossaryTrigger = null;
+  }
+
+  function showGlossary(event) {
+    const panel = $("#ssm-glossary");
+    state.glossaryTrigger = event?.currentTarget || null;
+    state.glossaryTrigger?.setAttribute("aria-expanded", "true");
+    panel.replaceChildren();
+    panel.append(element("div", { class: "ssm-glossary-head" }, [
+      element("div", {}, [
+        element("p", { class: "ssm-eyebrow" }, ["Guía de lectura"]),
+        element("h2", { id: "ssm-glossary-title" }, ["Qué significa cada dato"]),
+      ]),
+      element("button", {
+        class: "ssm-close", type: "button", "aria-label": "Cerrar guía",
+        onclick: () => closeGlossary(),
+      }, ["×"]),
+    ]));
+    panel.append(element("p", { class: "ssm-glossary-intro" }, [config.detail.glossaryIntro]));
+    const definitions = element("dl", { class: "ssm-glossary-list" });
+    let section = null;
+    for (const field of config.detail.fields || []) {
+      if (field.section && field.section !== section) {
+        section = field.section;
+        definitions.append(element("div", { class: "ssm-glossary-section" }, [section]));
+      }
+      definitions.append(
+        element("dt", {}, [field.label || field.key]),
+        element("dd", {}, [field.help]),
+      );
+    }
+    panel.append(definitions);
+    panel.classList.add("open");
+    panel.setAttribute("aria-hidden", "false");
+    panel.querySelector(".ssm-close").focus();
+  }
+
+  function photoCard(photo, zone) {
+    return element("figure", { class: "ssm-photo" }, [
+      element("a", { href: photo.sourceUrl, target: "_blank", rel: "noopener noreferrer" }, [
+        element("img", { src: photo.url, alt: `${photo.title}, imagen cercana a ${zone.name}`, loading: "lazy" }),
+      ]),
+      element("figcaption", {}, [
+        element("strong", {}, [photo.title]),
+        element("span", {}, [
+          `${photo.author} · `,
+          element("a", { href: photo.licenseUrl, target: "_blank", rel: "noopener noreferrer" }, [photo.license]),
+        ]),
+      ]),
+    ]);
+  }
+
+  async function renderMunicipalityPhotos(zone, section) {
+    const request = ++state.photoRequest;
+    section.replaceChildren(element("p", { class: "ssm-photo-status" }, ["Buscando imágenes cercanas…"]));
+    let promise = state.photoCache.get(String(zone.key));
+    if (!promise) {
+      const [lat, lon] = zoneCoordinates(zone) || [];
+      promise = engine.fetchCommonsImages(
+        { name: zone.name, lat, lon },
+        config.detail.photos,
+      );
+      state.photoCache.set(String(zone.key), promise);
+    }
+    try {
+      const photos = await promise;
+      if (request !== state.photoRequest || state.selected?.key !== zone.key || !section.isConnected) return;
+      section.replaceChildren();
+      if (!photos.length) {
+        section.append(element("p", { class: "ssm-photo-status" }, ["No se han encontrado fotografías reutilizables para este entorno."]));
+        return;
+      }
+      section.append(element("div", { class: "ssm-photos-grid" }, photos.map((photo) => photoCard(photo, zone))));
+      section.append(element("p", { class: "ssm-photo-note" }, [
+        "Imágenes geolocalizadas cercanas proporcionadas por Wikimedia Commons. Pueden mostrar el entorno y no el núcleo exacto.",
+      ]));
+    } catch {
+      state.photoCache.delete(String(zone.key));
+      if (request !== state.photoRequest || state.selected?.key !== zone.key || !section.isConnected) return;
+      section.replaceChildren(element("p", { class: "ssm-photo-status" }, [
+        "No se han podido cargar las fotografías. Los indicadores del municipio siguen disponibles.",
+      ]));
+    }
+  }
+
   function showDetail(zone) {
     const panel = $("#ssm-detail");
     const score = scoreFor(zone);
+    closeGlossary(false);
     state.selected = zone;
     highlightZone(zone);
     panel.replaceChildren();
@@ -168,8 +261,19 @@
             : `Índice relativo: ${score.score}/100 · cobertura ${Math.round(score.coverage * 100)}%`,
         ]),
       ]),
-      element("button", { class: "ssm-close", type: "button", "aria-label": "Cerrar", onclick: () => closeDetail() }, ["×"]),
+      element("div", { class: "ssm-detail-actions" }, [
+        element("button", {
+          class: "ssm-help", type: "button", "aria-haspopup": "dialog",
+          "aria-controls": "ssm-glossary", "aria-expanded": "false",
+          onclick: showGlossary,
+        }, ["Guía de indicadores"]),
+        element("button", { class: "ssm-close", type: "button", "aria-label": "Cerrar", onclick: () => closeDetail() }, ["×"]),
+      ]),
     ]));
+    panel.append(element("h3", { class: "ssm-detail-section" }, ["Localidad y entorno"]));
+    const photos = element("section", { class: "ssm-photos", "aria-label": `Imágenes de ${zone.name}` });
+    panel.append(photos);
+    renderMunicipalityPhotos(zone, photos);
     for (const field of config.detail.fields || []) {
       if (field.section) panel.append(element("h3", { class: "ssm-detail-section" }, [field.section]));
       panel.append(element("div", { class: "ssm-row" }, [
@@ -187,6 +291,8 @@
     panel.classList.remove("open");
     panel.setAttribute("aria-hidden", "true");
     state.selected = null;
+    state.photoRequest += 1;
+    closeGlossary(false);
     if (state.selectedOutline) state.selectedOutline.remove();
     state.selectedOutline = null;
   }
@@ -223,6 +329,25 @@
     return `${state.zones.length} municipios · ${scored} con cobertura suficiente en esta tesis`;
   }
 
+  function methodologySection() {
+    const content = element("div", { class: "ssm-methodology-content" }, [
+      element("p", {}, [config.methodology.summary]),
+      element("h3", {}, ["Fuentes principales"]),
+      element("div", { class: "ssm-source-list" }, config.methodology.sources.map((source) =>
+        element("div", {}, [element("strong", {}, [source.name]), element("p", {}, [source.role])]),
+      )),
+      element("h3", {}, ["Proceso"]),
+      element("ol", {}, config.methodology.steps.map((step) => element("li", {}, [step]))),
+      element("div", { class: "ssm-methodology-links" }, config.methodology.links.map((link) =>
+        element("a", { href: link.url, target: "_blank", rel: "noopener noreferrer" }, [link.label]),
+      )),
+    ]);
+    return element("details", { class: "ssm-methodology" }, [
+      element("summary", {}, ["Datos y metodología"]),
+      content,
+    ]);
+  }
+
   function buildConsole() {
     const rail = $("#ssm-rail");
     rail.replaceChildren();
@@ -235,6 +360,7 @@
     ]));
     rail.append(element("p", { class: "ssm-status" }, [coverageStatus()]));
     rail.append(element("p", { class: "ssm-notice" }, [config.branding.notice]));
+    rail.append(methodologySection());
     const searchFeedback = element("div", { class: "ssm-search-feedback", "aria-live": "polite" });
     const renderSearchFeedback = () => {
       searchFeedback.replaceChildren();
@@ -328,6 +454,8 @@
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", bootstrap);
   else bootstrap();
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeDetail();
+    if (event.key !== "Escape") return;
+    if ($("#ssm-glossary").classList.contains("open")) closeGlossary();
+    else closeDetail();
   });
 })();
