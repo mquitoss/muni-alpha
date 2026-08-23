@@ -8,8 +8,12 @@
     "deploy": "wrangler deploy",
     "preview": "wrangler dev",
     "test": "vitest run",
-    "lint": "eslint app.config.js scripts/build_static_site.js src tests/frontend"
+    "test:parity": "vitest run tests/frontend/parity.test.js",
+    "baseline:check": "node scripts/parity_baseline.js --check",
+    "baseline:write": "node scripts/parity_baseline.js --write",
+    "lint": "eslint app.config.js scripts src tests/frontend"
   },
+  "engines": { "node": ">=22" },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "eslint": "^9.34.0",

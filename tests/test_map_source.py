@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 from pathlib import Path
 
@@ -95,6 +96,20 @@ def test_source_uses_icgc_geometry_and_builder_emits_compact_js(tmp_path: Path) 
     assert "\n " not in text
 
 
+def test_builder_is_reproducible_and_preserves_codes_and_null(tmp_path: Path) -> None:
+    make_project(tmp_path)
+    first = tmp_path / "first.js"
+    second = tmp_path / "second.js"
+
+    build_bundle(Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0), first)
+    build_bundle(Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0), second)
+
+    assert first.read_bytes() == second.read_bytes()
+    payload = json.loads(first.read_text(encoding="utf-8").removeprefix("window.MUNIALPHA_DATA=").removesuffix(";\n"))
+    assert payload["indicators"][0]["municipality_code"] == "080018"
+    assert payload["indicators"][1]["sale_price_score_0_100"] is None
+
+
 def test_builder_rejects_mismatched_join_keys() -> None:
     geo = {"features": [{"properties": {"CODIMUNI": "1"}}]}
     with pytest.raises(ValueError, match="differ"):
@@ -103,7 +118,9 @@ def test_builder_rejects_mismatched_join_keys() -> None:
 
 def test_versioned_map_bundle_contains_all_municipalities() -> None:
     project_root = Path(__file__).resolve().parents[1]
-    text = (project_root / "data/map_bundle.js").read_text(encoding="utf-8")
+    bundle_path = project_root / "data/map_bundle.js"
+    raw = bundle_path.read_bytes()
+    text = raw.decode("utf-8")
     payload = text.removeprefix("window.MUNIALPHA_DATA=").removesuffix(";\n")
     bundle = json.loads(payload)
 
@@ -111,3 +128,10 @@ def test_versioned_map_bundle_contains_all_municipalities() -> None:
     assert len(bundle["indicators"]) == 947
     assert len({row["municipality_code"] for row in bundle["indicators"]}) == 947
     assert any(row["sale_price_score_0_100"] is None for row in bundle["indicators"])
+    assert len(raw) == 7_874_013
+    assert hashlib.sha256(raw).hexdigest() == "64f4b7367e56b9a6f296afc12b05abd61426387293eb246fa6e88c791f2998ce"
+    assert {
+        key
+        for feature in bundle["geo"]["features"]
+        for key in feature["properties"]
+    } == {"CODIMUNI", "NOMMUNI"}

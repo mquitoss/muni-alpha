@@ -1,0 +1,26 @@
+{
+  "config": {
+    "keyField": "id",
+    "minCoverage": 0.65,
+    "factors": [
+      { "key": "factor_a", "indicator": "metric_a", "sign": 1 },
+      { "key": "factor_b", "indicator": "metric_b", "sign": -1 },
+      { "key": "factor_c", "indicator": "metric_c", "sign": 1 }
+    ]
+  },
+  "weights": { "factor_a": 2, "factor_b": 1, "factor_c": 1 },
+  "records": [
+    { "id": "complete-low", "metric_a": 0, "metric_b": 100, "metric_c": 0 },
+    { "id": "complete-high", "metric_a": 100, "metric_b": 0, "metric_c": 100 },
+    { "id": "partial-sufficient", "metric_a": 50, "metric_b": 50, "metric_c": null },
+    { "id": "partial-insufficient", "metric_a": null, "metric_b": null, "metric_c": 50 },
+    { "id": "no-coverage", "metric_a": null, "metric_b": null, "metric_c": null }
+  ],
+  "expected": [
+    { "id": "complete-low", "score": 0, "coverage": 1 },
+    { "id": "complete-high", "score": 100, "coverage": 1 },
+    { "id": "partial-sufficient", "score": 42, "coverage": 0.75 },
+    { "id": "partial-insufficient", "score": null, "coverage": 0.25 },
+    { "id": "no-coverage", "score": null, "coverage": 0 }
+  ]
+}

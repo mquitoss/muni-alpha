@@ -1,0 +1,16 @@
+{
+  "zones": [
+    { "name": "Àlba Nova", "score": 40 },
+    { "name": "l'Albareda", "score": 20 },
+    { "name": "Vall d'Àlba", "score": 90 },
+    { "name": "El Bosc", "score": 50 },
+    { "name": "Bosc Gran", "score": 50 }
+  ],
+  "cases": [
+    { "query": "alba", "expected": ["Àlba Nova", "l'Albareda", "Vall d'Àlba"] },
+    { "query": "  ALBA ", "expected": ["Àlba Nova", "l'Albareda", "Vall d'Àlba"] },
+    { "query": "bosc", "expected": ["Bosc Gran", "El Bosc"] },
+    { "query": "vall d'al", "expected": ["Vall d'Àlba"] },
+    { "query": "inexistent", "expected": [] }
+  ]
+}
