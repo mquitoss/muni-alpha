@@ -9,11 +9,17 @@
     "preview": "wrangler dev",
     "test": "vitest run",
     "test:parity": "vitest run tests/frontend/parity.test.js",
+    "tesela:check": "node scripts/verify_tesela.js",
     "baseline:check": "node scripts/parity_baseline.js --check",
     "baseline:write": "node scripts/parity_baseline.js --write",
     "lint": "eslint app.config.js scripts src tests/frontend"
   },
   "engines": { "node": ">=22" },
+  "tesela": {
+    "version": "0.3.0",
+    "tag": "v0.3.0",
+    "commit": "824caa0fb73b5bd540468c12452eadeda2d5bd04"
+  },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "eslint": "^9.34.0",

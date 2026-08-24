@@ -598,6 +598,30 @@ obtenida como `partial` y continúa en la siguiente ejecución:
 .venv/bin/munialpha --data-dir data
 ```
 
+# Desarrollo local
+
+Tesela `v0.3.0` está fijado como submódulo Git. Para obtener el repositorio
+completo desde un clone nuevo:
+
+```bash
+git clone --recurse-submodules https://github.com/mquitoss/muni-alpha.git
+cd muni-alpha
+npm install
+npm run tesela:check
+```
+
+Si el repositorio ya estaba clonado, inicializa Tesela antes de ejecutar los
+tests o el build:
+
+```bash
+git submodule update --init --recursive
+npm run tesela:check
+```
+
+El comando de verificación comprueba la URL HTTPS, la versión publicada y que el
+gitlink continúa apuntando al commit etiquetado `v0.3.0`. Durante este milestone
+MuniAlpha todavía carga su motor local; el submódulo no forma parte del runtime.
+
 # Mapa estático (Fase 2)
 
 La versión visible del mapa sigue versionado semántico y actualmente es

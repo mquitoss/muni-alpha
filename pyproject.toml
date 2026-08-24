@@ -44,6 +44,7 @@ ignore = ["E501"]
 [tool.mypy]
 python_version = "3.12"
 strict = true
+exclude = ["^vendor/"]
 
 [[tool.mypy.overrides]]
 module = "munialpha.services"

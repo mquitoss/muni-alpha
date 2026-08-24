@@ -1,0 +1,3 @@
+[submodule "vendor/tesela"]
+	path = vendor/tesela
+	url = https://github.com/mquitoss/tesela.git
