@@ -606,7 +606,7 @@ completo desde un clone nuevo:
 ```bash
 git clone --recurse-submodules https://github.com/mquitoss/muni-alpha.git
 cd muni-alpha
-npm install
+npm ci
 npm run tesela:check
 ```
 
@@ -705,14 +705,21 @@ npm run lint
 
 ## Despliegue en Cloudflare
 
-El build web copia el bundle versionado y los recursos públicos a `dist/`; no
-regenera los datos. De este modo el despliegue no necesita las fuentes raw ni
-incluye `node_modules`, el entorno Python o ficheros de desarrollo:
+El build web inicializa el submódulo, valida su manifiesto público y copia el
+bundle versionado y los recursos permitidos a `dist/`; no regenera los datos.
+De este modo el despliegue no necesita las fuentes raw ni incluye `node_modules`,
+el entorno Python o ficheros de desarrollo:
 
 ```bash
 npm run build
+npm run deploy:dry-run
 npm run deploy
 ```
+
+`deploy:dry-run` valida el empaquetado de Wrangler sin publicar. El deploy real
+se mantiene como un paso explícito. Cloudflare Workers Builds debe conservar los
+metadatos Git del checkout para que `npm run build` pueda ejecutar
+`git submodule update --init --recursive`.
 
 En Cloudflare Workers Builds debe utilizarse `npm run build` como comando de
 build y `npm run deploy` como comando de despliegue. `wrangler.jsonc` publica

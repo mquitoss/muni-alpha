@@ -4,6 +4,7 @@
 .pytest_cache/
 .ruff_cache/
 .venv/
+.wrangler/
 __pycache__/
 *.egg-info/
 data/raw/

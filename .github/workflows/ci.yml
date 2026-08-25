@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+
+      - run: git submodule status --recursive
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run tesela:check
+      - run: npm test
+      - run: npm run baseline:check
+      - run: npm run lint
+      - run: uv run --extra dev pytest
+      - run: uv run --extra dev ruff check .
+      - run: uv run --extra dev mypy .
+      - run: npm run build
+      - run: npm run test:e2e
+      - run: npm run deploy:dry-run

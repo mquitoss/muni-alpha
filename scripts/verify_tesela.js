@@ -15,8 +15,11 @@ function readJson(path) {
 }
 
 function assertTeselaInitialized(path = submodulePath) {
-  const sourcePath = resolve(path, "src");
-  if (!existsSync(sourcePath)) {
+  const requiredPaths = [
+    resolve(path, "tesela.assets.json"),
+    resolve(path, "src/app.js"),
+  ];
+  if (requiredPaths.some((requiredPath) => !existsSync(requiredPath))) {
     throw new Error(
       "Tesela no está inicializado en vendor/tesela. Ejecuta: git submodule update --init --recursive",
     );

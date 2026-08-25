@@ -9,7 +9,7 @@ module.exports = defineConfig({
     viewport: { width: 1440, height: 900 },
   },
   webServer: {
-    command: "npm run build && uv run python -m http.server 4173 --directory dist",
+    command: "npm run build && node scripts/serve_static.js --root dist --port 4173",
     port: 4173,
     reuseExistingServer: true,
   },

@@ -96,6 +96,24 @@ test("shell MuniAlpha sobre Tesela por HTTP", async ({ page }) => {
   await verifyShell(page, "http://127.0.0.1:4173/index.html");
 });
 
+test("servidor estático publica MIME correctos", async ({ request }) => {
+  const expected = {
+    "/": "text/html",
+    "/index.html": "text/html",
+    "/app.config.js": "text/javascript",
+    "/src/styles.css": "text/css",
+    "/favicon.svg": "image/svg+xml",
+    "/data/map_bundle.js": "text/javascript",
+    "/vendor/tesela/src/app.js": "text/javascript",
+  };
+  for (const [path, mime] of Object.entries(expected)) {
+    const response = await request.get(`http://127.0.0.1:4173${path}`);
+    expect(response.status(), path).toBe(200);
+    expect(response.headers()["content-type"], path).toContain(mime);
+    expect(response.headers()["x-content-type-options"], path).toBe("nosniff");
+  }
+});
+
 test("shell MuniAlpha sobre Tesela mediante file://", async ({ page }) => {
   const url = pathToFileURL(resolve(__dirname, "../../dist/index.html")).href;
   await verifyShell(page, url);
