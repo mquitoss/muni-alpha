@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "applicationVersion": "0.4.0",
   "bundle": {
-    "bytes": 7874013,
-    "sha256": "64f4b7367e56b9a6f296afc12b05abd61426387293eb246fa6e88c791f2998ce",
+    "bytes": 7874100,
+    "sha256": "a979130ff74baf67936835640bf319d0cbf784dac2c8998e85a2a3c7ea162a5b",
     "geometries": 947,
     "indicators": 947,
     "featurePropertyKeys": [

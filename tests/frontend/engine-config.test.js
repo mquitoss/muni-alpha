@@ -188,6 +188,9 @@ describe("build estático", () => {
     expect(existsSync(resolve(projectRoot, "dist/src/engine/media.js"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/node_modules"))).toBe(false);
     expect(existsSync(resolve(projectRoot, "dist/.venv"))).toBe(false);
+    const publishedBundle = readFileSync(resolve(projectRoot, "dist/data/map_bundle.js"));
+    const versionedBundle = readFileSync(resolve(projectRoot, "data/map_bundle.js"));
+    expect(publishedBundle.equals(versionedBundle)).toBe(true);
 
     const wrangler = JSON.parse(readFileSync(resolve(projectRoot, "wrangler.jsonc"), "utf8"));
     expect(wrangler.build.command).toBe("npm run build");

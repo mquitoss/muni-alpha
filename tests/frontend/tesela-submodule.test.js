@@ -19,7 +19,7 @@ describe("submódulo Tesela", () => {
     });
   });
 
-  it("mantiene el motor local durante M1", () => {
+  it("mantiene el motor local durante M2", () => {
     const html = readFileSync(resolve(projectRoot, "index.html"), "utf8");
     expect(html).toContain('src="src/engine/scoring.js"');
     expect(html).not.toContain('src="vendor/tesela/');

@@ -24,14 +24,24 @@ function sha256Json(value) {
 function readMapBundle(path = defaultBundlePath) {
   const source = readFileSync(path);
   const text = source.toString("utf8");
-  const prefix = "window.MUNIALPHA_DATA=";
-  const suffix = ";\n";
-  if (!text.startsWith(prefix) || !text.endsWith(suffix)) {
+  const lines = text.trimEnd().split("\n");
+  const prefix = "window.MUNIALPHA_DATA = ";
+  const aliases = [
+    "window.TESELA_DATA = window.MUNIALPHA_DATA;",
+    "window.SSM_DATA = window.MUNIALPHA_DATA;",
+  ];
+  if (
+    lines.length !== 3
+    || !lines[0].startsWith(prefix)
+    || !lines[0].endsWith(";")
+    || lines[1] !== aliases[0]
+    || lines[2] !== aliases[1]
+  ) {
     throw new Error(`Bundle inválido: ${path}`);
   }
   return {
     bytes: source,
-    data: JSON.parse(text.slice(prefix.length, -suffix.length)),
+    data: JSON.parse(lines[0].slice(prefix.length, -1)),
   };
 }
 

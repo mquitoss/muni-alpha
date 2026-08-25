@@ -6,6 +6,8 @@ from typing import Any, Protocol
 
 
 class Source(Protocol):
+    attach_indicators: bool
+
     def geometry(self) -> dict[str, Any]: ...
 
     def indicators(self) -> list[dict[str, Any]]: ...

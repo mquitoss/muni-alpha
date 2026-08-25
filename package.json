@@ -5,6 +5,7 @@
   "type": "commonjs",
   "scripts": {
     "build": "node scripts/build_static_site.js",
+    "build:data": "uv run python scripts/build_map_data.py",
     "deploy": "wrangler deploy",
     "preview": "wrangler dev",
     "test": "vitest run",

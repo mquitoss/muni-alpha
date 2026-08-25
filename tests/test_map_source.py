@@ -3,12 +3,19 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
+import subprocess
 from pathlib import Path
+from typing import Any, cast
 
 import pytest
 
-from scripts.build_map_data import build_bundle, validate_join
+from scripts.build_map_data import REPOSITORY_ROOT, SOURCE_PATH, build_command
 from scripts.sources.munialpha import COMMON_FIELDS, DATASETS, Source, parse_value
+
+NAMESPACE_PREFIX = "window.MUNIALPHA_DATA = "
+TESELA_ALIAS = "window.TESELA_DATA = window.MUNIALPHA_DATA;"
+SSM_ALIAS = "window.SSM_DATA = window.MUNIALPHA_DATA;"
 
 
 def write_csv(path: Path, fieldnames: list[str], rows: list[dict[str, object]]) -> None:
@@ -63,6 +70,43 @@ def make_project(root: Path) -> None:
         write_csv(root / "data" / filename, fields, rows)
 
 
+def write_test_source(root: Path) -> Path:
+    source_path = root / "munialpha_test_source.py"
+    source_path.write_text(
+        "from scripts.sources.munialpha import Source as MuniAlphaSource\n\n"
+        "class Source(MuniAlphaSource):\n"
+        "    attach_indicators = False\n\n"
+        "    def __init__(self, *, project_root):\n"
+        "        super().__init__(project_root=project_root, expected_count=2, simplify_tolerance=0)\n",
+        encoding="utf-8",
+    )
+    return source_path
+
+
+def tesela_command(project_root: Path, source_path: Path, output: Path) -> list[str]:
+    command = build_command(project_root, output)
+    source_index = command.index("--source-path") + 1
+    command[source_index] = str(source_path)
+    return command
+
+
+def run_tesela(project_root: Path, source_path: Path, output: Path) -> None:
+    environment = {**os.environ, "PYTHONPATH": str(REPOSITORY_ROOT)}
+    subprocess.run(
+        tesela_command(project_root, source_path, output),
+        cwd=project_root,
+        env=environment,
+        check=True,
+    )
+
+
+def read_bundle(path: Path) -> dict[str, Any]:
+    lines = path.read_text(encoding="utf-8").splitlines()
+    assert lines[0].startswith(NAMESPACE_PREFIX) and lines[0].endswith(";")
+    assert lines[1:] == [TESELA_ALIAS, SSM_ALIAS]
+    return cast(dict[str, Any], json.loads(lines[0][len(NAMESPACE_PREFIX) : -1]))
+
+
 def test_parse_value_preserves_null_codes_and_booleans() -> None:
     assert parse_value("", field="score_0_100") is None
     assert parse_value("080018", field="municipality_code") == "080018"
@@ -74,7 +118,10 @@ def test_source_joins_all_datasets_by_code_and_preserves_null(tmp_path: Path) ->
     make_project(tmp_path)
     source = Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0)
     indicators = source.indicators()
+    geo_codes = {feature["properties"]["CODIMUNI"] for feature in source.geometry()["features"]}
 
+    assert source.attach_indicators is False
+    assert geo_codes == {row["municipality_code"] for row in indicators}
     assert [row["municipality_code"] for row in indicators] == ["080018", "080023"]
     assert indicators[0]["sale_price_score_0_100"] == 50
     assert indicators[0]["natural_risk_score_0_100"] == 64
@@ -83,53 +130,69 @@ def test_source_joins_all_datasets_by_code_and_preserves_null(tmp_path: Path) ->
     assert len(source.metadata()["datasets"]) == 15
 
 
-def test_source_uses_icgc_geometry_and_builder_emits_compact_js(tmp_path: Path) -> None:
+def test_tesela_cli_emits_compact_reproducible_bundle(tmp_path: Path) -> None:
     make_project(tmp_path)
-    source = Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0)
-    output = tmp_path / "data/map_bundle.js"
-    bundle = build_bundle(source, output)
-
-    assert bundle["geo"]["features"][0]["properties"] == {"CODIMUNI": "080018", "NOMMUNI": "Municipi"}
-    assert bundle["meta"]["join"] == "CODIMUNI/municipality_code"
-    text = output.read_text(encoding="utf-8")
-    assert text.startswith("window.MUNIALPHA_DATA=")
-    assert "\n " not in text
-
-
-def test_builder_is_reproducible_and_preserves_codes_and_null(tmp_path: Path) -> None:
-    make_project(tmp_path)
+    source_path = write_test_source(tmp_path)
     first = tmp_path / "first.js"
     second = tmp_path / "second.js"
 
-    build_bundle(Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0), first)
-    build_bundle(Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0), second)
+    run_tesela(tmp_path, source_path, first)
+    run_tesela(tmp_path, source_path, second)
 
     assert first.read_bytes() == second.read_bytes()
-    payload = json.loads(first.read_text(encoding="utf-8").removeprefix("window.MUNIALPHA_DATA=").removesuffix(";\n"))
-    assert payload["indicators"][0]["municipality_code"] == "080018"
-    assert payload["indicators"][1]["sale_price_score_0_100"] is None
+    bundle = read_bundle(first)
+    features = bundle["geo"]["features"]
+    indicators = bundle["indicators"]
+    meta = bundle["meta"]
+    assert features[0]["properties"] == {"CODIMUNI": "080018", "NOMMUNI": "Municipi"}
+    assert indicators[0]["municipality_code"] == "080018"
+    assert indicators[1]["sale_price_score_0_100"] is None
+    assert meta["join"] == "CODIMUNI/municipality_code"
+    assert (meta["zonas"], meta["indicadores"], meta["con_dato"]) == (2, 2, 2)
 
 
-def test_builder_rejects_mismatched_join_keys() -> None:
-    geo = {"features": [{"properties": {"CODIMUNI": "1"}}]}
-    with pytest.raises(ValueError, match="differ"):
-        validate_join(geo, [{"municipality_code": "2"}], "CODIMUNI", "municipality_code")
+def test_source_rejects_mismatched_geometry_keys(tmp_path: Path) -> None:
+    make_project(tmp_path)
+    geometry_path = tmp_path / "data/raw/icgc_municipal_boundaries.geojson"
+    geometry = json.loads(geometry_path.read_text(encoding="utf-8"))
+    geometry["features"][0]["properties"]["CODIMUNI"] = "999999"
+    geometry_path.write_text(json.dumps(geometry), encoding="utf-8")
+
+    with pytest.raises(ValueError, match="do not match"):
+        Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0).geometry()
+
+
+def test_wrapper_uses_pinned_tesela_contract() -> None:
+    command = build_command()
+    assert command[1].endswith("vendor/tesela/scripts/build_data.py")
+    assert command[command.index("--source-path") + 1] == str(SOURCE_PATH)
+    assert command[command.index("--join-property") + 1] == "CODIMUNI"
+    assert command[command.index("--key-field") + 1] == "municipality_code"
+    assert command[command.index("--namespace") + 1] == "MUNIALPHA_DATA"
+    assert "--no-attach-indicators" in command
 
 
 def test_versioned_map_bundle_contains_all_municipalities() -> None:
-    project_root = Path(__file__).resolve().parents[1]
-    bundle_path = project_root / "data/map_bundle.js"
+    bundle_path = REPOSITORY_ROOT / "data/map_bundle.js"
     raw = bundle_path.read_bytes()
-    text = raw.decode("utf-8")
-    payload = text.removeprefix("window.MUNIALPHA_DATA=").removesuffix(";\n")
-    bundle = json.loads(payload)
+    bundle = read_bundle(bundle_path)
 
     assert len(bundle["geo"]["features"]) == 947
     assert len(bundle["indicators"]) == 947
     assert len({row["municipality_code"] for row in bundle["indicators"]}) == 947
+    assert all(isinstance(row["municipality_code"], str) for row in bundle["indicators"])
+    assert {feature["properties"]["CODIMUNI"] for feature in bundle["geo"]["features"]} == {
+        row["municipality_code"] for row in bundle["indicators"]
+    }
     assert any(row["sale_price_score_0_100"] is None for row in bundle["indicators"])
-    assert len(raw) == 7_874_013
-    assert hashlib.sha256(raw).hexdigest() == "64f4b7367e56b9a6f296afc12b05abd61426387293eb246fa6e88c791f2998ce"
+    assert bundle["meta"]["source"] == "munialpha"
+    assert (
+        bundle["meta"]["zonas"],
+        bundle["meta"]["indicadores"],
+        bundle["meta"]["con_dato"],
+    ) == (947, 947, 947)
+    assert len(raw) == 7_874_100
+    assert hashlib.sha256(raw).hexdigest() == "a979130ff74baf67936835640bf319d0cbf784dac2c8998e85a2a3c7ea162a5b"
     assert {
         key
         for feature in bundle["geo"]["features"]

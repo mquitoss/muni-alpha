@@ -619,8 +619,9 @@ npm run tesela:check
 ```
 
 El comando de verificación comprueba la URL HTTPS, la versión publicada y que el
-gitlink continúa apuntando al commit etiquetado `v0.3.0`. Durante este milestone
-MuniAlpha todavía carga su motor local; el submódulo no forma parte del runtime.
+gitlink continúa apuntando al commit etiquetado `v0.3.0`. MuniAlpha genera ya su
+bundle mediante el pipeline del submódulo, pero todavía carga su motor local en
+el navegador.
 
 # Mapa estático (Fase 2)
 
@@ -633,16 +634,34 @@ El mapa zero-build combina `municipalities.csv` y los 15 CSV de scores mediante
 publican como `null`; no se imputan ni se convierten en cero.
 
 ```bash
-python scripts/build_map_data.py
+npm run build:data
 open index.html
 ```
 
-El artefacto generado y versionable es `data/map_bundle.js`. La generación
-simplifica la geometría de `data/raw/icgc_municipal_boundaries.geojson` con
-tolerancia conservadora y serializa JSON compacto para que el mapa pueda abrirse
-directamente mediante `file://`. Leaflet y el mapa base se cargan desde CDN, por
-lo que el fondo cartográfico requiere conexión; los límites y datos municipales
-están embebidos.
+`build:data` delega en `vendor/tesela/scripts/build_data.py` mediante el wrapper
+`scripts/build_map_data.py`. Utiliza el Source externo de MuniAlpha, exige el join
+exacto `CODIMUNI` ↔ `municipality_code` y no duplica indicadores dentro de las
+geometrías. El comando canónico equivalente es:
+
+```bash
+uv run python vendor/tesela/scripts/build_data.py \
+  --source-path scripts/sources/munialpha.py \
+  --project-root "$PWD" \
+  --output data/map_bundle.js \
+  --join-property CODIMUNI \
+  --key-field municipality_code \
+  --namespace MUNIALPHA_DATA \
+  --decimals 5 \
+  --no-attach-indicators
+```
+
+El artefacto generado y versionable es `data/map_bundle.js`. Expone
+`MUNIALPHA_DATA` y los aliases de compatibilidad `TESELA_DATA` y `SSM_DATA`. La
+generación simplifica la geometría de
+`data/raw/icgc_municipal_boundaries.geojson` con tolerancia conservadora y
+serializa JSON compacto para que el mapa pueda abrirse directamente mediante
+`file://`. Leaflet y el mapa base se cargan desde CDN, por lo que el fondo
+cartográfico requiere conexión; los límites y datos municipales están embebidos.
 
 Las tesis disponibles son equilibrado, rentabilidad residencial, crecimiento,
 turístico, calidad de vida, deportes de invierno y senderismo. Deportes de
@@ -673,9 +692,9 @@ npm run lint
 
 ## Despliegue en Cloudflare
 
-El build web copia exclusivamente los recursos públicos a `dist/`; de este modo
-el despliegue no incluye `node_modules`, el entorno Python ni los ficheros de
-desarrollo:
+El build web copia el bundle versionado y los recursos públicos a `dist/`; no
+regenera los datos. De este modo el despliegue no necesita las fuentes raw ni
+incluye `node_modules`, el entorno Python o ficheros de desarrollo:
 
 ```bash
 npm run build

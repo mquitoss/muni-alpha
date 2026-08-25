@@ -72,6 +72,10 @@ def read_rows(path: Path) -> list[dict[str, str]]:
 
 
 class Source:
+    """Provide MuniAlpha geometry and indicators to Tesela's build pipeline."""
+
+    attach_indicators = False
+
     def __init__(
         self,
         *,

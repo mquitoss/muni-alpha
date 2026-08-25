@@ -436,7 +436,7 @@
     const namespace = config.branding.dataNamespace;
     const bundle = engine.selectDataSource({ embedded: window[namespace] }).bundle;
     if (!bundle) {
-      $("#ssm-rail").innerHTML = '<p class="ssm-error">No se ha encontrado el bundle. Ejecuta <code>python scripts/build_map_data.py</code>.</p>';
+      $("#ssm-rail").innerHTML = '<p class="ssm-error">No se ha encontrado el bundle. Ejecuta <code>npm run build:data</code>.</p>';
       return;
     }
     state.zones = engine.joinByKey(bundle.geo, bundle.indicators, config.join).zones;
