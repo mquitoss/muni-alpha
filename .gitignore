@@ -10,3 +10,4 @@ data/raw/
 data/intermediate/
 node_modules/
 dist/
+test-results/

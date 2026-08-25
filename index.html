@@ -8,14 +8,15 @@
     <title>MuniAlpha · Mapa municipal</title>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+    <link rel="stylesheet" href="vendor/tesela/src/ui/tesela.css" />
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
   </head>
-  <body>
-    <aside id="ssm-rail" aria-label="Controles del mapa"></aside>
-    <main id="ssm-map" aria-label="Mapa de municipios"></main>
-    <aside id="ssm-detail" aria-live="polite" aria-hidden="true"></aside>
-    <aside id="ssm-glossary" role="dialog" aria-labelledby="ssm-glossary-title" aria-modal="false" aria-hidden="true"></aside>
+  <body class="tesela-layout">
+    <aside id="ssm-rail" class="tesela-rail" aria-label="Controles del mapa"></aside>
+    <main id="ssm-map" class="tesela-map" aria-label="Mapa de municipios"></main>
+    <aside id="ssm-detail" class="tesela-detail" aria-live="polite" aria-hidden="true" inert></aside>
+    <aside id="ssm-glossary" class="tesela-glossary" role="dialog" aria-modal="false" aria-hidden="true" inert></aside>
     <script src="vendor/tesela/src/engine/namespace.js"></script>
     <script src="app.config.js"></script>
     <script src="data/map_bundle.js"></script>
@@ -26,8 +27,13 @@
     <script src="vendor/tesela/src/engine/scoring.js"></script>
     <script src="vendor/tesela/src/engine/color.js"></script>
     <script src="vendor/tesela/src/engine/bundle.js"></script>
+    <script src="vendor/tesela/src/engine/config.js"></script>
+    <script src="vendor/tesela/src/engine/extensions.js"></script>
+    <script src="vendor/tesela/src/engine/providers.js"></script>
+    <script src="vendor/tesela/src/ui/map-layers.js"></script>
+    <script src="vendor/tesela/src/ui/detail.js"></script>
     <script src="vendor/tesela/src/providers/wikimedia-commons.js"></script>
     <script src="src/adapters/domain.js"></script>
-    <script src="src/app.js"></script>
+    <script src="vendor/tesela/src/app.js"></script>
   </body>
 </html>

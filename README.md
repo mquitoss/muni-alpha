@@ -620,8 +620,8 @@ npm run tesela:check
 
 El comando de verificación comprueba la URL HTTPS, la versión publicada y que el
 gitlink continúa apuntando al commit etiquetado `v0.3.0`. MuniAlpha genera su
-bundle y carga el motor desde el submódulo; conserva temporalmente su shell,
-tema y extensiones inmobiliarias locales.
+bundle y carga el motor, los componentes UI y el shell desde el submódulo. La
+configuración, el tema y las extensiones inmobiliarias permanecen en el host.
 
 # Mapa estático (Fase 2)
 
@@ -662,9 +662,10 @@ generación simplifica la geometría de
 serializa JSON compacto para que el mapa pueda abrirse directamente mediante
 `file://`. Leaflet y el mapa base se cargan desde CDN, por lo que el fondo
 cartográfico requiere conexión; los límites y datos municipales están embebidos.
-El navegador carga las funciones puras de Tesela desde
-`vendor/tesela/src/engine/`, mientras `src/app.js` mantiene la interfaz de
-MuniAlpha hasta la migración del shell.
+El navegador carga el motor y el shell declarativo de Tesela desde
+`vendor/tesela/src/`. `app.config.js`, `src/styles.css` y
+`src/adapters/domain.js` expresan la marca, la presentación, las capitales
+comarcales y los avisos HUT/riesgo sin introducir dominio en Tesela.
 
 Las tesis disponibles son equilibrado, rentabilidad residencial, crecimiento,
 turístico, calidad de vida, deportes de invierno y senderismo. Deportes de
@@ -684,12 +685,21 @@ La barra lateral resume las fuentes y las fases del pipeline: snapshots
 trazables, validación por código IDESCAT, normalización, conservación de `null`
 y cálculo dinámico con cobertura mínima.
 
+La primera vez que se ejecuten las pruebas de navegador hay que instalar
+Chromium para Playwright:
+
+```bash
+npx playwright install chromium
+```
+
 Pruebas y linters:
 
 ```bash
-pytest
-ruff check .
+uv run --extra dev pytest
+uv run --extra dev ruff check .
+uv run --extra dev mypy .
 npm test
+npm run test:e2e
 npm run lint
 ```
 

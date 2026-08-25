@@ -12,6 +12,7 @@ const media = require("../../vendor/tesela/src/providers/wikimedia-commons.js");
 const scoring = require("../../vendor/tesela/src/engine/scoring.js");
 const format = require("../../vendor/tesela/src/engine/format.js");
 const color = require("../../vendor/tesela/src/engine/color.js");
+const configEngine = require("../../vendor/tesela/src/engine/config.js");
 const adapters = require("../../src/adapters/domain.js");
 const { readMapBundle } = require("../../scripts/parity_baseline.js");
 const projectRoot = process.cwd();
@@ -95,14 +96,18 @@ describe("motor agnóstico", () => {
   });
 
   it("presenta booleanos y huecos en español", () => {
-    expect(adapters.formatValue(format, true, { format: "boolean" }, config.ui)).toBe("Sí");
-    expect(adapters.formatValue(format, null, { format: "number" }, config.ui)).toBe("sin dato");
+    expect(format.formatValue(true, {
+      format: "boolean",
+      booleanLabels: config.ui.booleanLabels,
+    })).toBe("Sí");
+    expect(format.formatValue(null, { format: "number" })).toBe("sin dato");
   });
 
   it("presenta duraciones en horas y minutos legibles", () => {
-    expect(adapters.formatValue(format, 45, { format: "duration" }, config.ui)).toBe("45 min");
-    expect(adapters.formatValue(format, 60, { format: "duration" }, config.ui)).toBe("1 h");
-    expect(adapters.formatValue(format, 95, { format: "duration" }, config.ui)).toBe("1 h 35 min");
+    const options = { format: "duration", durationLabels: config.ui.durationLabels };
+    expect(format.formatValue(45, options)).toBe("45 min");
+    expect(format.formatValue(60, options)).toBe("1 h");
+    expect(format.formatValue(95, options)).toBe("1 h 35 min");
   });
 
   it("conserva la rampa cromática explícita", () => {
@@ -121,9 +126,21 @@ describe("motor agnóstico", () => {
     const { data } = readMapBundle();
     for (const field of config.detail.fields) {
       for (const indicator of data.indicators) {
-        const value = indicator[field.key];
-        expect(adapters.formatValue(format, value, field, config.ui), field.key)
-          .toBe(legacyFormatValue(value, field));
+        const derived = adapters.derive(indicator);
+        const value = derived[field.key];
+        const legacyField = field.key === "demographic_population_display"
+          ? { ...field, format: "number" }
+          : field;
+        const legacyValue = field.key === "demographic_population_display"
+          ? indicator.demographic_population_current
+          : value;
+        expect(format.formatValue(value, {
+          locale: config.ui.locale,
+          sinDato: config.ui.labels.noData,
+          booleanLabels: config.ui.booleanLabels,
+          durationLabels: config.ui.durationLabels,
+          ...field,
+        }), field.key).toBe(legacyFormatValue(legacyValue, legacyField));
       }
     }
   });
@@ -155,15 +172,26 @@ describe("configuración MuniAlpha", () => {
     expect(context.self.TESELA_CONFIG.branding.version).toBe(packageConfig.version);
   });
 
+  it("cumple el contrato declarativo del shell Tesela", () => {
+    expect(configEngine.validateConfig(config)).toEqual({ valid: true, errors: [] });
+    expect(config.mounts).toEqual({
+      rail: "ssm-rail",
+      map: "ssm-map",
+      detail: "ssm-detail",
+      glossary: "ssm-glossary",
+    });
+  });
+
   it("configura referencias y etiquetas municipales por nivel de zoom", () => {
-    expect(config.map.referenceTiles.url).toContain("only_labels");
-    expect(config.map.municipalityLabels.minZoom).toBeGreaterThan(config.map.zoom);
+    expect(config.map.overlays[0].url).toContain("only_labels");
+    expect(config.map.labels.minZoom).toBeGreaterThan(config.map.zoom);
     expect(config.map.comarcaCapitals).toHaveLength(44);
+    expect(config.map.overlays[1].items({ zones: [] })).toEqual([]);
   });
 
   it("documenta todos los campos y el proceso de datos", () => {
     expect(config.detail.fields.every((field) => field.help?.length > 20)).toBe(true);
-    expect(config.detail.glossaryIntro).toMatch(/0 a 100/);
+    expect(config.detail.glossary.intro).toMatch(/0 a 100/);
     expect(config.methodology.sources.length).toBeGreaterThanOrEqual(4);
     expect(config.methodology.steps).toHaveLength(6);
   });
@@ -205,13 +233,32 @@ describe("configuración MuniAlpha", () => {
     expect(config.detail.notices.join(" ")).toMatch(/gate regulatorio/);
     expect(config.branding.notice).toMatch(/No constituye asesoramiento/);
   });
+
+  it("mantiene capitales y alertas inmobiliarias en el adaptador host", () => {
+    const { data } = readMapBundle();
+    const zones = join.joinByKey(data.geo, data.indicators, config.join).zones;
+    expect(adapters.comarcaCapitalZones(
+      zones,
+      config.map.comarcaCapitals,
+      join.normalizeName,
+    )).toHaveLength(44);
+    expect(zones.filter(adapters.hutRestricted)).toHaveLength(262);
+    expect(zones.filter(adapters.riskReviewRequired)).toHaveLength(882);
+  });
+
+  it("deriva la población visible conservando la agrupación anterior", () => {
+    expect(adapters.populationDisplay(9474)).toBe("9474");
+    expect(adapters.populationDisplay(13227)).toBe("13.227");
+    expect(adapters.populationDisplay(null)).toBe("sin dato");
+  });
 });
 
 describe("fotografías de Wikimedia Commons", () => {
   it("construye una búsqueda geográfica alrededor del municipio", () => {
+    const photos = config.detail.providers[0];
     const url = new URL(media.buildCommonsUrl(
       { name: "Vic", lat: 41.93, lon: 2.25 },
-      { ...config.detail.photos, searchLimit: 12 },
+      { ...photos, searchLimit: 12 },
     ));
     expect(url.hostname).toBe("commons.wikimedia.org");
     expect(url.searchParams.get("generator")).toBe("geosearch");
@@ -241,7 +288,7 @@ describe("fotografías de Wikimedia Commons", () => {
       5: image("File:001 Plaça major.jpg", "image/jpeg"),
     } } };
 
-    const selected = media.selectCommonsImages(payload, config.detail.photos);
+    const selected = media.selectCommonsImages(payload, config.detail.providers[0]);
     expect(selected.map((photo) => photo.title)).toEqual(["Plaça major", "Entorn natural"]);
     expect(selected[0].author).toBe("Autora & Co.");
     expect(selected[0].license).toBe("CC BY-SA 4.0");
@@ -250,18 +297,15 @@ describe("fotografías de Wikimedia Commons", () => {
     expect(media.safeExternalUrl("//creativecommons.org/licenses/by/4.0/")).toMatch(/^https:/);
   });
 
-  it("carga fotografías mediante el provider Tesela sin bloquear el shell", async () => {
-    const fetcher = async (url) => ({
-      ok: true,
-      json: async () => ({ query: { pages: {} } }),
-      url,
-    });
-    await expect(adapters.fetchCommonsImages(
-      media,
-      { name: "Vic", lat: 41.93, lon: 2.25 },
-      config.detail.photos,
-      fetcher,
-    )).resolves.toEqual([]);
+  it("configura el provider Tesela con coordenadas del núcleo y textos locales", () => {
+    expect(config.detail.providers[0]).toEqual(expect.objectContaining({
+      type: "wikimediaCommons",
+      latField: "capital_lat",
+      lonField: "capital_lon",
+      limit: 3,
+      radius: 10000,
+      unknownAuthor: "Autor no indicado",
+    }));
   });
 });
 
@@ -273,7 +317,9 @@ describe("build estático", () => {
     expect(existsSync(resolve(projectRoot, "dist/data/map_bundle.js"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/vendor/tesela/src/engine/scoring.js"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/vendor/tesela/src/providers/wikimedia-commons.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/vendor/tesela/src/app.js"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/src/engine"))).toBe(false);
+    expect(existsSync(resolve(projectRoot, "dist/src/app.js"))).toBe(false);
     expect(existsSync(resolve(projectRoot, "dist/node_modules"))).toBe(false);
     expect(existsSync(resolve(projectRoot, "dist/.venv"))).toBe(false);
     const publishedBundle = readFileSync(resolve(projectRoot, "dist/data/map_bundle.js"));

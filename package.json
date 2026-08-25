@@ -9,13 +9,16 @@
     "deploy": "wrangler deploy",
     "preview": "wrangler dev",
     "test": "vitest run",
+    "test:e2e": "playwright test",
     "test:parity": "vitest run tests/frontend/parity.test.js",
     "tesela:check": "node scripts/verify_tesela.js",
     "baseline:check": "node scripts/parity_baseline.js --check",
     "baseline:write": "node scripts/parity_baseline.js --write",
-    "lint": "eslint app.config.js scripts src tests/frontend"
+    "lint": "eslint app.config.js playwright.config.js scripts src tests/frontend tests/e2e"
   },
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "tesela": {
     "version": "0.3.0",
     "tag": "v0.3.0",
@@ -23,6 +26,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.34.0",
+    "@playwright/test": "^1.62.1",
     "eslint": "^9.34.0",
     "globals": "^16.3.0",
     "vitest": "^3.2.4",

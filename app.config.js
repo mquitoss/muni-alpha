@@ -38,9 +38,33 @@
     },
     ui: {
       locale: "es-ES",
+      slider: { min: 0, max: 1, step: 0.1 },
+      search: { enabled: true, limit: 12, maxZoom: 12 },
       booleanLabels: { true: "Sí", false: "No" },
       durationLabels: { hour: "h", minute: "min" },
-      noDataLabel: "sin dato",
+      labels: {
+        noData: "sin dato",
+        index: "Índice relativo",
+        zones: "municipios",
+        withData: "con datos",
+        weightedIndex: "Índice relativo",
+        low: "índice bajo",
+        high: "índice alto",
+        searchLabel: "Buscar municipio",
+        searchPlaceholder: "Buscar municipio…",
+        searchNoResults: "No se ha encontrado ningún municipio.",
+        searchResultCount: "{count} coincidencias",
+        zoneFallback: "Municipio",
+        invalidConfig: "Configuración MuniAlpha inválida.",
+        missingData: "No hay datos válidos en",
+        buildHint: "Ejecuta npm run build:data.",
+      },
+    },
+    mounts: {
+      rail: "ssm-rail",
+      map: "ssm-map",
+      detail: "ssm-detail",
+      glossary: "ssm-glossary",
     },
     map: {
       center: [41.72, 1.65],
@@ -50,11 +74,17 @@
         attribution:
           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a> · Geometría ICGC',
       },
-      referenceTiles: {
-        url: "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
-        attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+      panes: {
+        zones: { name: "tesela-zones", zIndex: 400, pointerEvents: "auto" },
+        context: { name: "tesela-context", zIndex: 450, pointerEvents: "none" },
+        selection: { name: "tesela-selection", zIndex: 610, pointerEvents: "none" },
+        labels: { name: "tesela-labels", zIndex: 620, pointerEvents: "none" },
       },
-      municipalityLabels: { minZoom: 11 },
+      selection: {
+        enabled: true,
+        pane: "selection",
+        style: { weight: 4, opacity: 1, fill: false, lineCap: "round", lineJoin: "round" },
+      },
       comarcaCapitals: [
         "Valls", "Figueres", "Vilafranca del Penedès", "la Seu d'Urgell", "el Pont de Suert",
         "Igualada", "Manresa", "Reus", "Tortosa", "la Bisbal d'Empordà",
@@ -65,6 +95,52 @@
         "Lleida", "Santa Coloma de Farners", "Solsona", "Tarragona", "Gandesa", "Tàrrega",
         "Vielha e Mijaran", "Sabadell", "Terrassa", "Granollers",
       ],
+      overlays: [
+        {
+          id: "reference-label-tiles",
+          label: "Capitales comarcales y vías",
+          type: "tile",
+          enabled: true,
+          pane: "context",
+          interactive: false,
+          url: "https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}{r}.png",
+          attribution: '&copy; <a href="https://carto.com/attributions">CARTO</a>',
+          control: { id: "orientation", label: "Capitales comarcales y vías" },
+        },
+        {
+          id: "comarca-capitals",
+          label: "Capitales comarcales y vías",
+          type: "markers",
+          enabled: true,
+          pane: "labels",
+          interactive: false,
+          items: ({ zones }) => {
+            const tesela = root.Tesela || root.SSM || {};
+            return tesela.adapters?.comarcaCapitalZones(
+              zones,
+              config.map.comarcaCapitals,
+              tesela.engine?.normalizeName,
+            ) || [];
+          },
+          pointFor: (zone) => [zone.ind?.capital_lat, zone.ind?.capital_lon],
+          labelFor: (zone) => zone.name,
+          className: "ssm-map-label ssm-map-label-capital",
+          iconClassName: "ssm-map-label-icon",
+          control: { id: "orientation", label: "Capitales comarcales y vías" },
+        },
+      ],
+      labels: {
+        enabled: true,
+        label: "Nombres de municipios (zoom 11+)",
+        pane: "labels",
+        minZoom: 11,
+        boundsPadding: 0.15,
+        pointFor: (zone) => [zone.ind?.capital_lat, zone.ind?.capital_lon],
+        labelFor: (zone) => zone.name,
+        className: "ssm-map-label ssm-map-label-municipality",
+        iconClassName: "ssm-map-label-icon",
+      },
+      layerControl: { enabled: true, position: "topright", collapsed: true },
     },
     join: {
       property: "CODIMUNI",
@@ -84,7 +160,6 @@
       keyField: "municipality_code",
       factors,
       minCoverage: 0.65,
-      slider: { min: 0, max: 1, step: 0.1 },
       presets: [
         { id: "equilibrado", label: "Equilibrado", weights: { mercado: 0.3, asequibilidad: 0, momentum: 0.5, alquiler: 0.5, yield: 0.6, liquidez: 0.6, barcelona: 0.4, esqui: 0.2, costa: 0.3, paisaje: 0.4, turismo: 0.3, demografia: 0.5, renta: 0.4, servicios: 0.5 } },
         { id: "residencial", label: "Rentabilidad residencial", weights: { mercado: 0, asequibilidad: 0.7, momentum: 0.3, alquiler: 0.9, yield: 1, liquidez: 0.8, barcelona: 0.5, esqui: 0, costa: 0.1, paisaje: 0.1, turismo: 0.1, demografia: 0.6, renta: 0.4, servicios: 0.6 } },
@@ -97,6 +172,10 @@
       defaultPreset: "equilibrado",
     },
     methodology: {
+      enabled: true,
+      label: "Datos y metodología",
+      sourcesLabel: "Fuentes principales",
+      stepsLabel: "Proceso",
       summary:
         "MuniAlpha combina 15 datasets municipales reproducibles. Prioriza fuentes públicas y oficiales, conserva los valores ausentes y documenta cobertura, confianza y periodo de referencia.",
       sources: [
@@ -119,26 +198,45 @@
       ],
     },
     detail: {
-      glossaryIntro:
-        "Los scores van de 0 a 100 y son relativos al conjunto municipal analizado: un valor alto representa una mejor señal en ese indicador, no una garantía. La confianza describe calidad, cobertura y actualidad del dato; no es una probabilidad de éxito.",
-      photos: {
-        provider: "Wikimedia Commons",
+      closeLabel: "Cerrar detalle",
+      glossary: {
+        enabled: true,
+        triggerLabel: "Guía de indicadores",
+        eyebrow: "Guía de lectura",
+        title: "Qué significa cada dato",
+        intro:
+          "Los scores van de 0 a 100 y son relativos al conjunto municipal analizado: un valor alto representa una mejor señal en ese indicador, no una garantía. La confianza describe calidad, cobertura y actualidad del dato; no es una probabilidad de éxito.",
+        closeLabel: "Cerrar guía",
+      },
+      providerCacheSize: 32,
+      providers: [{
+        id: "municipality-photos",
+        type: "wikimediaCommons",
+        label: "Localidad y entorno",
         limit: 3,
         searchLimit: 16,
         radius: 10000,
         thumbnailWidth: 720,
         querySuffix: "Catalunya",
+        latField: "capital_lat",
+        lonField: "capital_lon",
         unknownAuthor: "Autor no indicado",
         unknownLicense: "Consulta la licencia en Commons",
         excludePattern: /\b(escuts?|banderes?|banderas?|blasons?|coat of arms|flags?|mapes?|mapas?|maps?|locator|localitzaci[oó]|ubicaci[oó]|logos?|emblems?|seals?|icons?)\b/i,
-      },
+        loadingLabel: "Buscando imágenes cercanas…",
+        emptyLabel: "No se han encontrado fotografías reutilizables para este entorno.",
+        errorLabel: "No se han podido cargar las fotografías. Los indicadores del municipio siguen disponibles.",
+        note:
+          "Imágenes geolocalizadas cercanas proporcionadas por Wikimedia Commons. Pueden mostrar el entorno y no el núcleo exacto.",
+        altFor: (item, context) => `${item.title}, imagen cercana a ${context.zone.name}`,
+      }],
       notices: [
         "La viabilidad HUT es un gate regulatorio, no una señal económica. Un valor alto no garantiza una licencia; comprueba el planeamiento local.",
         "El riesgo natural es un indicador de revisión y no forma parte del índice. La cobertura de inundación puede estar incompleta.",
       ],
       fields: [
         { section: "Municipio", key: "comarca_name", label: "Comarca", format: "plain", help: "División territorial a la que pertenece el municipio." },
-        { key: "demographic_population_current", label: "Población", format: "number", help: "Número de habitantes del último periodo municipal disponible." },
+        { key: "demographic_population_display", label: "Población", format: "plain", help: "Número de habitantes del último periodo municipal disponible." },
         { section: "Accesibilidad", key: "barcelona_access_drive_minutes", label: "Tiempo en coche a Barcelona", format: "duration", help: "Duración estimada por carretera desde el núcleo municipal hasta el centro de Barcelona mediante openrouteservice." },
         { section: "Mercado", key: "sale_price_score_0_100", label: "Precio de venta · score", format: "number", decimals: 1, help: "Posición relativa del nivel de precios de compraventa. Un score alto indica precios observados más elevados." },
         { key: "sale_price_confidence_0_100", label: "Precio de venta · confianza", format: "number", help: "Calidad y cobertura de los registros usados para estimar el precio de venta." },
@@ -171,6 +269,7 @@
         { key: "natural_risk_risk_review_required", label: "Revisión de riesgo necesaria", format: "boolean", help: "Advierte que el municipio no debe evaluarse automáticamente sin comprobar información de riesgo más detallada." },
       ],
     },
+    extensions: { slots: {} },
   };
 
   root.TESELA_CONFIG = config;

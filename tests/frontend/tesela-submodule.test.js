@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const packageConfig = require("../../package.json");
+const assetManifest = require("../../vendor/tesela/tesela.assets.json");
 const {
   assertTeselaInitialized,
   verifyTesela,
@@ -19,15 +20,21 @@ describe("submódulo Tesela", () => {
     });
   });
 
-  it("carga el motor Tesela y mantiene el shell local durante M3", () => {
+  it("carga el shell Tesela completo y conserva el adaptador host durante M4", () => {
     const html = readFileSync(resolve(projectRoot, "index.html"), "utf8");
-    expect(html).toContain('src="vendor/tesela/src/engine/namespace.js"');
-    expect(html).toContain('src="vendor/tesela/src/engine/scoring.js"');
-    expect(html).toContain('src="vendor/tesela/src/providers/wikimedia-commons.js"');
-    expect(html).toContain('src="src/app.js"');
+    const scripts = [...html.matchAll(/<script src="([^"]+)"/g)].map((match) => match[1]);
+    const vendorScripts = scripts.filter((path) => path.startsWith("vendor/tesela/"));
+    expect(vendorScripts).toEqual([
+      ...assetManifest.scripts.runtime,
+      ...assetManifest.scripts.engine,
+      assetManifest.scripts.entrypoint,
+    ].map((path) => `vendor/tesela/${path}`));
+    expect(html).toContain('href="vendor/tesela/src/ui/tesela.css"');
+    expect(html).toContain('src="src/adapters/domain.js"');
+    expect(html).toContain('src="vendor/tesela/src/app.js"');
     expect(html).not.toContain('src="src/engine/');
-    expect(html).not.toContain('src="vendor/tesela/src/app.js"');
-    expect(html).not.toContain('src="vendor/tesela/src/ui/');
+    expect(html).not.toContain('src="src/app.js"');
+    expect(html).not.toContain(`src="vendor/tesela/${assetManifest.scripts.defaultAdapter}"`);
   });
 
   it("explica cómo inicializar un submódulo ausente", () => {
