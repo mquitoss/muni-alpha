@@ -1,13 +1,13 @@
 {
   "name": "munialpha-static-map",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "private": true,
   "type": "commonjs",
   "scripts": {
     "submodules:init": "git submodule update --init --recursive",
     "prebuild": "npm run submodules:init",
     "build": "node scripts/build_static_site.js",
-    "build:data": "uv run python scripts/build_map_data.py",
+    "build:data": "uv run python vendor/tesela/scripts/build_data.py --source-path scripts/sources/munialpha.py --project-root . --output data/map_bundle.js --join-property CODIMUNI --key-field municipality_code --namespace MUNIALPHA_DATA --decimals 5 --no-attach-indicators",
     "deploy": "wrangler deploy",
     "deploy:dry-run": "wrangler deploy --dry-run",
     "preview": "wrangler dev",
@@ -15,6 +15,7 @@
     "test:e2e": "playwright test",
     "test:parity": "vitest run tests/frontend/parity.test.js",
     "tesela:check": "node scripts/verify_tesela.js",
+    "version:check": "node scripts/verify_release.js",
     "baseline:check": "node scripts/parity_baseline.js --check",
     "baseline:write": "node scripts/parity_baseline.js --write",
     "lint": "eslint app.config.js playwright.config.js scripts src tests/frontend tests/e2e"

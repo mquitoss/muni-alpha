@@ -2,12 +2,12 @@ import { describe, expect, it } from "vitest";
 
 const scoring = require("../../vendor/tesela/src/engine/scoring.js");
 const search = require("../../vendor/tesela/src/engine/search.js");
-const expectedBaseline = require("./fixtures/munialpha-parity-v0.4.0.json");
+const expectedBaseline = require("./fixtures/munialpha-parity-v0.5.0.json");
 const scoringCases = require("./fixtures/scoring-cases.json");
 const searchCases = require("./fixtures/search-cases.json");
 const { buildParityBaseline } = require("../../scripts/parity_baseline.js");
 
-describe("baseline de paridad MuniAlpha 0.4.0", () => {
+describe("baseline de paridad MuniAlpha 0.5.0", () => {
   it("congela bundle, scoring, cobertura y rankings de los siete presets", () => {
     const actual = buildParityBaseline();
     expect(actual.bundle).toEqual(expectedBaseline.bundle);

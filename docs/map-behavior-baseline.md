@@ -1,5 +1,8 @@
 # Baseline de comportamiento cartográfico de MuniAlpha 0.4.0
 
+Este documento conserva el baseline de entrada usado para validar la migración
+sin regresiones publicada posteriormente como MuniAlpha `v0.5.0`.
+
 Este documento congela el comportamiento previo a integrar Tesela 0.3.0. No
 define la arquitectura futura: describe lo que la migración debe conservar.
 

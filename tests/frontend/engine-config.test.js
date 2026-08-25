@@ -15,6 +15,7 @@ const color = require("../../vendor/tesela/src/engine/color.js");
 const configEngine = require("../../vendor/tesela/src/engine/config.js");
 const adapters = require("../../src/adapters/domain.js");
 const { readMapBundle } = require("../../scripts/parity_baseline.js");
+const { verifyRelease } = require("../../scripts/verify_release.js");
 const projectRoot = process.cwd();
 
 function legacyFormatValue(value, field = {}) {
@@ -165,11 +166,19 @@ describe("configuración MuniAlpha", () => {
     expect(config.branding.version).toMatch(/^\d+\.\d+\.\d+$/);
   });
 
+  it("sincroniza los metadatos de la release", () => {
+    expect(verifyRelease()).toEqual({
+      version: "0.5.0",
+      tag: "v0.5.0",
+      fixture: "munialpha-parity-v0.5.0.json",
+    });
+  });
+
   it("publica TESELA_CONFIG como configuración primaria", () => {
     const context = { self: {} };
     runInNewContext(readFileSync(resolve(projectRoot, "app.config.js"), "utf8"), context);
-    expect(context.self.TESELA_CONFIG).toBe(context.self.SSM_CONFIG);
     expect(context.self.TESELA_CONFIG.branding.version).toBe(packageConfig.version);
+    expect(context.self.SSM_CONFIG).toBeUndefined();
   });
 
   it("cumple el contrato declarativo del shell Tesela", () => {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "applicationVersion": "0.4.0",
+  "applicationVersion": "0.5.0",
   "bundle": {
     "bytes": 7874100,
     "sha256": "a979130ff74baf67936835640bf319d0cbf784dac2c8998e85a2a3c7ea162a5b",

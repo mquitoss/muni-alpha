@@ -10,7 +10,7 @@ const projectRoot = resolve(__dirname, "..");
 const defaultBundlePath = resolve(projectRoot, "data/map_bundle.js");
 const defaultBaselinePath = resolve(
   projectRoot,
-  "tests/frontend/fixtures/munialpha-parity-v0.4.0.json",
+  "tests/frontend/fixtures/munialpha-parity-v0.5.0.json",
 );
 
 function sha256Bytes(value) {

@@ -20,7 +20,7 @@ describe("submódulo Tesela", () => {
     });
   });
 
-  it("carga el shell Tesela completo y conserva el adaptador host durante M4", () => {
+  it("carga el shell Tesela completo y conserva el adaptador de dominio host", () => {
     const html = readFileSync(resolve(projectRoot, "index.html"), "utf8");
     const scripts = [...html.matchAll(/<script src="([^"]+)"/g)].map((match) => match[1]);
     const vendorScripts = scripts.filter((path) => path.startsWith("vendor/tesela/"));

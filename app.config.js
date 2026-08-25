@@ -29,7 +29,7 @@
   const config = {
     branding: {
       title: "MuniAlpha",
-      version: "0.4.0",
+      version: "0.5.0",
       subtitle: "Explorador municipal de inversión inmobiliaria · Cataluña",
       accent: "#e3b341",
       dataNamespace: "MUNIALPHA_DATA",
@@ -115,7 +115,7 @@
           pane: "labels",
           interactive: false,
           items: ({ zones }) => {
-            const tesela = root.Tesela || root.SSM || {};
+            const tesela = root.Tesela || {};
             return tesela.adapters?.comarcaCapitalZones(
               zones,
               config.map.comarcaCapitals,
@@ -273,6 +273,5 @@
   };
 
   root.TESELA_CONFIG = config;
-  root.SSM_CONFIG = config;
   if (typeof module !== "undefined" && module.exports) module.exports = config;
 })(typeof self !== "undefined" ? self : this);

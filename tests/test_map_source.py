@@ -5,14 +5,16 @@ import hashlib
 import json
 import os
 import subprocess
+import sys
 from pathlib import Path
 from typing import Any, cast
 
 import pytest
 
-from scripts.build_map_data import REPOSITORY_ROOT, SOURCE_PATH, build_command
 from scripts.sources.munialpha import COMMON_FIELDS, DATASETS, Source, parse_value
 
+REPOSITORY_ROOT = Path(__file__).resolve().parents[1]
+TESELA_BUILDER = REPOSITORY_ROOT / "vendor/tesela/scripts/build_data.py"
 NAMESPACE_PREFIX = "window.MUNIALPHA_DATA = "
 TESELA_ALIAS = "window.TESELA_DATA = window.MUNIALPHA_DATA;"
 SSM_ALIAS = "window.SSM_DATA = window.MUNIALPHA_DATA;"
@@ -84,10 +86,25 @@ def write_test_source(root: Path) -> Path:
 
 
 def tesela_command(project_root: Path, source_path: Path, output: Path) -> list[str]:
-    command = build_command(project_root, output)
-    source_index = command.index("--source-path") + 1
-    command[source_index] = str(source_path)
-    return command
+    return [
+        sys.executable,
+        str(TESELA_BUILDER),
+        "--source-path",
+        str(source_path),
+        "--project-root",
+        str(project_root),
+        "--output",
+        str(output),
+        "--join-property",
+        "CODIMUNI",
+        "--key-field",
+        "municipality_code",
+        "--namespace",
+        "MUNIALPHA_DATA",
+        "--decimals",
+        "5",
+        "--no-attach-indicators",
+    ]
 
 
 def run_tesela(project_root: Path, source_path: Path, output: Path) -> None:
@@ -160,16 +177,6 @@ def test_source_rejects_mismatched_geometry_keys(tmp_path: Path) -> None:
 
     with pytest.raises(ValueError, match="do not match"):
         Source(project_root=tmp_path, expected_count=2, simplify_tolerance=0).geometry()
-
-
-def test_wrapper_uses_pinned_tesela_contract() -> None:
-    command = build_command()
-    assert command[1].endswith("vendor/tesela/scripts/build_data.py")
-    assert command[command.index("--source-path") + 1] == str(SOURCE_PATH)
-    assert command[command.index("--join-property") + 1] == "CODIMUNI"
-    assert command[command.index("--key-field") + 1] == "municipality_code"
-    assert command[command.index("--namespace") + 1] == "MUNIALPHA_DATA"
-    assert "--no-attach-indicators" in command
 
 
 def test_versioned_map_bundle_contains_all_municipalities() -> None:

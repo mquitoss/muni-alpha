@@ -623,10 +623,45 @@ gitlink continúa apuntando al commit etiquetado `v0.3.0`. MuniAlpha genera su
 bundle y carga el motor, los componentes UI y el shell desde el submódulo. La
 configuración, el tema y las extensiones inmobiliarias permanecen en el host.
 
+## Arquitectura Tesela + MuniAlpha
+
+- `vendor/tesela/` es un gitlink inmutable: aporta engine, shell, UI, providers y
+  pipeline genérico.
+- `app.config.js`, `scripts/sources/munialpha.py`, `src/adapters/domain.js` y
+  `src/styles.css` pertenecen a MuniAlpha y contienen el dominio inmobiliario.
+- `data/map_bundle.js` es el artefacto versionado; `dist/` se genera y no se
+  edita manualmente.
+- El join canónico es `CODIMUNI` ↔ `municipality_code`; los códigos siguen siendo
+  strings de seis dígitos y los huecos siguen siendo `null`.
+- El namespace host es `MUNIALPHA_DATA`; Tesela publica además `TESELA_DATA` y el
+  alias de compatibilidad `SSM_DATA` durante la serie 0.x.
+
+### Actualizar Tesela
+
+Consulta primero el changelog y la guía de migración de la versión objetivo.
+Después fija siempre un tag inmutable, actualiza conjuntamente los metadatos
+`package.json.tesela` y valida el commit:
+
+```bash
+git -C vendor/tesela fetch --tags
+git -C vendor/tesela checkout <vX.Y.Z>
+git add vendor/tesela package.json
+npm run tesela:check
+npm run version:check
+npm test
+npm run baseline:check
+npm run build
+npm run test:e2e
+npm run deploy:dry-run
+```
+
+No utilices `git submodule update --remote`: una actualización de Tesela debe ser
+explícita, revisable y acompañada por sus tests de paridad.
+
 # Mapa estático (Fase 2)
 
 La versión visible del mapa sigue versionado semántico y actualmente es
-`0.4.0`. El número se declara en `package.json` y se valida contra la
+`0.5.0`. El número se declara en `package.json` y se valida contra la
 configuración mostrada en la interfaz.
 
 El mapa zero-build combina `municipalities.csv` y los 15 CSV de scores mediante
@@ -638,10 +673,9 @@ npm run build:data
 open index.html
 ```
 
-`build:data` delega en `vendor/tesela/scripts/build_data.py` mediante el wrapper
-`scripts/build_map_data.py`. Utiliza el Source externo de MuniAlpha, exige el join
-exacto `CODIMUNI` ↔ `municipality_code` y no duplica indicadores dentro de las
-geometrías. El comando canónico equivalente es:
+`build:data` ejecuta `vendor/tesela/scripts/build_data.py` con el Source externo
+de MuniAlpha, exige el join exacto `CODIMUNI` ↔ `municipality_code` y no duplica
+indicadores dentro de las geometrías. El comando equivalente es:
 
 ```bash
 uv run python vendor/tesela/scripts/build_data.py \
@@ -701,6 +735,7 @@ uv run --extra dev mypy .
 npm test
 npm run test:e2e
 npm run lint
+npm run version:check
 ```
 
 ## Despliegue en Cloudflare
@@ -720,6 +755,11 @@ npm run deploy
 se mantiene como un paso explícito. Cloudflare Workers Builds debe conservar los
 metadatos Git del checkout para que `npm run build` pueda ejecutar
 `git submodule update --init --recursive`.
+
+El deploy requiere una sesión Wrangler autenticada. Después de publicar se
+comprueban la URL raíz, los MIME de los assets, la consola y el flujo principal
+del mapa. Para hacer rollback se vuelve al tag o commit anterior, se ejecuta el
+gate completo y se publica de nuevo; no se modifica manualmente `dist/`.
 
 En Cloudflare Workers Builds debe utilizarse `npm run build` como comando de
 build y `npm run deploy` como comando de despliegue. `wrangler.jsonc` publica

@@ -1,8 +1,8 @@
 (function (root, factory) {
   const api = factory(root);
   if (typeof module !== "undefined" && module.exports) module.exports = api;
-  const tesela = root.Tesela || root.SSM || {};
-  root.Tesela = root.SSM = tesela;
+  const tesela = root.Tesela || {};
+  root.Tesela = tesela;
   tesela.adapters = Object.assign(tesela.adapters || {}, api);
 })(typeof self !== "undefined" ? self : this, function (root) {
   "use strict";
@@ -53,10 +53,10 @@
   }
 
   function scoredZones(config, weights) {
-    const tesela = root.Tesela || root.SSM || {};
+    const tesela = root.Tesela || {};
     const engine = tesela.engine || {};
     const namespace = config.branding?.dataNamespace || "MUNIALPHA_DATA";
-    const bundle = root[namespace] || root.TESELA_DATA || root.SSM_DATA;
+    const bundle = root[namespace] || root.TESELA_DATA;
     if (!bundle || typeof engine.computeScores !== "function" || typeof engine.joinByKey !== "function") {
       return [];
     }
@@ -217,7 +217,7 @@
       for (const preset of document.querySelectorAll(".ssm-preset.active")) {
         preset.classList.remove("active");
       }
-      const config = root.TESELA_CONFIG || root.SSM_CONFIG;
+      const config = root.TESELA_CONFIG;
       const weights = currentWeights(document, config);
       const status = document.querySelector(".munialpha-coverage-status");
       if (status && config) status.textContent = coverageText(config, weights);
@@ -228,7 +228,7 @@
     const rail = document.getElementById("ssm-rail");
     const observer = rail && typeof root.MutationObserver === "function"
       ? new root.MutationObserver(() => {
-          const config = root.TESELA_CONFIG || root.SSM_CONFIG;
+          const config = root.TESELA_CONFIG;
           decorateSearchResults(document, config, currentWeights(document, config));
         })
       : null;

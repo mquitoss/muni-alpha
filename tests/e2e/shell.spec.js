@@ -2,7 +2,7 @@ const { expect, test } = require("@playwright/test");
 const { readFileSync } = require("node:fs");
 const { pathToFileURL } = require("node:url");
 const { resolve } = require("node:path");
-const parityBaseline = require("../frontend/fixtures/munialpha-parity-v0.4.0.json");
+const parityBaseline = require("../frontend/fixtures/munialpha-parity-v0.5.0.json");
 
 const bundleLine = readFileSync(resolve(__dirname, "../../data/map_bundle.js"), "utf8")
   .split("\n", 1)[0];
@@ -117,4 +117,22 @@ test("servidor estático publica MIME correctos", async ({ request }) => {
 test("shell MuniAlpha sobre Tesela mediante file://", async ({ page }) => {
   const url = pathToFileURL(resolve(__dirname, "../../dist/index.html")).href;
   await verifyShell(page, url);
+});
+
+test("tema MuniAlpha permanece utilizable en móvil", async ({ page }) => {
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.route("https://commons.wikimedia.org/**", (route) => route.fulfill({
+    contentType: "application/json",
+    body: JSON.stringify({ query: { pages: {} } }),
+  }));
+  await page.goto("http://127.0.0.1:4173/index.html", { waitUntil: "domcontentloaded" });
+  await expect(page.locator(".tesela-zone-path")).toHaveCount(947);
+  expect(await page.locator("body").evaluate((element) => getComputedStyle(element).display))
+    .toBe("block");
+  expect((await page.locator("#ssm-map").boundingBox()).height).toBeGreaterThanOrEqual(430);
+  await page.locator(".tesela-search input").fill("Abrera");
+  await page.locator(".tesela-search-result").first().click();
+  const detail = await page.locator("#ssm-detail").boundingBox();
+  expect(detail.width).toBeLessThanOrEqual(390);
+  await expect(page.locator(".munialpha-score")).toContainText("cobertura");
 });
