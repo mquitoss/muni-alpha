@@ -3,8 +3,11 @@
   if (typeof window === "undefined") return;
 
   const L = window.L;
-  const config = window.SSM_CONFIG || {};
-  const engine = (window.SSM && window.SSM.engine) || {};
+  const config = window.TESELA_CONFIG || window.SSM_CONFIG || {};
+  const tesela = window.Tesela || window.SSM || {};
+  const engine = tesela.engine || {};
+  const adapters = tesela.adapters || {};
+  const providers = tesela.providers || {};
   const state = {
     zones: [], scores: new Map(), weights: {}, preset: null, map: null, layer: null,
     layers: new Map(), query: "", selected: null, selectedOutline: null,
@@ -218,7 +221,8 @@
     let promise = state.photoCache.get(String(zone.key));
     if (!promise) {
       const [lat, lon] = zoneCoordinates(zone) || [];
-      promise = engine.fetchCommonsImages(
+      promise = adapters.fetchCommonsImages(
+        providers,
         { name: zone.name, lat, lon },
         config.detail.photos,
       );
@@ -278,7 +282,9 @@
       if (field.section) panel.append(element("h3", { class: "ssm-detail-section" }, [field.section]));
       panel.append(element("div", { class: "ssm-row" }, [
         element("span", { class: "ssm-row-label" }, [field.label || field.key]),
-        element("span", { class: "ssm-row-value" }, [engine.formatValue(zone.ind && zone.ind[field.key], field)]),
+        element("span", { class: "ssm-row-value" }, [
+          adapters.formatValue(engine, zone.ind && zone.ind[field.key], field, config.ui),
+        ]),
       ]));
     }
     for (const notice of config.detail.notices || []) panel.append(element("p", { class: "ssm-detail-notice" }, [notice]));
@@ -304,7 +310,12 @@
   }
 
   function matchingZones() {
-    return engine.searchZones(state.zones, state.query, scoreFor);
+    return engine.searchZones(state.zones, state.query, {
+      scoreFor: (zone) => scoreFor(zone)?.score,
+      keyFor: (zone) => zone.key,
+      locale: "ca",
+      normalization: config.join.nameNormalization,
+    });
   }
 
   function resultList(limit = 8) {

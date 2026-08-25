@@ -36,6 +36,12 @@
       notice:
         "Herramienta exploratoria basada en datos públicos. No constituye asesoramiento financiero, legal, fiscal ni urbanístico.",
     },
+    ui: {
+      locale: "es-ES",
+      booleanLabels: { true: "Sí", false: "No" },
+      durationLabels: { hour: "h", minute: "min" },
+      noDataLabel: "sin dato",
+    },
     map: {
       center: [41.72, 1.65],
       zoom: 8,
@@ -119,6 +125,12 @@
         provider: "Wikimedia Commons",
         limit: 3,
         searchLimit: 16,
+        radius: 10000,
+        thumbnailWidth: 720,
+        querySuffix: "Catalunya",
+        unknownAuthor: "Autor no indicado",
+        unknownLicense: "Consulta la licencia en Commons",
+        excludePattern: /\b(escuts?|banderes?|banderas?|blasons?|coat of arms|flags?|mapes?|mapas?|maps?|locator|localitzaci[oó]|ubicaci[oó]|logos?|emblems?|seals?|icons?)\b/i,
       },
       notices: [
         "La viabilidad HUT es un gate regulatorio, no una señal económica. Un valor alto no garantiza una licencia; comprueba el planeamiento local.",
@@ -161,6 +173,7 @@
     },
   };
 
+  root.TESELA_CONFIG = config;
   root.SSM_CONFIG = config;
   if (typeof module !== "undefined" && module.exports) module.exports = config;
 })(typeof self !== "undefined" ? self : this);

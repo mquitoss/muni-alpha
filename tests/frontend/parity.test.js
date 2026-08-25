@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 
-const scoring = require("../../src/engine/scoring.js");
-const search = require("../../src/engine/search.js");
+const scoring = require("../../vendor/tesela/src/engine/scoring.js");
+const search = require("../../vendor/tesela/src/engine/search.js");
 const expectedBaseline = require("./fixtures/munialpha-parity-v0.4.0.json");
 const scoringCases = require("./fixtures/scoring-cases.json");
 const searchCases = require("./fixtures/search-cases.json");
@@ -33,15 +33,18 @@ describe("baseline de paridad MuniAlpha 0.4.0", () => {
     expect(actual.map(({ key, score, coverage }) => ({ id: key, score, coverage })))
       .toEqual(scoringCases.expected);
     expect(actual[2].contributions.factor_c).toBeNull();
-    expect(actual[3].contributions).toBeNull();
-    expect(actual[4].contributions).toBeNull();
+    expect(actual[2].missingFactors).toEqual(["factor_c"]);
+    expect(actual[3].status).toBe("insufficient_coverage");
+    expect(actual[3].missingFactors).toEqual(["factor_a", "factor_b"]);
+    expect(actual[4].status).toBe("insufficient_coverage");
+    expect(actual[4].missingFactors).toEqual(["factor_a", "factor_b", "factor_c"]);
   });
 
   it.each(searchCases.cases)("congela búsqueda normalizada: $query", ({ query, expected }) => {
     const results = search.searchZones(
       searchCases.zones,
       query,
-      (zone) => ({ score: zone.score }),
+      { scoreFor: (zone) => zone.score, keyFor: (zone) => zone.id, locale: "ca" },
     );
     expect(results.map((zone) => zone.name)).toEqual(expected);
   });

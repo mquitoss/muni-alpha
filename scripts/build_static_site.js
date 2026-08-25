@@ -2,6 +2,7 @@
 
 const { cpSync, mkdirSync, readdirSync, rmSync, statSync } = require("node:fs");
 const { join, resolve } = require("node:path");
+const { assertTeselaInitialized } = require("./verify_tesela.js");
 
 const root = resolve(__dirname, "..");
 const output = join(root, "dist");
@@ -14,7 +15,15 @@ const assets = [
   "src/app.js",
   "src/styles.css",
   "src/adapters",
-  "src/engine",
+  "vendor/tesela/src/engine/namespace.js",
+  "vendor/tesela/src/engine/format.js",
+  "vendor/tesela/src/engine/geo.js",
+  "vendor/tesela/src/engine/join.js",
+  "vendor/tesela/src/engine/search.js",
+  "vendor/tesela/src/engine/scoring.js",
+  "vendor/tesela/src/engine/color.js",
+  "vendor/tesela/src/engine/bundle.js",
+  "vendor/tesela/src/providers/wikimedia-commons.js",
 ];
 
 function copyAsset(relativePath) {
@@ -35,6 +44,7 @@ function validateAssets(directory) {
   }
 }
 
+assertTeselaInitialized();
 rmSync(output, { recursive: true, force: true });
 mkdirSync(output, { recursive: true });
 assets.forEach(copyAsset);

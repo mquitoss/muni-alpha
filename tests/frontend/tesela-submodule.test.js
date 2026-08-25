@@ -19,10 +19,15 @@ describe("submódulo Tesela", () => {
     });
   });
 
-  it("mantiene el motor local durante M2", () => {
+  it("carga el motor Tesela y mantiene el shell local durante M3", () => {
     const html = readFileSync(resolve(projectRoot, "index.html"), "utf8");
-    expect(html).toContain('src="src/engine/scoring.js"');
-    expect(html).not.toContain('src="vendor/tesela/');
+    expect(html).toContain('src="vendor/tesela/src/engine/namespace.js"');
+    expect(html).toContain('src="vendor/tesela/src/engine/scoring.js"');
+    expect(html).toContain('src="vendor/tesela/src/providers/wikimedia-commons.js"');
+    expect(html).toContain('src="src/app.js"');
+    expect(html).not.toContain('src="src/engine/');
+    expect(html).not.toContain('src="vendor/tesela/src/app.js"');
+    expect(html).not.toContain('src="vendor/tesela/src/ui/');
   });
 
   it("explica cómo inicializar un submódulo ausente", () => {

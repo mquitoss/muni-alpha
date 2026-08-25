@@ -619,9 +619,9 @@ npm run tesela:check
 ```
 
 El comando de verificación comprueba la URL HTTPS, la versión publicada y que el
-gitlink continúa apuntando al commit etiquetado `v0.3.0`. MuniAlpha genera ya su
-bundle mediante el pipeline del submódulo, pero todavía carga su motor local en
-el navegador.
+gitlink continúa apuntando al commit etiquetado `v0.3.0`. MuniAlpha genera su
+bundle y carga el motor desde el submódulo; conserva temporalmente su shell,
+tema y extensiones inmobiliarias locales.
 
 # Mapa estático (Fase 2)
 
@@ -662,6 +662,9 @@ generación simplifica la geometría de
 serializa JSON compacto para que el mapa pueda abrirse directamente mediante
 `file://`. Leaflet y el mapa base se cargan desde CDN, por lo que el fondo
 cartográfico requiere conexión; los límites y datos municipales están embebidos.
+El navegador carga las funciones puras de Tesela desde
+`vendor/tesela/src/engine/`, mientras `src/app.js` mantiene la interfaz de
+MuniAlpha hasta la migración del shell.
 
 Las tesis disponibles son equilibrado, rentabilidad residencial, crecimiento,
 turístico, calidad de vida, deportes de invierno y senderismo. Deportes de

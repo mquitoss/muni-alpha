@@ -2,15 +2,43 @@ import { describe, expect, it } from "vitest";
 import { execFileSync } from "node:child_process";
 import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
+import { runInNewContext } from "node:vm";
 
 const config = require("../../app.config.js");
 const packageConfig = require("../../package.json");
-const join = require("../../src/engine/join.js");
-const search = require("../../src/engine/search.js");
-const media = require("../../src/engine/media.js");
-const scoring = require("../../src/engine/scoring.js");
-const format = require("../../src/engine/format.js");
+const join = require("../../vendor/tesela/src/engine/join.js");
+const search = require("../../vendor/tesela/src/engine/search.js");
+const media = require("../../vendor/tesela/src/providers/wikimedia-commons.js");
+const scoring = require("../../vendor/tesela/src/engine/scoring.js");
+const format = require("../../vendor/tesela/src/engine/format.js");
+const color = require("../../vendor/tesela/src/engine/color.js");
+const adapters = require("../../src/adapters/domain.js");
+const { readMapBundle } = require("../../scripts/parity_baseline.js");
 const projectRoot = process.cwd();
+
+function legacyFormatValue(value, field = {}) {
+  if (value == null || value === "" || (typeof value === "number" && !Number.isFinite(value))) return "sin dato";
+  if (field.format === "boolean") return value === true ? "Sí" : value === false ? "No" : "sin dato";
+  if (field.format === "duration") {
+    const totalMinutes = Math.round(Number(value));
+    if (!Number.isFinite(totalMinutes) || totalMinutes < 0) return "sin dato";
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    if (hours === 0) return `${minutes} min`;
+    if (minutes === 0) return `${hours} h`;
+    return `${hours} h ${minutes} min`;
+  }
+  if (field.format === "number" || field.format === "percent") {
+    const decimals = field.decimals ?? (field.format === "percent" ? 1 : 0);
+    const text = Number(value).toLocaleString("es-ES", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+    if (field.format === "percent") return `${text}%`;
+    return field.unit ? `${text} ${field.unit}` : text;
+  }
+  return String(value);
+}
 
 describe("motor agnóstico", () => {
   it("une códigos conservando ceros iniciales y null", () => {
@@ -19,6 +47,17 @@ describe("motor agnóstico", () => {
     const result = join.joinByKey(geo, [indicator], config.join);
     expect(result.matched).toBe(1);
     expect(result.zones[0].ind.value).toBeNull();
+  });
+
+  it("une exactamente los 947 municipios sin duplicados ni fallback", () => {
+    const { data } = readMapBundle();
+    const result = join.joinByKey(data.geo, data.indicators, config.join);
+    expect(result.zones).toHaveLength(947);
+    expect(result.matched).toBe(947);
+    expect(result.unmatched).toBe(0);
+    expect(result.usedNameFallback).toBe(0);
+    expect(result.duplicateIndicatorKeys).toEqual([]);
+    expect(result.zones.every((zone) => /^\d{6}$/.test(zone.key))).toBe(true);
   });
 
   it("pondera solo factores disponibles y deja null sin cobertura", () => {
@@ -56,14 +95,37 @@ describe("motor agnóstico", () => {
   });
 
   it("presenta booleanos y huecos en español", () => {
-    expect(format.formatValue(true, { format: "boolean" })).toBe("Sí");
-    expect(format.formatValue(null, { format: "number" })).toBe("sin dato");
+    expect(adapters.formatValue(format, true, { format: "boolean" }, config.ui)).toBe("Sí");
+    expect(adapters.formatValue(format, null, { format: "number" }, config.ui)).toBe("sin dato");
   });
 
   it("presenta duraciones en horas y minutos legibles", () => {
-    expect(format.formatValue(45, { format: "duration" })).toBe("45 min");
-    expect(format.formatValue(60, { format: "duration" })).toBe("1 h");
-    expect(format.formatValue(95, { format: "duration" })).toBe("1 h 35 min");
+    expect(adapters.formatValue(format, 45, { format: "duration" }, config.ui)).toBe("45 min");
+    expect(adapters.formatValue(format, 60, { format: "duration" }, config.ui)).toBe("1 h");
+    expect(adapters.formatValue(format, 95, { format: "duration" }, config.ui)).toBe("1 h 35 min");
+  });
+
+  it("conserva la rampa cromática explícita", () => {
+    expect([0, 0.25, 0.5, 0.75, 1].map((value) =>
+      color.colorForValue(value, { min: 0, max: 1 }, config.color.ramp)))
+      .toEqual([
+        "rgb(126,44,54)",
+        "rgb(206,104,62)",
+        "rgb(213,178,94)",
+        "rgb(84,138,107)",
+        "rgb(34,96,78)",
+      ]);
+  });
+
+  it("mantiene todos los formatos visibles del motor anterior", () => {
+    const { data } = readMapBundle();
+    for (const field of config.detail.fields) {
+      for (const indicator of data.indicators) {
+        const value = indicator[field.key];
+        expect(adapters.formatValue(format, value, field, config.ui), field.key)
+          .toBe(legacyFormatValue(value, field));
+      }
+    }
   });
 
   it("busca sin acentos ni artículos y prioriza coincidencias iniciales", () => {
@@ -72,10 +134,11 @@ describe("motor agnóstico", () => {
       { name: "Sant Mori" },
       { name: "Móra la Nova" },
     ];
-    expect(search.searchZones(zones, "mora").map((zone) => zone.name)).toEqual([
+    const options = { locale: "ca" };
+    expect(search.searchZones(zones, "mora", options).map((zone) => zone.name)).toEqual([
       "Móra d'Ebre", "Móra la Nova",
     ]);
-    expect(search.searchZones([{ name: "l'Hospitalet de Llobregat" }], "hospitalet")).toHaveLength(1);
+    expect(search.searchZones([{ name: "l'Hospitalet de Llobregat" }], "hospitalet", options)).toHaveLength(1);
   });
 });
 
@@ -83,6 +146,13 @@ describe("configuración MuniAlpha", () => {
   it("mantiene una única versión semántica visible", () => {
     expect(config.branding.version).toBe(packageConfig.version);
     expect(config.branding.version).toMatch(/^\d+\.\d+\.\d+$/);
+  });
+
+  it("publica TESELA_CONFIG como configuración primaria", () => {
+    const context = { self: {} };
+    runInNewContext(readFileSync(resolve(projectRoot, "app.config.js"), "utf8"), context);
+    expect(context.self.TESELA_CONFIG).toBe(context.self.SSM_CONFIG);
+    expect(context.self.TESELA_CONFIG.branding.version).toBe(packageConfig.version);
   });
 
   it("configura referencias y etiquetas municipales por nivel de zoom", () => {
@@ -139,7 +209,10 @@ describe("configuración MuniAlpha", () => {
 
 describe("fotografías de Wikimedia Commons", () => {
   it("construye una búsqueda geográfica alrededor del municipio", () => {
-    const url = new URL(media.buildCommonsUrl({ name: "Vic", lat: 41.93, lon: 2.25, searchLimit: 12 }));
+    const url = new URL(media.buildCommonsUrl(
+      { name: "Vic", lat: 41.93, lon: 2.25 },
+      { ...config.detail.photos, searchLimit: 12 },
+    ));
     expect(url.hostname).toBe("commons.wikimedia.org");
     expect(url.searchParams.get("generator")).toBe("geosearch");
     expect(url.searchParams.get("ggscoord")).toBe("41.93|2.25");
@@ -168,13 +241,27 @@ describe("fotografías de Wikimedia Commons", () => {
       5: image("File:001 Plaça major.jpg", "image/jpeg"),
     } } };
 
-    const selected = media.selectCommonsImages(payload, 3);
+    const selected = media.selectCommonsImages(payload, config.detail.photos);
     expect(selected.map((photo) => photo.title)).toEqual(["Plaça major", "Entorn natural"]);
     expect(selected[0].author).toBe("Autora & Co.");
     expect(selected[0].license).toBe("CC BY-SA 4.0");
     expect(media.titleSignature("001 Plaça major (Vic).jpg")).toBe("placa major");
     expect(media.safeExternalUrl("javascript:alert(1)")).toBeNull();
     expect(media.safeExternalUrl("//creativecommons.org/licenses/by/4.0/")).toMatch(/^https:/);
+  });
+
+  it("carga fotografías mediante el provider Tesela sin bloquear el shell", async () => {
+    const fetcher = async (url) => ({
+      ok: true,
+      json: async () => ({ query: { pages: {} } }),
+      url,
+    });
+    await expect(adapters.fetchCommonsImages(
+      media,
+      { name: "Vic", lat: 41.93, lon: 2.25 },
+      config.detail.photos,
+      fetcher,
+    )).resolves.toEqual([]);
   });
 });
 
@@ -184,13 +271,19 @@ describe("build estático", () => {
 
     expect(existsSync(resolve(projectRoot, "dist/index.html"))).toBe(true);
     expect(existsSync(resolve(projectRoot, "dist/data/map_bundle.js"))).toBe(true);
-    expect(existsSync(resolve(projectRoot, "dist/src/engine/scoring.js"))).toBe(true);
-    expect(existsSync(resolve(projectRoot, "dist/src/engine/media.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/vendor/tesela/src/engine/scoring.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/vendor/tesela/src/providers/wikimedia-commons.js"))).toBe(true);
+    expect(existsSync(resolve(projectRoot, "dist/src/engine"))).toBe(false);
     expect(existsSync(resolve(projectRoot, "dist/node_modules"))).toBe(false);
     expect(existsSync(resolve(projectRoot, "dist/.venv"))).toBe(false);
     const publishedBundle = readFileSync(resolve(projectRoot, "dist/data/map_bundle.js"));
     const versionedBundle = readFileSync(resolve(projectRoot, "data/map_bundle.js"));
     expect(publishedBundle.equals(versionedBundle)).toBe(true);
+    const publishedHtml = readFileSync(resolve(projectRoot, "dist/index.html"), "utf8");
+    const localScripts = [...publishedHtml.matchAll(/<script src="([^"]+)"/g)]
+      .map((match) => match[1])
+      .filter((path) => !path.startsWith("http"));
+    expect(localScripts.every((path) => existsSync(resolve(projectRoot, "dist", path)))).toBe(true);
 
     const wrangler = JSON.parse(readFileSync(resolve(projectRoot, "wrangler.jsonc"), "utf8"));
     expect(wrangler.build.command).toBe("npm run build");

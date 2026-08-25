@@ -3,8 +3,8 @@ const { readFileSync, writeFileSync } = require("node:fs");
 const { resolve } = require("node:path");
 
 const config = require("../app.config.js");
-const scoring = require("../src/engine/scoring.js");
-const search = require("../src/engine/search.js");
+const scoring = require("../vendor/tesela/src/engine/scoring.js");
+const search = require("../vendor/tesela/src/engine/search.js");
 
 const projectRoot = resolve(__dirname, "..");
 const defaultBundlePath = resolve(projectRoot, "data/map_bundle.js");
@@ -84,7 +84,11 @@ function rankTopZones(features, matrix, codes, limit = 8) {
     key: String(feature.properties.CODIMUNI),
     name: feature.properties.NOMMUNI,
   }));
-  return search.searchZones(zones, "", (zone) => scoreByCode.get(zone.key)).slice(0, limit)
+  return search.searchZones(zones, "", {
+    scoreFor: (zone) => scoreByCode.get(zone.key)?.score,
+    keyFor: (zone) => zone.key,
+    locale: "ca",
+  }).slice(0, limit)
     .map((zone) => zone.key);
 }
 
